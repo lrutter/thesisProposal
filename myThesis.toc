@@ -1,0 +1,8 @@
+\contentsline {chapter}{Contents}{2}{section*.1}
+\contentsline {chapter}{\chapternumberline {1}Introduction}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Background to data visualization}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Problems to be addressed}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Overview of thesis research}{3}{section.1.3}
+\contentsline {chapter}{\chapternumberline {2}Visualization methods for genealogical datasets}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Database structure}{4}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Question types}{4}{subsection.2.1.1}

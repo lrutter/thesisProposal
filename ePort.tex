@@ -1,5 +1,5 @@
 %\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
-\documentclass[11pt,a4paper,oldfontcommands]{memoir}
+\documentclass[11pt,a4paper,oldfontcommands,openany]{memoir}
 \usepackage{graphicx}
 \usepackage[]{color}
 %% maxwidth is the original width if it is less than linewidth
@@ -86,6 +86,7 @@
 \newcommand{\R}{{\normalfont\textsf{R }}{}}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 
+
 \begin{document}
 
 \sloppy
@@ -137,7 +138,8 @@
 {\centerline{\large May 16, 2016}}
 }
 
-\cleardoublepage
+\clearpage
+%\cleardoublepage
 
 %%% CHAPTER'S STYLE
 \chapterstyle{bianchi}
@@ -146,9 +148,7 @@
 \setsubsubsecheadstyle{\bfseries\sffamily\raggedright}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\tableofcontents*
-
-\clearpage
+\tableofcontents
 
 \setlength{\parskip}{10pt} % Inter-paragraph spacing
 
@@ -158,19 +158,11 @@
 
 \chapter{Introduction}
 
-\section{Summary}
+\section{Background to data visualization}
 
-The \pkg{ePort} package provides tools for course instructors to generate electronic reports regarding student performance. Instructors can produce reports immediately after homework assignment deadlines, and use them to better understand student performance throughout the teaching semester. The goal is to allow instructors to assess and improve upon their teaching approaches in a fast response cycle.
+Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah.
 
-The tools in this package will be especially beneficial for users who supervise large introductory courses. These courses often consist of multiple topics (groups of learning outcomes) that are taught by multiple instructors across multiple sections (groups of students). To accomodate the various ways that student performance can be examined for such courses, the package can generate various reports that can compare within and between topics and sections.
-
-At its simplest, a report can be generated for one topic and one section. This would allow course coordinators to determine how well a particular section performed on a particular topic. Reports can also be generated for one topic across multiple sections, which can allow course coordinators to quickly determine how well and consistently the multiple sections performed on a topic of interest. This could be particularly insightful in cases where discrepancies in student performance are discovered between sections, especially if different instructors and/or teaching methods are being used across the sections.
-
-In addition, we can produce reports for one unit (group of topics), either within one section or between multiple sections. This allows coordinators to assess student performance across all the learning outcomes of the combined topics that form the unit, and to quantify the consistency of how students perform across sections.
-
-In general, both short and long versions of reports can be generated. Short versions of reports provide brief summarizations of student performance without regard to individual problems, whereas long versions of reports provide detailed summarizations of student performance for each individual problem in the assignment. Hence, long reports can also be used to confirm the suitability of assigned problems. For instance, in some courses, problems that assess the same learning outcome and are intended to be of equal difficulty levels are grouped into a question set, and each student is assigned a random subset from this set of problems. However, sometimes, an unexpected discrepancy in student performance between problems in a given quesiton set will be discovered, indicating an unintended discrepancy in the clearness or difficulty level of the problems to which students were randomly assigned. This package will allow users to efficiently find and fix such issues. 
-
-\section{Installation}
+\section{Problems to be addressed}
 
 \textbf{\textsf{R}} is a open source software project for statistical computing, and can be freely downloaded from the Comprehensive \textbf{\textsf{R}} Archive Network (\texttt{CRAN}) website. The link to contributed documentation on the \texttt{CRAN} website offers practical resources for an introduction to \textbf{\textsf{R}} in several languages. After downloading and installing \textbf{\textsf{R}}, the installation of additional packages is straightforward. To install the \pkg{ePort} package from \textbf{\textsf{R}}, use the command: \\
 

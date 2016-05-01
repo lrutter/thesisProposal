@@ -1,47 +1,48 @@
-\contentsline {chapter}{\chapternumberline {1}Introduction}{5}{chapter.1}
-\contentsline {section}{\numberline {1.1}Summary}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Installation}{6}{section.1.2}
-\contentsline {section}{\numberline {1.3}Help files}{6}{section.1.3}
-\contentsline {chapter}{\chapternumberline {2}Online homework database}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Database structure}{9}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Topics}{9}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Learning outcomes}{10}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Question types}{11}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Question sets}{14}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}Report generation outline}{14}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}External software - Respondus}{15}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}External software - Blackboard}{16}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Input files}{16}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Parsing input files}{16}{subsection.2.2.4}
-\contentsline {chapter}{\chapternumberline {3}Example data}{19}{chapter.3}
-\contentsline {chapter}{\chapternumberline {4}Generating Reports}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}One topic for one section - short version}{22}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Code}{22}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Output}{26}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Contacts of low-performing students}{29}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}One topic for one section - long version}{29}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Code}{29}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Output}{30}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}One topic comparing multiple sections - short version}{33}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Code}{33}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Output}{34}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}One topic comparing multiple sections - long version}{35}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Code}{35}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Output}{36}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}One unit (group of topics) for one section}{40}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Code}{41}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Output}{42}{subsection.4.5.2}
-\contentsline {section}{\numberline {4.6}One unit (group of topics) comparing multiple sections}{44}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Code}{45}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Output}{45}{subsection.4.6.2}
-\contentsline {subsection}{\numberline {4.6.3}Contacts of low-performing students}{47}{subsection.4.6.3}
-\contentsline {chapter}{\chapternumberline {5}Additional tools}{49}{chapter.5}
-\contentsline {section}{\numberline {5.1}Splitting files}{49}{section.5.1}
-\contentsline {section}{\numberline {5.2}Merging files}{50}{section.5.2}
-\contentsline {section}{\numberline {5.3}Deidentifying files}{51}{section.5.3}
-\contentsline {chapter}{\chapternumberline {6}Running reports sequentially}{55}{chapter.6}
-\contentsline {chapter}{\chapternumberline {7}Report Defaults}{59}{chapter.7}
-\contentsline {section}{\numberline {7.1}Parameter options}{59}{section.7.1}
-\contentsline {section}{\numberline {7.2}Examples}{60}{section.7.2}
-\contentsline {chapter}{\chapternumberline {8}Future avenues}{63}{chapter.8}
-\contentsline {chapter}{\chapternumberline {9}Conclusions}{65}{chapter.9}
+\contentsline {chapter}{Contents}{2}{section*.1}
+\contentsline {chapter}{\chapternumberline {1}Introduction}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Summary}{4}{section.1.1}
+\contentsline {section}{\numberline {1.2}Installation}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Help files}{5}{section.1.3}
+\contentsline {chapter}{\chapternumberline {2}Online homework database}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Database structure}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Topics}{7}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Learning outcomes}{8}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Question types}{9}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Question sets}{12}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Report generation outline}{12}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}External software - Respondus}{13}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}External software - Blackboard}{14}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Input files}{14}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Parsing input files}{14}{subsection.2.2.4}
+\contentsline {chapter}{\chapternumberline {3}Example data}{16}{chapter.3}
+\contentsline {chapter}{\chapternumberline {4}Generating Reports}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}One topic for one section - short version}{18}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Code}{18}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Output}{22}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Contacts of low-performing students}{25}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}One topic for one section - long version}{25}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Code}{25}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Output}{26}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}One topic comparing multiple sections - short version}{29}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Code}{29}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Output}{30}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}One topic comparing multiple sections - long version}{31}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Code}{31}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Output}{32}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}One unit (group of topics) for one section}{36}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Code}{37}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Output}{38}{subsection.4.5.2}
+\contentsline {section}{\numberline {4.6}One unit (group of topics) comparing multiple sections}{40}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Code}{41}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Output}{41}{subsection.4.6.2}
+\contentsline {subsection}{\numberline {4.6.3}Contacts of low-performing students}{43}{subsection.4.6.3}
+\contentsline {chapter}{\chapternumberline {5}Additional tools}{44}{chapter.5}
+\contentsline {section}{\numberline {5.1}Splitting files}{44}{section.5.1}
+\contentsline {section}{\numberline {5.2}Merging files}{45}{section.5.2}
+\contentsline {section}{\numberline {5.3}Deidentifying files}{46}{section.5.3}
+\contentsline {chapter}{\chapternumberline {6}Running reports sequentially}{49}{chapter.6}
+\contentsline {chapter}{\chapternumberline {7}Report Defaults}{52}{chapter.7}
+\contentsline {section}{\numberline {7.1}Parameter options}{52}{section.7.1}
+\contentsline {section}{\numberline {7.2}Examples}{53}{section.7.2}
+\contentsline {chapter}{\chapternumberline {8}Future avenues}{56}{chapter.8}
+\contentsline {chapter}{\chapternumberline {9}Conclusions}{57}{chapter.9}

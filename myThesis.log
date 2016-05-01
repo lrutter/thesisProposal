@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 MAY 2016 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 MAY 2016 16:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**ePort.tex
-(./ePort.tex
+**myThesis.tex
+(./myThesis.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/memoir/memoir.cls
@@ -1169,8 +1169,9 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)) (./ePort.aux)
-\openout1 = `ePort.aux'.
+))
+(./myThesis.aux)
+\openout1 = `myThesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
@@ -1188,7 +1189,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 90.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 90.
@@ -1242,9 +1243,9 @@ LaTeX Info: Redefining \nameref on input line 90.
 LaTeX Info: Redefining \ref on input line 90.
 LaTeX Info: Redefining \pageref on input line 90.
 LaTeX Info: Redefining \nameref on input line 90.
-(./ePort.out) (./ePort.out)
+(./myThesis.out) (./myThesis.out)
 \@outlinefile=\write4
-\openout4 = `ePort.out'.
+\openout4 = `myThesis.out'.
 
 
 *geometry* driver: auto-detecting
@@ -1307,7 +1308,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- (./ePort.toc
+ (./myThesis.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 1.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1323,11 +1324,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [2
+)) [2
 
-])
-[3]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 163.
+]
+[3
+
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 178.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1337,948 +1340,120 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
+<stock.png, id=69, 577.15625pt x 391.4625pt>
+File: stock.png Graphic file (type png)
+ <use stock.png>
+Package pdftex.def Info: stock.png used on input line 186.
+(pdftex.def)             Requested size: 426.79135pt x 289.48656pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 187.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 186--187
+ [] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 196.
+See the caption package documentation for explanation.
+
+[5 <./stock.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 178.
+Package xcolor Warning: Incompatible color definition on input line 237.
 
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 180.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 239.
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--187
-
- []
+Package xcolor Warning: Incompatible color definition on input line 245.
 
 
-Package xcolor Warning: Incompatible color definition on input line 189.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 202.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 212.
-
-[5] [6]
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 235.
-See the caption package documentation for explanation.
-
-[7
-
-] [8]
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 320.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
-
- []
-
-[9] [10] [11] <stock.png, id=319, 577.15625pt x 391.4625pt>
-File: stock.png Graphic file (type png)
- <use stock.png>
-Package pdftex.def Info: stock.png used on input line 438.
-(pdftex.def)             Requested size: 426.79135pt x 289.48656pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 439.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 438--439
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-[13 <./stock.png>] [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 483--484
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 486.
-
-[16
-
-]
-Underfull \vbox (badness 5637) has occurred while \output is active []
-
- [17
-
-]
-Underfull \hbox (badness 2790) in paragraph at lines 526--527
-\T1/cmr/m/n/10.95 (+20) (\T1/cmtt/m/n/10.95 Topic06.A.csv\T1/cmr/m/n/10.95 (+20
-) , \T1/cmtt/m/n/10.95 Topic06.B.csv\T1/cmr/m/n/10.95 (+20) , \T1/cmtt/m/n/10.9
-5 Topic06.C.csv\T1/cmr/m/n/10.95 (+20) , \T1/cmtt/m/n/10.95 Topic07.A.csv\T1/cm
-r/m/n/10.95 (+20) , \T1/cmtt/m/n/10.95 Topic07.B.csv\T1/cmr/m/n/10.95 (+20) ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--529
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 531.
-
-
-Overfull \hbox (8.90321pt too wide) in paragraph at lines 533--533
+Overfull \hbox (8.90321pt too wide) in paragraph at lines 247--247
 [][]\T1/cmtt/m/n/10.95 keyHTM[] []=[] []system.file[][]([][]"inst/extdata/KeyFi
 les/Topic06.Questions.htm"[][],[] []package[] []=[][] 
  []
 
 
-Overfull \hbox (25.87833pt too wide) in paragraph at lines 540--540
+Overfull \hbox (25.87833pt too wide) in paragraph at lines 254--254
 [][]\T1/cmtt/m/n/10.95 dataPath[] []=[] []system.file[][]([][]"inst/extdata/Dat
 aFiles/Topic06/Topic06.A.csv"[][],[] []package[] []=[][] 
  []
 
 
-Overfull \hbox (47.38014pt too wide) in paragraph at lines 545--545
+Overfull \hbox (47.38014pt too wide) in paragraph at lines 259--259
 [][]\T1/cmtt/m/n/10.95 loPath[] []=[] []system.file[][]([][]"inst/extdata/LOFil
 es/Topic06.Outcomes.txt"[][],[] []package[] []=[] []"ePort"[][])[][] 
  []
 
 
-Overfull \hbox (8.90321pt too wide) in paragraph at lines 549--549
-[][]\T1/cmtt/m/n/10.95 makeReport[][]([][]keyFile[] []= keyPath,[] []dataFile[]
- []= dataPath,[] []loFile[] []= loPath,[] []outFile[] []=[][] 
- []
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 555--556
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 558.
-
-
-Overfull \hbox (8.90321pt too wide) in paragraph at lines 560--560
-[][]\T1/cmtt/m/n/10.95 keyHTM[] []=[] []system.file[][]([][]"inst/extdata/KeyFi
-les/Topic06.Questions.htm"[][],[] []package[] []=[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 566--567
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 569.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 578--579
-
- []
-
-[19]
-
-Package xcolor Warning: Incompatible color definition on input line 581.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 588--589
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 591.
-
-
-Overfull \hbox (25.87833pt too wide) in paragraph at lines 593--593
-[][]\T1/cmtt/m/n/10.95 dataPath[] []=[] []system.file[][]([][]"inst/extdata/Dat
-aFiles/Topic06/Topic06.A.csv"[][],[] []package[] []=[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 599--600
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 602.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 611--612
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 614.
-
-
-Overfull \hbox (47.38014pt too wide) in paragraph at lines 616--616
-[][]\T1/cmtt/m/n/10.95 loPath[] []=[] []system.file[][]([][]"inst/extdata/LOFil
-es/Topic06.Outcomes.txt"[][],[] []package[] []=[] []"ePort"[][])[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 621--622
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 624.
-
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 631--632
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 634.
-
-
-Overfull \hbox (8.90321pt too wide) in paragraph at lines 636--636
+Overfull \hbox (8.90321pt too wide) in paragraph at lines 263--263
 [][]\T1/cmtt/m/n/10.95 makeReport[][]([][]keyFile[] []= keyPath,[] []dataFile[]
  []= dataPath,[] []loFile[] []= loPath,[] []outFile[] []=[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 658--659
+Package xcolor Warning: Incompatible color definition on input line 270.
 
- []
 
-
-Package xcolor Warning: Incompatible color definition on input line 661.
-
-
-Overfull \hbox (8.90321pt too wide) in paragraph at lines 663--663
-[][]\T1/cmtt/m/n/10.95 makeReport[][]([][]keyFile[] []= keyPath,[] []dataFile[]
- []= dataPath,[] []loFile[] []= loPath,[] []outFile[] []=[][] 
- []
-
-[21]
-File: stock.png Graphic file (type png)
- <use stock.png>
-Package pdftex.def Info: stock.png used on input line 681.
-(pdftex.def)             Requested size: 277.41176pt x 188.16267pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 682.
-See the caption package documentation for explanation.
-
-[22]
-File: stock.png Graphic file (type png)
- <use stock.png>
-Package pdftex.def Info: stock.png used on input line 689.
-(pdftex.def)             Requested size: 320.0935pt x 217.11491pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 691.
-See the caption package documentation for explanation.
-
-File: stock.png Graphic file (type png)
-<use stock.png>
-Package pdftex.def Info: stock.png used on input line 699.
-(pdftex.def)             Requested size: 277.41176pt x 188.16267pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 700.
-See the caption package documentation for explanation.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23]
-File: stock.png Graphic file (type png)
-
-<use stock.png>
-Package pdftex.def Info: stock.png used on input line 708.
-(pdftex.def)             Requested size: 362.77525pt x 246.06715pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 709.
-See the caption package documentation for explanation.
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 732--733
-
- []
-
-[25]
-
-Package xcolor Warning: Incompatible color definition on input line 735.
-
-
-Overfull \hbox (8.90321pt too wide) in paragraph at lines 737--737
-[][]\T1/cmtt/m/n/10.95 makeReport[][]([][]keyFile[] []= keyPath,[] []dataFile[]
- []= dataPath,[] []loFile[] []= loPath,[] []outFile[] []=[][] 
- []
-
-File: stock.png Graphic file (type png)
-<use stock.png>
-Package pdftex.def Info: stock.png used on input line 751.
-(pdftex.def)             Requested size: 320.0935pt x 217.11491pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 752.
-See the caption package documentation for explanation.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26]
-File: stock.png Graphic file (type png)
-
-<use stock.png>
-Package pdftex.def Info: stock.png used on input line 760.
-(pdftex.def)             Requested size: 426.79135pt x 289.48656pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 761.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 760--761
- [] 
- []
-
-[27]
-File: stock.png Graphic file (type png)
- <use stock.png>
-Package pdftex.def Info: stock.png used on input line 771.
-(pdftex.def)             Requested size: 426.79135pt x 289.48656pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 772.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 771--772
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28]
-Underfull \hbox (badness 10000) in paragraph at lines 788--789
-
- []
-
-[29]
-
-Package xcolor Warning: Incompatible color definition on input line 791.
-
-
-Overfull \hbox (7.77155pt too wide) in paragraph at lines 793--793
-[][]\T1/cmtt/m/n/10.95 dataFolder[] []=[] []system.file[][]([][]"inst/extdata/D
-ataFiles/Topic06"[][],[] []package[] []=[] []"ePort"[][])[][] 
- []
-
-
-Overfull \hbox (8.90321pt too wide) in paragraph at lines 795--795
-[][]\T1/cmtt/m/n/10.95 makeReport[][]([][]keyFile[] []= keyPath,[] []dataFile[]
- []= dataList,[] []loFile[] []= loPath,[] []outFile[] []=[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 805--806
-\T1/cmr/m/n/10.95 (+20) You should be able to ex-am-ine the re-port we just gen
--er-ated
- []
-
-File: stock.png Graphic file (type png)
-<use stock.png>
-Package pdftex.def Info: stock.png used on input line 809.
-(pdftex.def)             Requested size: 128.0387pt x 86.84477pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 810.
-See the caption package documentation for explanation.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30]
-Underfull \hbox (badness 10000) in paragraph at lines 829--830
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 832.
-
-[31]
-Overfull \hbox (8.90321pt too wide) in paragraph at lines 834--834
-[][]\T1/cmtt/m/n/10.95 makeReport[][]([][]keyFile[] []= keyPath,[] []dataFile[]
- []= dataList,[] []loFile[] []= loPath,[] []outFile[] []=[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 842--843
-\T1/cmr/m/n/10.95 (+20) The code above should have gen-er-ated the long edi-tio
-n of the re-port
- []
-
-File: stock.png Graphic file (type png)
-<use stock.png>
-Package pdftex.def Info: stock.png used on input line 846.
-(pdftex.def)             Requested size: 298.75264pt x 202.64178pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 847.
-See the caption package documentation for explanation.
-
-File: stock.png Graphic file (type png)
-<use stock.png>
-Package pdftex.def Info: stock.png used on input line 855.
-(pdftex.def)             Requested size: 341.43437pt x 231.58806pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 856.
-See the caption package documentation for explanation.
-
-[32]
-File: stock.png Graphic file (type png)
- <use stock.png>
-Package pdftex.def Info: stock.png used on input line 864.
-(pdftex.def)             Requested size: 234.73654pt x 159.21642pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 865.
-See the caption package documentation for explanation.
-
-[33]
-File: stock.png Graphic file (type png)
- <use stock.png>
-Package pdftex.def Info: stock.png used on input line 875.
-(pdftex.def)             Requested size: 426.79135pt x 289.48656pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 876.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 875--876
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34]
-[35]
-File: stock.png Graphic file (type png)
- <use stock.png>
-Package pdftex.def Info: stock.png used on input line 886.
-(pdftex.def)             Requested size: 426.79135pt x 289.48656pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 887.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 886--887
- [] 
- []
-
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 911--912
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 914.
-
-[37]
-Overfull \hbox (30.40503pt too wide) in paragraph at lines 916--916
-[][]\T1/cmtt/m/n/10.95 dataFolder[] []=[] []system.file[][]([][]"inst/extdata/D
-ataFiles/Topic06_07_08"[][],[] []package[][]=[][]"ePort"[][])[][] 
- []
-
-
-Overfull \hbox (47.38014pt too wide) in paragraph at lines 928--928
-[]  []\T1/cmtt/m/n/10.95 makeReport[][]([][]outFile[] []= outPath,[] []unit[] [
-]=[] []2[][],[] []section[] []= section,[] []reportType[] []=[] []"secUnit"[][]
-)[][] 
- []
-
-
-Underfull \hbox (badness 2065) in paragraph at lines 934--935
-\T1/cmtt/m/n/10.95 Stat101hwk_Unit2_A.pdf\T1/cmr/m/n/10.95 (+20) , \T1/cmtt/m/n
-/10.95 Stat101hwk_Unit2_B.pdf\T1/cmr/m/n/10.95 (+20) , and \T1/cmtt/m/n/10.95 S
-tat101hwk_Unit2_C.pdf\T1/cmr/m/n/10.95 (+20) .
- []
-
-File: stock.png Graphic file (type png)
-<use stock.png>
-Package pdftex.def Info: stock.png used on input line 942.
-(pdftex.def)             Requested size: 277.41176pt x 188.16267pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 943.
-See the caption package documentation for explanation.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [38]
-File: stock.png Graphic file (type png)
-
-<use stock.png>
-Package pdftex.def Info: stock.png used on input line 951.
-(pdftex.def)             Requested size: 277.41176pt x 188.16267pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 952.
-See the caption package documentation for explanation.
-
-[39]
-File: stock.png Graphic file (type png)
- <use stock.png>
-Package pdftex.def Info: stock.png used on input line 960.
-(pdftex.def)             Requested size: 277.41176pt x 188.16267pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 961.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 980--981
-
- []
-
-[40]
-
-Package xcolor Warning: Incompatible color definition on input line 983.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 991--992
-[]\T1/cmr/m/n/10.95 (+20) This cre-ates four files, \T1/cmtt/m/n/10.95 Stat101h
-wk_Unit2_crossSection.pdf\T1/cmr/m/n/10.95 (+20) ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 991--992
-\T1/cmtt/m/n/10.95 Stat101hwk_Unit2_A_lowScore.txt\T1/cmr/m/n/10.95 (+20) , \T1
-/cmtt/m/n/10.95 Stat101hwk_Unit2_B_lowScore.txt\T1/cmr/m/n/10.95 (+20) , and
- []
-
-File: stock.png Graphic file (type png)
-<use stock.png>
-Package pdftex.def Info: stock.png used on input line 999.
-(pdftex.def)             Requested size: 170.71393pt x 115.79103pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1000.
-See the caption package documentation for explanation.
-
-File: stock.png Graphic file (type png)
-<use stock.png>
-Package pdftex.def Info: stock.png used on input line 1008.
-(pdftex.def)             Requested size: 341.43437pt x 231.58806pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1009.
-See the caption package documentation for explanation.
-
-[41]
-File: stock.png Graphic file (type png)
- <use stock.png>
-Package pdftex.def Info: stock.png used on input line 1017.
-(pdftex.def)             Requested size: 320.0935pt x 217.11491pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1018.
-See the caption package documentation for explanation.
-
-[42] [43]
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1038
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1040.
-
-
-Overfull \hbox (41.72177pt too wide) in paragraph at lines 1042--1042
-[][]\T1/cmtt/m/n/10.95 dataFolder[] []=[] []system.file[][]([][]"inst/extdata/D
-ataFiles/Topic06_Split"[][],[] []package[] []=[] []"ePort"[][])[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [44
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1054
-\T1/cmtt/m/n/10.95 Topic06.B.part1.csv\T1/cmr/m/n/10.95 (+20) , \T1/cmtt/m/n/10
-.95 Topic06.B.part2.csv\T1/cmr/m/n/10.95 (+20) , \T1/cmtt/m/n/10.95 Topic06.C.p
-art1.csv\T1/cmr/m/n/10.95 (+20) , and
- []
-
-
-Underfull \hbox (badness 1221) in paragraph at lines 1053--1054
-\T1/cmtt/m/n/10.95 Topic06.C.part2.csv\T1/cmr/m/n/10.95 (+20) . You can ver-ify
- that the \T1/cmtt/m/n/10.95 part1 \T1/cmr/m/n/10.95 (+20) files con-tain the f
-irst 9
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1060
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1062.
-
-
-Overfull \hbox (30.40503pt too wide) in paragraph at lines 1064--1064
-[][]\T1/cmtt/m/n/10.95 dataFolder[] []=[] []system.file[][]([][]"inst/extdata/D
-ataFiles/Topic11_Merge"[][],[] []package[][]=[][]"ePort"[][])[][] 
- []
-
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 107
-0.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmtt.fd
-File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `cmtt' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-Overfull \hbox (45.68262pt too wide) in paragraph at lines 1072--1072
-[]  []\T1/cmtt/m/n/10.95 combineFiles[][](tmp[[][]2[][]], tmp[[][]1[][]],[] []p
-aste[][]([][]dirname[][](tmp[[][]1[][]]),[] []"/"[][],[] []paste[][](topicNum, 
-i,[] []"csv"[][],[][] 
- []
-
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 1085--1086
-
- []
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1088.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (55.9724pt too wide) in paragraph at lines 1090--1114
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1116--1117
-
- []
-
-[46]
-
-Package xcolor Warning: Incompatible color definition on input line 1119.
-
-
-Overfull \hbox (31.5367pt too wide) in paragraph at lines 1122--1122
-[][]\T1/cmtt/m/n/10.95 dataFolder[] []=[] []system.file[][]([][]"inst/extdata/D
-ataFiles/Topic06_Deidentified"[][],[] []package[] []=[][] 
- []
-
-
-Overfull \hbox (25.87833pt too wide) in paragraph at lines 1124--1124
-[][]\T1/cmtt/m/n/10.95 getNameList[][](dataFolder,[] []section[] []=[] []NULL[]
-[],[] []semester[] []=[] []NULL[][],[] []secblind[] []=[] []TRUE[][],[] []save[
-] []=[][] 
- []
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1134.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (55.9724pt too wide) in paragraph at lines 1136--1160
- [] 
- []
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1165.
-See the caption package documentation for explanation.
-
-[47] [48]
-Underfull \hbox (badness 10000) in paragraph at lines 1196--1197
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1199.
-
-
-Overfull \hbox (25.87833pt too wide) in paragraph at lines 1201--1201
-[][]\T1/cmtt/m/n/10.95 dataPath[] []=[] []system.file[][]([][]"inst/extdata/Dat
-aFiles/Topic06/Topic06.A.csv"[][],[] []package[] []=[][] 
- []
-
-
-Overfull \hbox (8.90321pt too wide) in paragraph at lines 1203--1203
-[][]\T1/cmtt/m/n/10.95 makeReport[][]([][]keyFile[] []= keyPath,[] []dataFile[]
- []= dataPath,[] []loFile[] []= loPath,[] []outFile[] []=[][] 
- []
-
-
-Overfull \hbox (25.87833pt too wide) in paragraph at lines 1206--1206
-[][]\T1/cmtt/m/n/10.95 dataPath[] []=[] []system.file[][]([][]"inst/extdata/Dat
-aFiles/Topic06/Topic06.B.csv"[][],[] []package[] []=[][] 
- []
-
-
-Overfull \hbox (8.90321pt too wide) in paragraph at lines 1209--1209
-[][]\T1/cmtt/m/n/10.95 makeReport[][]([][]keyFile[] []= keyPath,[] []dataFile[]
- []= dataPath,[] []loFile[] []= loPath,[] []outFile[] []=[][] 
- []
-
-
-Overfull \hbox (25.87833pt too wide) in paragraph at lines 1212--1212
-[][]\T1/cmtt/m/n/10.95 dataPath[] []=[] []system.file[][]([][]"inst/extdata/Dat
-aFiles/Topic06/Topic06.C.csv"[][],[] []package[] []=[][] 
- []
-
-
-Overfull \hbox (8.90321pt too wide) in paragraph at lines 1215--1215
-[][]\T1/cmtt/m/n/10.95 makeReport[][]([][]keyFile[] []= keyPath,[] []dataFile[]
- []= dataPath,[] []loFile[] []= loPath,[] []outFile[] []=[][] 
- []
-
-
-Underfull \hbox (badness 2556) in paragraph at lines 1221--1222
-\T1/cmr/m/n/10.95 (+20) of our three sec-tions (\T1/cmtt/m/n/10.95 Stat101hwk_T
-opic06_A--short.pdf\T1/cmr/m/n/10.95 (+20) , \T1/cmtt/m/n/10.95 Stat101hwk_Topi
-c06_B-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
-\T1/cmtt/m/n/10.95 Stat101hwk_Topic06_B_lowScore.txt\T1/cmr/m/n/10.95 (+20) , a
-nd \T1/cmtt/m/n/10.95 Stat101hwk_Topic06_C_lowScore.txt\T1/cmr/m/n/10.95 (+20) 
-).
- []
-
-[49
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 1223--1224
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1226.
-
-
-Overfull \hbox (28.7075pt too wide) in paragraph at lines 1229--1229
-[]  []\T1/cmtt/m/n/10.95 package[] []=[] []"ePort"[][]),[] []system.file[][]([]
-[]"inst/extdata/DataFiles/Topic06/Topic06.B.csv"[][],[][] 
- []
-
-
-Overfull \hbox (28.7075pt too wide) in paragraph at lines 1230--1230
-[]  []\T1/cmtt/m/n/10.95 package[] []=[] []"ePort"[][]),[] []system.file[][]([]
-[]"inst/extdata/DataFiles/Topic06/Topic06.C.csv"[][],[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1236--1237
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1239.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1247--1248
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1250.
-
-
-Overfull \hbox (28.7075pt too wide) in paragraph at lines 1254--1254
-[]  []\T1/cmtt/m/n/10.95 makeReport[][]([][]keyFile[] []= keyPath,[] []dataFile
-[] []= i,[] []loFile[] []= loPath,[] []outFile[] []= outPath,[][] 
- []
-
-[50] [51] [52
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 1289--1290
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1292.
-
-
-Overfull \hbox (24.74666pt too wide) in paragraph at lines 1294--1294
-[][]\T1/cmtt/m/n/10.95 unlink[][]([][]paste0[][]([][]system.file[][]([][]"inst/
-extdata/OutputFiles"[][],[] []package[] []=[] []"ePort"[][]),[] []"/*"[][]))[][
-] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1299--1300
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1302.
-
-[53]
-Overfull \hbox (25.87833pt too wide) in paragraph at lines 1304--1304
-[][]\T1/cmtt/m/n/10.95 dataPath[] []=[] []system.file[][]([][]"inst/extdata/Dat
-aFiles/Topic06/Topic06.A.csv"[][],[] []package[] []=[][] 
- []
-
-
-Overfull \hbox (8.90321pt too wide) in paragraph at lines 1306--1306
-[][]\T1/cmtt/m/n/10.95 makeReport[][]([][]keyFile[] []= keyPath,[] []dataFile[]
- []= dataPath,[] []loFile[] []= loPath,[] []outFile[] []=[][] 
- []
-
-
-Overfull \hbox (48.51181pt too wide) in paragraph at lines 1307--1307
-[]  []\T1/cmtt/m/n/10.95 outPath,[] []reportType[] []=[] []"secTopicShort"[][],
-[] []keepFiles[] []=[] []TRUE[][],[] []keepTex[] []=[] []TRUE[][],[] []keepImag
-e[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1318
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1320.
-
-
-Overfull \hbox (24.74666pt too wide) in paragraph at lines 1322--1322
-[][]\T1/cmtt/m/n/10.95 unlink[][]([][]paste0[][]([][]system.file[][]([][]"inst/
-extdata/OutputFiles"[][],[] []package[] []=[] []"ePort"[][]),[] []"/*"[][]))[][
-] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1327--1328
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1330.
-
-
-Overfull \hbox (25.87833pt too wide) in paragraph at lines 1333--1333
+Overfull \hbox (25.87833pt too wide) in paragraph at lines 273--273
 [][]\T1/cmtt/m/n/10.95 makeReport[][]([][]outFile[] []= outPath,[] []unit[] []=
 [] []2[][],[] []reportType[] []=[] []"crossSecUnit"[][],[] []className[] []=[][
 ] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1339--1340
-[]\T1/cmr/m/n/10.95 (+20) This cre-ates four files, \T1/cmtt/m/n/10.95 Eng444hw
-k_Unit2_crossSection.pdf\T1/cmr/m/n/10.95 (+20) ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1339--1340
-\T1/cmtt/m/n/10.95 Eng444hwk_Unit2_A_lowScore.txt\T1/cmr/m/n/10.95 (+20) , \T1/
-cmtt/m/n/10.95 Eng444hwk_Unit2_B_lowScore.txt\T1/cmr/m/n/10.95 (+20) , and
- []
-
-[54] [55] [56
-
-] [57
-
-]
+[6] [7]
 \tf@toc=\write5
-\openout5 = `ePort.toc'.
+\openout5 = `myThesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1355.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1355.
- (./ePort.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1355.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1355.
-
-Package rerunfilecheck Info: File `ePort.out' has not changed.
-(rerunfilecheck)             Checksum: 6A71C7B2EE7BA04C15325BB7CB5B67DF;3149.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1355.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 295.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 295.
+ (./myThesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 295.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 295.
+Package rerunfilecheck Info: File `myThesis.out' has not changed.
+(rerunfilecheck)             Checksum: C1894B47AD364DFA379D56FC9619F98A;525.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 295.
  ) 
 Here is how much of TeX's memory you used:
- 16410 strings out of 493089
- 242837 string characters out of 6134842
- 431760 words of memory out of 5000000
- 19382 multiletter control sequences out of 15000+600000
- 29395 words of font info for 109 fonts, out of 8000000 for 9000
+ 16100 strings out of 493089
+ 239050 string characters out of 6134842
+ 403875 words of memory out of 5000000
+ 19292 multiletter control sequences out of 15000+600000
+ 24839 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,12n,78p,2268b,541s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/cm-super/sfsi1440.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/cm-super/sfti2074.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on ePort.pdf (57 pages, 993606 bytes).
+ 47i,12n,78p,503b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfsi1440.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/cm-super/sfti2074.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on myThesis.pdf (7 pages, 799784 bytes).
 PDF statistics:
- 714 PDF objects out of 1000 (max. 8388607)
- 626 compressed objects within 7 object streams
- 157 named destinations out of 1000 (max. 500000)
- 21894 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 151 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 18502 words of extra memory for PDF output out of 20736 (max. 10000000)
 
