@@ -2,7 +2,6 @@
 \documentclass[11pt,a4paper,oldfontcommands,openany]{memoir}
 \usepackage{graphicx}
 \usepackage[]{color}
-\usepackage{url}
 %% maxwidth is the original width if it is less than linewidth
 %% otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
@@ -56,10 +55,7 @@
 \setcounter{secnumdepth}{4}  % Remove section numbering at certain depth # If zero, then no numbering of sections
 \setcounter{tocdepth}{4} % Determines number of subsections that will have tabs
 \usepackage{tabu}
-
-\usepackage[square,sort,comma,numbers]{natbib}
-\bibliographystyle{plain}
-
+\usepackage[round,sort]{natbib}
 \usepackage{fixltx2e}
 %\usepackage{graphicx}	% For external pictures
 \usepackage{float}
@@ -179,8 +175,8 @@ Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah 
 
 \section{Abstract}
 
-In this chapter, we introduce ggenealogy (\cite{ggen}), a developing R software package that provides tools for searching through genealogical data, generating basic statistics on their graphical structures using parent and child connections, and displaying the results. The package allows users to draw the genealogy in relation to variables related to the nodes, and to determine and display the shortest path distances between the nodes. Production of pairwise distance matrices and genealogical diagrams constrained on generation are also available in the visualization toolkit. We are testing the tools on a dataset with milestone cultivars of soybean varieties (\cite{soybean}) as well as on a web-based database of the academic genealogy of mathematicians (\cite{mgp}). 
-The software package has been available on the Comprehensive R Archive Network since March 2015. 
+In this chapter, we introduce \pkg{ggenealogy} (\cite{ggen}), a developing \proglang{R} software package that provides tools for searching through genealogical data, generating basic statistics on their graphical structures using parent and child connections, and displaying the results. The package allows users to draw the genealogy in relation to variables related to the nodes, and to determine and display the shortest path distances between the nodes. Production of pairwise distance matrices and genealogical diagrams constrained on generation are also available in the visualization toolkit. We are testing the tools on a dataset with milestone cultivars of soybean varieties (\cite{soybean}) as well as on a web-based database of the academic genealogy of mathematicians (\cite{mgp}). 
+The software package has been available on the Comprehensive \proglang{R} Archive Network since March 2015. 
 
 \chapter{Stock syntax}
 \section{Database structure}
@@ -300,5 +296,6 @@ The absolute pathway to the \texttt{extdata} directory on your local computer ca
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \bibliography{myThesis}
+\bibliographystyle{plain}
 
 \end{document}
