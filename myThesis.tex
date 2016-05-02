@@ -57,8 +57,8 @@
 \setcounter{tocdepth}{4} % Determines number of subsections that will have tabs
 \usepackage{tabu}
 
-\usepackage[square,sort,comma,numbers]{natbib}
-\bibliographystyle{plain}
+\usepackage[round]{natbib}   % omit 'round' option if you prefer square brackets
+\bibliographystyle{plainnat}
 
 \usepackage{fixltx2e}
 %\usepackage{graphicx}	% For external pictures
@@ -179,7 +179,7 @@ Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah 
 
 \section{Abstract}
 
-In this chapter, we introduce ggenealogy (\cite{ggen}), a developing R software package that provides tools for searching through genealogical data, generating basic statistics on their graphical structures using parent and child connections, and displaying the results. The package allows users to draw the genealogy in relation to variables related to the nodes, and to determine and display the shortest path distances between the nodes. Production of pairwise distance matrices and genealogical diagrams constrained on generation are also available in the visualization toolkit. We are testing the tools on a dataset with milestone cultivars of soybean varieties (\cite{soybean}) as well as on a web-based database of the academic genealogy of mathematicians (\cite{mgp}). 
+In this chapter, we introduce ggenealogy (\citealt{ggen}), a developing R software package that provides tools for searching through genealogical data, generating basic statistics on their graphical structures using parent and child connections, and displaying the results. The package allows users to draw the genealogy in relation to variables related to the nodes, and to determine and display the shortest path distances between the nodes. Production of pairwise distance matrices and genealogical diagrams constrained on generation are also available in the visualization toolkit. We are testing the tools on a dataset with milestone cultivars of soybean varieties (\citealt{soybean}) as well as on a web-based database of the academic genealogy of mathematicians (\citealt{mgp}). 
 The software package has been available on the Comprehensive R Archive Network since March 2015. 
 
 \chapter{Stock syntax}

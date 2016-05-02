@@ -1,20 +1,29 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{soybean}
+\bibitem[Hymowitz et~al.(1977)Hymowitz, Newell, and Carmer]{soybean}
 T~Hymowitz, CA~Newell, and SG~Carmer.
-\newblock {\em Pedigrees of Soybean Cultivars Released in the United States and
-  Canada}.
+\newblock \emph{Pedigrees of Soybean Cultivars Released in the United States
+  and Canada}.
 \newblock International Soybean Series, College of Agriculture, University of
   Illinois at Urbana-Champaign, Urbana, IL, 1977.
 
-\bibitem{mgp}
-{\em The Mathematics Genealogy Project}, 2010.
+\bibitem[North Dakota State University and American Mathematical
+  Society()]{mgp}
+North Dakota State University and American Mathematical Society.
+\newblock \emph{The Mathematics Genealogy Project}, 2010.
+\newblock URL \url{http://www.genealogy.math.ndsu.nodak.edu}.
 \newblock Archived Web Site. Retrieved from the Library of Congress, Accessed
   on March 6, 2015.
 
-\bibitem{ggen}
+\bibitem[Rutter et~al.(2015)Rutter, Vanderplas, and Cook]{ggen}
 Lindsay Rutter, Susan Vanderplas, and Di~Cook.
-\newblock {\em ggenealogy: Visualization Tools for Genealogical Data}, 2015.
+\newblock \emph{ggenealogy: Visualization Tools for Genealogical Data}, 2015.
+\newblock URL \url{https://CRAN.R-project.org/package=ggenealogy}.
 \newblock R package version 0.1.0.
 
 \end{thebibliography}
