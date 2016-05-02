@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: myThesis.aux
 The style file: plainnat.bst
 Database file #1: myThesis.bib
-You've used 3 entries,
+Warning--empty publisher in shiny
+You've used 12 entries,
             2773 wiz_defined-function locations,
-            608 strings with 5462 characters,
-and the built_in function-call counts, 1087 in all, are:
-= -- 94
-> -- 60
-< -- 0
-+ -- 21
-- -- 18
-* -- 89
-:= -- 168
-add.period$ -- 11
-call.type$ -- 3
-change.case$ -- 13
-chr.to.int$ -- 3
-cite$ -- 6
-duplicate$ -- 56
-empty$ -- 89
-format.name$ -- 20
-if$ -- 221
+            665 strings with 6876 characters,
+and the built_in function-call counts, 4723 in all, are:
+= -- 417
+> -- 276
+< -- 6
++ -- 96
+- -- 84
+* -- 375
+:= -- 736
+add.period$ -- 44
+call.type$ -- 12
+change.case$ -- 57
+chr.to.int$ -- 12
+cite$ -- 25
+duplicate$ -- 223
+empty$ -- 379
+format.name$ -- 100
+if$ -- 970
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 2
-newline$ -- 25
-num.names$ -- 8
-pop$ -- 30
+missing$ -- 9
+newline$ -- 76
+num.names$ -- 40
+pop$ -- 124
 preamble$ -- 1
-purify$ -- 13
+purify$ -- 54
 quote$ -- 0
-skip$ -- 42
+skip$ -- 181
 stack$ -- 0
-substring$ -- 6
-swap$ -- 5
+substring$ -- 86
+swap$ -- 17
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 28
-warning$ -- 0
-while$ -- 6
+type$ -- 117
+warning$ -- 1
+while$ -- 34
 width$ -- 0
-write$ -- 47
+write$ -- 169
+(There was 1 warning)
