@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 MAY 2016 00:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 MAY 2016 15:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -383,10 +383,6 @@ Package color Info: Driver file: pdftex.def on input line 142.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip10
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
@@ -699,7 +695,7 @@ LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count157
 \c@MaxMatrixCols=\count158
-\dotsspace@=\muskip11
+\dotsspace@=\muskip10
 \c@parentequation=\count159
 \dspbrk@lvl=\count160
 \tag@help=\toks35
@@ -824,12 +820,12 @@ L3 Module: l3skip 2014/08/23 v5354 L3 Dimensions and skips
 \l_tmpb_skip=\skip191
 \g_tmpa_skip=\skip192
 \g_tmpb_skip=\skip193
-\c_zero_muskip=\muskip12
-\c_max_muskip=\muskip13
-\l_tmpa_muskip=\muskip14
-\l_tmpb_muskip=\muskip15
-\g_tmpa_muskip=\muskip16
-\g_tmpb_muskip=\muskip17
+\c_zero_muskip=\muskip11
+\c_max_muskip=\muskip12
+\l_tmpa_muskip=\muskip13
+\l_tmpb_muskip=\muskip14
+\g_tmpa_muskip=\muskip15
+\g_tmpb_muskip=\muskip16
 L3 Module: l3keys 2015/01/27 v5500 L3 Key-value interfaces
 \g__keyval_level_int=\count184
 \l_keys_choice_int=\count185
@@ -1099,6 +1095,10 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \tabu@hleads=\box74
 \tabu@vleads=\box75
 \tabu@cellskip=\skip195
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
@@ -1929,24 +1929,42 @@ Underfull \vbox (badness 1292) has occurred while \output is active []
 Underfull \vbox (badness 2065) has occurred while \output is active []
 
  [5]
-<kinshipFig.png, id=187, 452.892pt x 360.3864pt>
+<kinshipFig.png, id=193, 452.892pt x 360.3864pt>
 File: kinshipFig.png Graphic file (type png)
  <use kinshipFig.png>
 Package pdftex.def Info: kinshipFig.png used on input line 228.
 (pdftex.def)             Requested size: 277.41176pt x 220.75372pt.
- [6 <./kinshipFig.png>] <Graph.png, id=201, 520.8258pt x 337.26pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Class memoir Warning: The material used in the headers is too large
+(27.2pt) for the given head height (13.6pt), it is recommended to
+either increase the head height or redesign the header
+(in both cases you will find help in the memoir manual). on input line 232.
+
+
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[6] <Graph.png, id=207, 520.8258pt x 337.26pt>
 File: Graph.png Graphic file (type png)
  <use Graph.png>
 Package pdftex.def Info: Graph.png used on input line 239.
 (pdftex.def)             Requested size: 256.07741pt x 165.82492pt.
 
-Underfull \vbox (badness 6708) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7 <./Graph.png>]
-Underfull \vbox (badness 2050) has occurred while \output is active []
+ [7 <./kinshipFig.png>]
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
- [8]
-[9] [10]
+
+[8 <./Graph.png>] [9]
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[10] [11]
 Underfull \hbox (badness 10000) in paragraph at lines 363--363
 
  []
@@ -1976,21 +1994,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 363--363
 
  []
 
-[11]
+
+Underfull \vbox (badness 1496) has occurred while \output is active []
+
+
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 380--380
 
  []
 
-<pathTNZB.png, id=237, 636.9396pt x 398.9304pt>
+<pathTNZB.png, id=248, 636.9396pt x 398.9304pt>
 File: pathTNZB.png Graphic file (type png)
  <use pathTNZB.png>
 Package pdftex.def Info: pathTNZB.png used on input line 390.
 (pdftex.def)             Requested size: 426.79135pt x 267.30632pt.
+ [13 <./pathTNZB.png>]
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12] [13 <./pathTNZB.png>]
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 434--434
 []\T1/pcr/m/n/10.95 R> plotPathOnAll(pathTN, sbGeneal, sbIG, binVector = 1:3,
  []
@@ -2005,7 +2030,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 434--434
 \T1/pcr/m/n/10.95 ggplot2::theme(axis.text = ggplot2::element_text(size = 12),
  []
 
-<plotTNBin3.png, id=252, 693.59125pt x 405.515pt>
+<plotTNBin3.png, id=263, 693.59125pt x 405.515pt>
 File: plotTNBin3.png Graphic file (type png)
  <use plotTNBin3.png>
 Package pdftex.def Info: plotTNBin3.png used on input line 438.
@@ -2016,15 +2041,12 @@ Underfull \hbox (badness 2158) in paragraph at lines 443--444
  ggplot2 \T1/cmr/m/n/10.95 (+20) pack-age was ap-pended to the
  []
 
-[14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15 <./plotTNBin3.png>]
+[15 <./plotTNBin3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 457--457
 []\T1/pcr/m/n/10.95 R> plotPathOnAll(pathTN, sbGeneal, sbIG, binVector = 1:6,
  []
 
-<plotTNBin6.png, id=270, 693.59125pt x 405.515pt>
+<plotTNBin6.png, id=277, 693.59125pt x 405.515pt>
 File: plotTNBin6.png Graphic file (type png)
  <use plotTNBin6.png>
 Package pdftex.def Info: plotTNBin6.png used on input line 461.
@@ -2032,30 +2054,28 @@ Package pdftex.def Info: plotTNBin6.png used on input line 461.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16 <./plotTNBin6.png>]
+
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 479--479
 []\T1/pcr/m/n/10.95 R> plotAncDes("Lee", sbGeneal, mAnc = 6, mDes = 6, vCol =
  []
 
-<LeeAD3.png, id=282, 536.2434pt x 381.1038pt>
+[17 <./plotTNBin6.png>] <LeeAD3.png, id=293, 536.2434pt x 381.1038pt>
 File: LeeAD3.png Graphic file (type png)
- <use LeeAD3.png>
+
+<use LeeAD3.png>
 Package pdftex.def Info: LeeAD3.png used on input line 485.
 (pdftex.def)             Requested size: 426.79135pt x 303.32498pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
- [17]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18 <./LeeAD3.png>]
+[18 <./LeeAD3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 501--501
 []\T1/pcr/m/n/10.95 >R varieties <- c("Brim", "Bedford", "Calland", "Dillon",
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 501--501
-\T1/pcr/m/n/10.95 "Hood", "Narow", "Pella", "Tokyo", "Young", "Zane")
  []
 
 
@@ -2078,23 +2098,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 501--501
 \T1/pcr/m/n/10.95 = ggplot2::element_text(size = 15), legend.text =
  []
 
-<degMatrix.png, id=297, 349.305pt x 289.08pt>
+<degMatrix.png, id=305, 349.305pt x 289.08pt>
 File: degMatrix.png Graphic file (type png)
  <use degMatrix.png>
 Package pdftex.def Info: degMatrix.png used on input line 507.
 (pdftex.def)             Requested size: 213.39568pt x 176.6032pt.
- [19 <./degMatrix.png>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19]
+Underfull \vbox (badness 2521) has occurred while \output is active []
+
+
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[20 <./degMatrix.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 529--529
 \T1/pcr/m/n/10.95 >R dFunc <- function(var) nrow(getDescendants(var, statGeneal
 ,
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]
-Underfull \hbox (badness 10000) in paragraph at lines 539--539
-
  []
 
 
@@ -2103,7 +2126,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 554--554
 vCol
  []
 
-<dCox.png, id=317, 779.91376pt x 1187.43625pt>
+<dCox.png, id=324, 779.91376pt x 1187.43625pt>
 File: dCox.png Graphic file (type png)
  <use dCox.png>
 Package pdftex.def Info: dCox.png used on input line 558.
@@ -2112,22 +2135,19 @@ Package pdftex.def Info: dCox.png used on input line 558.
 
 LaTeX Warning: Float too large for page by 13.29039pt on input line 561.
 
+[21]
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
+
+[22 <./dCox.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 575--575
 []\T1/pcr/m/n/10.95 R> nrow(getDescendants("Peter Bloomfield", statGeneal, gen 
 =
  []
 
-[21] [22 <./dCox.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 587--587
-[]\T1/pcr/m/n/10.95 R> statIG <- dfToIG(statGeneal) R> pathCB <- getPath("David
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 587--587
-\T1/pcr/m/n/10.95 Cox", "Petra Buzkova", statIG, statGeneal, isDirected = FALSE
-)
+\T1/pcr/m/n/10.95 R> pathCB <- getPath("David Cox", "Petra Buzkova", statIG,
  []
 
 
@@ -2140,15 +2160,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 587--587
 \T1/pcr/m/n/10.95 = ggplot2::element_text(size = 10), axis.title =
  []
 
-<pathCB.png, id=329, 454.69875pt x 397.485pt>
+<pathCB.png, id=336, 454.69875pt x 397.485pt>
 File: pathCB.png Graphic file (type png)
  <use pathCB.png>
 Package pdftex.def Info: pathCB.png used on input line 591.
 (pdftex.def)             Requested size: 298.75264pt x 261.16428pt.
 
-Underfull \vbox (badness 1077) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23 <./pathCB.png>]
+ [23]
 Underfull \hbox (badness 10000) in paragraph at lines 604--604
 []\T1/pcr/m/n/10.95 R> plotPathOnAll(pathCB, statGeneal, statIG, binVector =
  []
@@ -2164,21 +2184,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 604--604
 \T1/pcr/m/n/10.95 = 8), axis.title = ggplot2::element_text(size = 8)) +
  []
 
-<plotCBText.png, id=341, 691.58376pt x 405.515pt>
+
+Underfull \vbox (badness 3118) has occurred while \output is active []
+
+
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[24 <./pathCB.png>] <plotCBText.png, id=352, 691.58376pt x 405.515pt>
 File: plotCBText.png Graphic file (type png)
- <use plotCBText.png>
+
+<use plotCBText.png>
 Package pdftex.def Info: plotCBText.png used on input line 608.
 (pdftex.def)             Requested size: 426.79135pt x 250.2534pt.
- [24 <./plotCBText.png>] <plotCBNoText.png, id=351, 592.2125pt x 397.485pt>
-File: plotCBNoText.png Graphic file (type png)
+ [25 <./plotCBText.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 619--619
+[]\T1/pcr/m/n/10.95 R> plotPathOnAll(pathCB, statGeneal, statIG,
+ []
 
-<use plotCBNoText.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--619
+\T1/pcr/m/n/10.95 binVector = 1:200, nodeSize = .5, pathNodeSize =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--619
+\T1/pcr/m/n/10.95 2.5, nodeCol = "darkgray", edgeCol = "lightgray") +
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--619
+\T1/pcr/m/n/10.95 ggplot2::theme(axis.text = ggplot2::element_text(size
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--619
+\T1/pcr/m/n/10.95 = 8), axis.title = ggplot2::element_text(size = 8)) +
+ []
+
+<plotCBNoText.png, id=363, 592.2125pt x 397.485pt>
+File: plotCBNoText.png Graphic file (type png)
+ <use plotCBNoText.png>
 Package pdftex.def Info: plotCBNoText.png used on input line 623.
 (pdftex.def)             Requested size: 426.79135pt x 286.4619pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
- [25]
+
+[26 <./plotCBNoText.png>]
+
+LaTeX Warning: Reference `fig:plotAnimate' on page 27 undefined on input line 6
+30.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 634--634
 []\T1/pcr/m/n/10.95 R> plotPathOnAll(pathCB, statGeneal, statIG, binVector =
  []
@@ -2189,124 +2247,129 @@ Underfull \hbox (badness 10000) in paragraph at lines 634--634
 ",
  []
 
-[26 <./plotCBNoText.png>] <./plotCBNoText.png, id=370, 592.2125pt x 397.485pt>
-File: ./plotCBNoText.png Graphic file (type png)
+[27]
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
-<use ./plotCBNoText.png>
-Package pdftex.def Info: ./plotCBNoText.png used on input line 638.
-(pdftex.def)             Requested size: 592.21104pt x 397.48402pt.
-\g__file_internal_ior=\read3
-<<VPlayer.swf>><<animateGen.mov>> [27 <./plotCBNoText.png>] [28] <stock.png, id
-=410, 577.15625pt x 391.4625pt>
+
+[28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+[31] <stock.png, id=446, 577.15625pt x 391.4625pt>
 File: stock.png Graphic file (type png)
  <use stock.png>
-Package pdftex.def Info: stock.png used on input line 686.
+Package pdftex.def Info: stock.png used on input line 705.
 (pdftex.def)             Requested size: 426.79135pt x 289.48656pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 687.
+(caption)                particular \caption on input line 706.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 686--687
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 705--706
  [] 
  []
 
-[29
+[32
 
  <./stock.png>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 696.
+(caption)                particular \caption on input line 715.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 734--735
+Underfull \hbox (badness 10000) in paragraph at lines 753--754
 
  []
 
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 739.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 758.
 
-Overfull \hbox (79.09804pt too wide) in paragraph at lines 747--747
+Overfull \hbox (79.09804pt too wide) in paragraph at lines 766--766
 [][]\T1/pcr/m/n/10.95 keyHTM[] []=[] []\T1/pcr/b/n/10.95 system.file[][]\T1/pcr
 /m/n/10.95 ([][]"inst/extdata/KeyFiles/Topic06.Questions.htm"[][],[] []package[
 ] []=[][] 
  []
 
 
-Overfull \hbox (98.80801pt too wide) in paragraph at lines 754--754
+Overfull \hbox (98.80801pt too wide) in paragraph at lines 773--773
 [][]\T1/pcr/m/n/10.95 dataPath[] []=[] []\T1/pcr/b/n/10.95 system.file[][]\T1/p
 cr/m/n/10.95 ([][]"inst/extdata/DataFiles/Topic06/Topic06.A.csv"[][],[] []packa
 ge[] []=[][] 
  []
 
 
-Overfull \hbox (123.77399pt too wide) in paragraph at lines 759--759
+Overfull \hbox (123.77399pt too wide) in paragraph at lines 778--778
 [][]\T1/pcr/m/n/10.95 loPath[] []=[] []\T1/pcr/b/n/10.95 system.file[][]\T1/pcr
 /m/n/10.95 ([][]"inst/extdata/LOFiles/Topic06.Outcomes.txt"[][],[] []package[] 
 []=[] []"ePort"[][])[][] 
  []
 
 
-Overfull \hbox (18.65411pt too wide) in paragraph at lines 761--761
+Overfull \hbox (18.65411pt too wide) in paragraph at lines 780--780
 [][]\T1/pcr/m/n/10.95 outPath[] []=[] []\T1/pcr/b/n/10.95 system.file[][]\T1/pc
 r/m/n/10.95 ([][]"inst/extdata/OutputFiles"[][],[] []package[] []=[] []"ePort"[
 ][])[][] 
  []
 
 
-Overfull \hbox (79.09804pt too wide) in paragraph at lines 763--763
+Overfull \hbox (79.09804pt too wide) in paragraph at lines 782--782
 [][]\T1/pcr/b/n/10.95 makeReport[][]\T1/pcr/m/n/10.95 ([][]keyFile[] []= keyPat
 h,[] []dataFile[] []= dataPath,[] []loFile[] []= loPath,[] []outFile[] []=[][] 
 
  []
 
-[30]
-Overfull \hbox (98.80801pt too wide) in paragraph at lines 773--773
+[33]
+Overfull \hbox (98.80801pt too wide) in paragraph at lines 792--792
 [][]\T1/pcr/b/n/10.95 makeReport[][]\T1/pcr/m/n/10.95 ([][]outFile[] []= outPat
 h,[] []unit[] []=[] []2[][],[] []reportType[] []=[] []"crossSecUnit"[][],[] []c
 lassName[] []=[][] 
  []
 
-(./myThesis.bbl [31]
+(./myThesis.bbl [34] [35
+
+]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 48.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 101.
+)
 
-! Undefined control sequence.
-l.51 \newblock \proglang
-                        {R} package version 0.10.2.1.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Class memoir Warning: The material used in the headers is too large
+(27.2pt) for the given head height (13.6pt), it is recommended to
+either increase the head height or redesign the header
+(in both cases you will find help in the memoir manual). on input line 816.
 
-[32
-
-])
-Package atenddvi Info: Last page = 33.
- [33]
+Package atenddvi Info: Last page = 36.
+[36]
 \tf@toc=\write8
 \openout8 = `myThesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 797.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 797.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 816.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 816.
  (./myThesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 797.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 797.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 816.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 816.
 Package rerunfilecheck Info: File `myThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 61EFA0E736CDF75A9A5201872BB740B2;1691.
+(rerunfilecheck)             Checksum: 4E8DF175B90D6857C05F4433DE4318A8;1789.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 36665 strings out of 493089
- 700421 string characters out of 6134842
- 846410 words of memory out of 5000000
- 39384 multiletter control sequences out of 15000+600000
- 29756 words of font info for 110 fonts, out of 8000000 for 9000
+ 36673 strings out of 493089
+ 700000 string characters out of 6134842
+ 843462 words of memory out of 5000000
+ 39373 multiletter control sequences out of 15000+600000
+ 30360 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,12n,85p,10366b,884s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,12n,85p,10366b,795s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/tex
 live/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texl
@@ -2326,10 +2389,10 @@ s/type1/public/cm-super/sfti2074.pfb></usr/local/texlive/2015/texmf-dist/fonts/
 type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
 w/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courie
 r/ucrro8a.pfb>
-Output written on myThesis.pdf (33 pages, 16841061 bytes).
+Output written on myThesis.pdf (36 pages, 2052925 bytes).
 PDF statistics:
- 537 PDF objects out of 1000 (max. 8388607)
- 448 compressed objects within 5 object streams
- 89 named destinations out of 1000 (max. 500000)
- 21866 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 572 PDF objects out of 1000 (max. 8388607)
+ 489 compressed objects within 5 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 21785 words of extra memory for PDF output out of 24883 (max. 10000000)
 

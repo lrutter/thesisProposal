@@ -2,7 +2,6 @@
 \usepackage{graphicx}
 \usepackage[]{color}
 \usepackage{courier}
-\usepackage{url}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[breakable, theorems, skins]{tcolorbox}
 \usepackage[]{media9}
@@ -79,6 +78,7 @@
 \setcounter{secnumdepth}{4}  % Remove section numbering at certain depth # If zero, then no numbering of sections
 \setcounter{tocdepth}{4} % Determines number of subsections that will have tabs
 \usepackage{tabu}
+\usepackage{url}
 
 \usepackage[round]{natbib}   % omit 'round' option if you prefer square brackets
 \bibliographystyle{plainnat}
@@ -196,14 +196,14 @@ Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah 
 
 Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah.
 
-\chapter{Visualization methods for genealogical datasets}
+\chapter{ggenealogy: Visualization methods for genealogical datasets}
 \label{sec:ggenealogy}
 
 \section{Abstract}
 
 In this chapter, we introduce \pkg{ggenealogy} (\citealt{ggen}), a developing \pkg{R} software package that provides tools for searching through genealogical data, generating basic statistics on their graphical structures using parent and child connections, and displaying the results. The package allows users to draw the genealogy in relation to variables related to the nodes, and to determine and display the shortest path distances between the nodes. Production of pairwise distance matrices and genealogical diagrams constrained on generation are also available in the visualization toolkit. We have tested the tools on a dataset with milestone cultivars of soybean varieties (\citealt{soybean}) as well as on a web-based database of the academic genealogy of mathematicians (\citealt{mgp}).
 
-The software package has been available on the Comprehensive \pkg{R} Archive Network since March 2015. In August 2015, a paper introducing the \pkg{ggenealogy} software package received a student paper competition award from the Statistical Computing and Graphics Section of the American Statistical Association. Currently, we are preparing to submit another paper describing the software package to the Journal of Statistical Software.
+The software package has been available on the Comprehensive \pkg{R} Archive Network since March 2015 (\citealt{ggen}). In August 2015, a paper introducing the \pkg{ggenealogy} software package received a student paper competition award from the Statistical Computing and Graphics Section of the American Statistical Association. Currently, we are preparing to submit another paper describing the software package to the Journal of Statistical Software.
 
 \section{Introduction}
 
@@ -274,7 +274,7 @@ We can load the example dataset of soybean genealogy (\code{sbGeneal}) and exami
 
 \subsection{Academic Genealogy of Statisticians}
 
-The \pkg{ggenealogy} package also comes with an academic genealogy of statisticians; this dataset is in the form of a data frame with 8165 rows and six columns. To develop this later dataset, we contacted the \citealt{mgp}, a web-based database for the genealogy of academic mathematicians. This database, which currently contains almost 200,000 entries, is a service of the North Dakota State University Department of Mathematics and the American Mathematical Society. The Mathematics Genealogy Project contact provided us a Structured Query Language (SQL) export, and we used PostgreSQL to query the database (\citealt{psql}).
+The \pkg{ggenealogy} package also comes with an academic genealogy of statisticians; this dataset is in the form of a data frame with 8165 rows and six columns. To develop this later dataset, we contacted the Math Genealogy Project (\citealt{mgp}), a web-based database for the genealogy of academic mathematicians. This database, which currently contains almost 200,000 entries, is a service of the North Dakota State University Department of Mathematics and the American Mathematical Society. The Mathematics Genealogy Project contact provided us a Structured Query Language (SQL) export, and we used PostgreSQL to query the database (\citealt{psql}).
 
 Each entry in the database contained 26 variables pertaining to an individual who received a graduate-level academic degree in mathematics. One of these variables was called ``msc" (Mathematics Subject Classification), and we selected only those entries that contained a value of 62 for this variable (coded as ``Statistics"). Furthermore, we only retained entries that had a parent if that parent was also in the field of ``Statistics". Hence, in our parent-child relationships, both the child and the parent received postbaccalaureate degrees in statistics, and the parent was the academic advisor to the child. This process resulted in 8995 entries, which we reduced to 8165 entries by removing duplicate entries. With the final data frame of 8165 entries, we only maintained six of the original 26 variables. 
 
@@ -496,7 +496,7 @@ It may also be of interest to generate matrices where the colors indicates a var
 Here we generate a distance matrix for a set of 10 varieties, setting the x-label and y-label as ``Variety" and the legend label as ``Degree". In this example, we add \pkg{ggplot2} functionality to specify that pairs with small degrees are white, while those with large degrees are dark green, as well as to specify the text size of the legend title and label.
 
 \mybox{
-\texttt{>R varieties <- c("Brim", "Bedford", "Calland", "Dillon", "Hood", "Narow", "Pella", "Tokyo", "Young", "Zane")}
+\texttt{>R varieties <- c("Brim", "Bedford", "Calland", "Dillon", "Hood", "Narow", "Pella", "Tokyo", "Young", "Zane")}\\
 \texttt{>R plotDegMatrix(varieties, sbIG, sbGeneal, "Variety", "Variety", "Degree") + ggplot2::scale\_fill\_continuous(low = "white", high = "darkgreen") + ggplot2::theme(legend.title = ggplot2::element\_text(size = 15), legend.text = ggplot2::element\_text(size = 15))}
 }
 
@@ -535,7 +535,7 @@ After that, we can generate a table to examine all values of ``descendant" count
 \texttt{  15   16   17   18   19   20   21   22   23   24   25   26   27   29   30 }\\
 \texttt{   6    4    3    2    5    7    5    3    3    2    2    6    1    1    3 }\\
 \texttt{  34   37   38   40   41   44   45   48   49   61   62   75   77   84  159 }\\
-\texttt{   2    1    1    1    1    1    1    1    2    1    1    1    1    1    1 }\\
+\texttt{   2    1    1    1    1    1    1    1    2    1    1    1    1    1    1 }
 }
 
 \mybox{
@@ -581,8 +581,8 @@ We see from Figure \ref{fig:dCox} that Sir David Cox had 42 ``children", many of
 At this point, it would be insightful to examine a more detailed view of one of the longest strings of ``parent-child" relationships between Sir David Cox and one of the two individuals who are his fifth generation ``descendants". We do so with the code below, choosing his fifth generation ``descendant" to be Petra Buzkova. We set the \code{fontFace} variable of the \code{plotPath()} to a value of 4, indicating we wish to boldface and italicize the two varieties of interest.
 
 \mybox{
-\texttt{R> statIG <- dfToIG(statGeneal)}
-\texttt{R> pathCB <- getPath("David Cox", "Petra Buzkova", statIG, statGeneal, isDirected = FALSE)}
+\texttt{R> statIG <- dfToIG(statGeneal)}\\
+\texttt{R> pathCB <- getPath("David Cox", "Petra Buzkova", statIG, statGeneal, isDirected = FALSE)}\\
 \texttt{R> plotPath(pathCB, fontFace = 4) + ggplot2::theme(axis.text = ggplot2::element\_text(size = 10), axis.title = ggplot2::element\_text(size = 10))}
 }
 
@@ -615,7 +615,7 @@ We see from the resulting Figure \ref{fig:plotCBText} that almost all text label
 The text labels are so numerous in Figure \ref{fig:plotCBText} that simply trying different values for the input parameter \code{binVector} will not solve the text overlapping problem. Instead, one approach we can try is to reconstruct the plot using the same \pkg{ggenealogy} function \code{plotPathOnAll()}, only now specifying variables to render the size (2.5) and color (default of black) of the text for nodes that are on the path of interest to be more noticeable than the size (0.5) and color (dark gray) of the text for nodes thare not on the path of interest. Moreover, we can make the edges that are not on the path of interest to be represented in a less noticeable color (light gray) than the edges that are on the path of interest (default of dark green). The variable names and options for these aesthetics is further detailed in the help manual of the function. We provide one example code that alters the defaults of the text color and sizes of nodes and edges below, which results in Figure \ref{fig:plotCBNoText}.
 
 \mybox{
-R> plotPathOnAll(pathCB, statGeneal, statIG, binVector = 1:200, nodeSize = .5, pathNodeSize = 2.5, nodeCol = "darkgray", edgeCol = "lightgray") + ggplot2::theme(axis.text = ggplot2::element\_text(size = 8), axis.title = ggplot2::element\_text(size = 8)) + ggplot2::scale\_x\_continuous(expand = c(.1, .2))
+\texttt{R> plotPathOnAll(pathCB, statGeneal, statIG, binVector = 1:200, nodeSize = .5, pathNodeSize = 2.5, nodeCol = "darkgray", edgeCol = "lightgray") + ggplot2::theme(axis.text = ggplot2::element\_text(size = 8), axis.title = ggplot2::element\_text(size = 8)) + ggplot2::scale\_x\_continuous(expand = c(.1, .2))}
 }
 
 \begin{figure}[H]
@@ -633,20 +633,20 @@ We could still improve upon Figure \ref{fig:plotCBNoText}. Even though we may be
 \texttt{R> plotPathOnAll(pathCB, statGeneal, statIG, binVector = 1:200, nodeSize = .5, pathNodeSize = 2.5, nodeCol = "darkgray", edgeCol = "lightgray", animate = TRUE)}
 }
 
-\begin{figure}[H]
-    \centering
-    \includemedia[width=1.0\textwidth, addresource=animateGen.mov, deactivate=onclick, flashvars={source=animateGen.mov}]{\includegraphics{./plotCBNoText.png}}{VPlayer.swf}
-    \caption{Upon clicking on this figure twice, a short video demonstrating the animation features for this function can be viewed. Please note that to properly view this video, the PDF version of this paper must be opened in Adobe Acrobat Reader DC, which can be downloaded free of charge.}
-    \label{fig:plotAnimate}
-\end{figure}
+%\begin{figure}[H]
+%    \centering
+%    \includemedia[width=1.0\textwidth, addresource=animateGen.mov, deactivate=onclick, flashvars={source=animateGen.mov}]{\includegraphics{./plotCBNoText.png}}{VPlayer.swf}
+%    \caption{Upon clicking on this figure twice, a short video demonstrating the animation features for this function can be viewed. Please note that to properly view this video, the PDF version of this paper must be opened in Adobe Acrobat Reader DC (Version >=9), which can be downloaded free of charge.}
+%    \label{fig:plotAnimate}
+%\end{figure}
 
 \section{Future Avenues}
 
-Incorporation of the Shiny application allows users to examine \pkg{ggenealogy} tools in a more interactive way (\citealt{shiny}). The reactive programming saves them the time of using command-line for each change of input as well as the inefficiency of rerunning code. A Shiny application that uses certain \pkg{ggenealogy} functionality is available for users who wish to explore the soybean genealogy; the data can be viewed at \url{http://shiny.soybase.org/CNV/}.
+Incorporation of the Shiny application allows users to examine \pkg{ggenealogy} tools in a more interactive way (\citealt{shiny}). The reactive programming saves them the time of using command line for each change of input as well as the inefficiency of rerunning code. A Shiny application that uses certain \pkg{ggenealogy} functionality is available for users who wish to explore the soybean genealogy; the data can be viewed at \url{http://shiny.soybase.org/CNV/}.
 
 We also aim to incorporate plotting tools that can examine not only quantitative variables (such as our example variable of ``year"), but also categorical variables associated with individuals in datasets. Moreover, we look forward to testing the \pkg{ggenealogy} package on additional genealogical data sets. Exploring several datasets with the software will allow us to fix remaining bugs, and provide us further insight into how to make our tools available for a wide range of data input formats. 
 
-The \pkg{ggenealogy} visualization tool \code{plotPathOnAll()} is suitable as a data exploration tool, but not always as a publication tool. This is because we still see textual overlap in small-enough datasets (see Figure \ref{fig:plotTNBin6}). As such, we plan to add a feature to the package that allows users to manually fine-tune automated plots. For example, after comparing several bin sizes on the soybean genealogy, we determined that the bin size of 6 produced the minimal textual overlap, as is seen in Figure \ref{fig:plotTNBin6}. If we could subsequently fine\-tune the vertical positions of the small fraction of text labels that remained overlapped after the automated \pkg{ggenealogy} function, then we could potentially remove all overlaps, and the plot could be used in presentations and publications. Of course, it is impossible to eliminate textual overlap in larger datasets (see Figure \ref{fig:plotCBText}). In such cases, we can remedy this problem by representing individuals who are not on the path of interest with dots instead of text (see Figure \ref{fig:plotCBNoText}).
+The \pkg{ggenealogy} visualization tool \code{plotPathOnAll()} is suitable as a data exploration tool, but not always as a publication tool. This is because we still see textual overlap in small-enough datasets (see Figure \ref{fig:plotTNBin6}). As such, we plan to add a feature to the package that allows users to manually fine-tune automated plots. For example, after comparing several bin sizes on the soybean genealogy, we determined that the bin size of 6 produced the minimal textual overlap, as is seen in Figure \ref{fig:plotTNBin6}. If we could subsequently fine-tune the vertical positions of the small fraction of text labels that remained overlapped after the automated \pkg{ggenealogy} function, then we could potentially remove all overlaps, and the plot could be used in presentations and publications. Of course, it is impossible to eliminate textual overlap in larger datasets (see Figure \ref{fig:plotCBText}). In such cases, we can remedy this problem by representing individuals who are not on the path of interest with dots instead of text (see Figure \ref{fig:plotCBNoText}).
 
 \section{Conclusions}
 
@@ -654,14 +654,40 @@ The \pkg{ggenealogy} package offers various plotting tools that can assist those
 
 \section{Acknowledgments}
 
-%The authors thank Drs. James E. Specht and Randy C. Shoemaker for helpful discussions of soybean genealogy. In addition, the authors are grateful for the financial support from the United Soybean Board (Project 1204), The North Central Soybean Research Program, the NSF Plant Genome Research Program (award number 0820642), and the USDA-ARS CRIS Project 3625-21220-005-00D. The USDA is an equal opportunity provider and employer. Mention of trade names or commercial products in this article is solely for the purpose of providing specific information and does not imply recommendation or endorsement by the U.S. Department of Agriculture. Author Cook was a faculty member at Iowa State University at the time that most of this work was conducted.
+This project was an effort between Susan VanderPlas, Dianne Cook, Michelle A. Graham, and myself. Together, we  thank Drs. James E. Specht and Randy C. Shoemaker for helpful discussions of soybean genealogy. In addition, we are grateful for the financial support from the United Soybean Board (Project 1204), The North Central Soybean Research Program, the NSF Plant Genome Research Program (award number 0820642), and the USDA-ARS CRIS Project 3625-21220-005-00D. The USDA is an equal opportunity provider and employer. Mention of trade names or commercial products in this article is solely for the purpose of providing specific information and does not imply recommendation or endorsement by the U.S. Department of Agriculture.
+
+\chapter{Visualization methods for gene expression analysis}
+
+- Gene expression analysis is a relatively new application for statisticians. As with any new field of research the dizzying pace of development has created some confusion, forward advances and backward disappointments, and new but often immaturely developed methods. There is now a growing maturity to the field and a growing understanding of the primary purposes of gene expression studies, partly due to the increased involvement of statisticians. But it is still far from a fully-fledged discipline, and new issues continue to arise with the technology, analytical methods, software, and related data and information. This paper is about the surprises that may arise by plotting gene expression data, and how plots can reveal inadequacies in models and suggest ways to improve the models. When analyzing locally collected data, using conventional ANOVA methods, we found that the results didn’t match findings that were obvious from data plots. We describe why this happened, and why it happens generally for similar types of data analyses, and the implications for ANOVA, p-values, false discovery rates and filtering of gene expression data (\citealt{jds}).
+
+- There are some commonly used graphics for gene expression data which are fraught with problems, and there are some less commonly used methods that are especially helpful. This paper discusses why this is, and ways to improve them (\citealt{jds}).
+
+- It is important to emphasize the difference between the analysis of gene expression data from many other multivariate data analysis tasks. In gene expression data it is important to find a small number of genes that are behaving differently to others in an understandable way. It is expected that most genes are expressing as normal, and only a few are expressing differently in response to a treatment. The expression values for each treatment are collected using a single microarray chip, which is read by an image reader to give numerical values for expression. These image values are calibrated across the chips, based on the assumption that the expression of most genes on all the chips is similar. The values on each chip are logged because the distributions are skewed, and there is some evidence to suggest that intensity is exponentially distributed. Software such as Bioconductor (\citealt{bioconductor}) provides tools for normalizing microarray data and making plots to check the results of the normalization. When the calibration and normalization is complete, the task is to find the outliers, the most differently expressed genes, relative to the expression of most genes. Thus the task involves outlier detection 
+
+- It is also a multiple comparisons problem. From the perspective of a traditional statistical analysis we are merely dealing with a situation which could be solved by a t-test for comparing means. The drawback is that we have to do a test for every single gene! For example, the newer Affymetrix Arabidopsis ATH1 Genome Array chips have about 22000 genes. In calculating 22000 test statistics, according to a normal distribution we would expect to see at least 1100 genes with a significant p-value on a conventional level of 5\%. That is simply by chance 1100 genes will emerge as interesting. This is not a practical approach to finding the few truly interesting genes to study in greater depth. These issues will be discussed later in the paper. This is the question of interest. Which genes are expressing differently in response to the experimental treatments? Difference is measured relative to the distribution of all the genes, and relative to consistent values in the replications. We need plots of the multivariate distributions to assess this. (\citealt{jds}).
+
+- Heatmaps are commonly-used but not helpful. Paper shows 2 clusters in heatmap, but it is really just one huge cluster in the scatterplot matrix (\citealt{jds}). Scatterplot allows us to detect the outlying genes that could not be detected in the heatmap.
+
+- The parallel coordinate plot (\citealt{origPCP}, \citealt{origPCP2}) is useful for examining relative patterns, such as those sought in gene expression data analysis. The axes are laid out in parallel rather than the orthogonal axes of scatterplots. These types of plots are commonly used to display gene expression data. Figure 4 displays the simulated data in parallel coordinates. What can we see from this plot? The pattern is a bow tie. The twist, between chips 2 and 3, means that the values of these chips are negatively correlated. The flat profiles between chips 1 and 2, and again between chips 3 and 4, mean that the values are positively correlated. Thus we get an overall picture that there is no strong clustering in this data. Yet, it is not a very clear picture because there are a lot of lines drawn here. Even though there are only 77 genes, which is tiny by microarray standards, the overplotting obscures important profiles such as the outlier. Commonly alpha-blending is used to alleviate the problem (\citealt{jds}).
+
+- Interaction on plots is critical! Especially important for gene expression analysis is the ability to probe and link plots. Exploring data depends on the ability to interact with a plot and link the changes to elements of other simultaneously visible displays (\citealt{interact}, \citealt{interact2}, \citealt{interact3}).
+
+- With direct manipulation and linking the multivariate plots become very useful. Figure 5 shows the scatterplot matrix of the data from Figure 1 linked to parallel coordinates, generated with GGobi (\citealt{ggobi}, \citealt{ggobi2}, \citealt{ggobi3}). The outlier that is clearly visible in the scatterplot of chip 1 vs chip 2 is highlighted (orange or medium grey). This profile can now be seen in the profile plot, and it is obviously an outlier, on chip 1 relatively to it is expression on the other three chips. This is the simplest type of linking: the elements of all plots corresponding to the same row of the data matrix are all highlighted. This type of linking is commonly available in graphics software.
+
+Summary overview of plot types
+
+- Heatmaps provide an overview of the data. It is diffcult to grasp the distribution of values, because of a lack of geometric interpretability, diffculty in laying it out, and the mapping of numerical value to color. However, there is an appeal to heatmaps, and their use is very wide-spread. These plots can be enhanced to make them more useful. This is our wish list:
+* Different color mappings change the perception of patterns, and in exploratory analysis we want to see many different patterns to learn about different aspects of the data. We would like to add controls to allow the analyst to rapidly change the mapping of numerical value to color, and also the color scale. It would also be useful to switch from using color to glyphs (symbols) with size of glyph representing the the numerical value.
+* Methods to re-organize the rows and columns. Cluster analysis is one approach. For small subsets of data, manual controls like a large Rubik’s cube, would be helpful. There is a package for R (Ihaka & Gentleman 1996) available on gclus, written by Catherine Hurley, which has some alternative approaches for rearranging the results of a dendrogram. Orca (Sutherland, Rossini, Lumley, Lewin-Koh, Dickerson, Cox & Cook 2000) has a few manual controls for rearranging rows and columns in a colored matrix.
+* The plot is not scalable, because at some point one reaches the maximum available plotting space. There need to be ways to reduce the size of a plot, such as spatial smoothing, and pan and zoom and slice controls for focusing on smaller subsets.
+* The heatmap needs to be probeable, to allow queries such as, “Which gene and which chip is it that has such a high expression value?”
+- Scatterplots are useful for pairwise comparisons, finding which genes are disproportionately expressed, and in tours they provide an overview of the multivariate distribution of expression values. Overplotting can be a problem for a large number of genes, but this can be alleviated using a density representation of the overplotted points. When there are many chips it is not possible to organize all pairs of plots into a scatterplot matrix. Linking between scatterplots is common and simple to implement.
+- Parallel coordinates can be used to overview data, but only when there are very few cases. Generally the large number of genes means that it is not possible to see the distribution of values using a parallel coordinate plot, although density plots based on alpha blending, such as those available in ExplorN 1, Mondrian and Cassatt 2, can help. In the literature, and gene expression software packages, we usually see only subsets of the data plotted using parallel coordinates.
+
+- These are a new type of plot, that we call a replicate line (RL) plot. We are now looking for genes that have a big difference between treatments (far from x = y), and that have little di↵erence in replicates, small line length.
 
 
-
-
-
-
-
+\chapter{}
 
 
 

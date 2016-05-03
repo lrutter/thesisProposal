@@ -3,15 +3,15 @@
 \contentsline {section}{\numberline {1.1}Background to data visualization}{3}{section.1.1}
 \contentsline {section}{\numberline {1.2}Problems to be addressed}{3}{section.1.2}
 \contentsline {section}{\numberline {1.3}Overview of thesis research}{3}{section.1.3}
-\contentsline {chapter}{\chapternumberline {2}Visualization methods for genealogical datasets}{4}{chapter.2}
+\contentsline {chapter}{\chapternumberline {2}ggenealogy: Visualization methods for genealogical datasets}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}Abstract}{4}{section.2.1}
 \contentsline {section}{\numberline {2.2}Introduction}{4}{section.2.2}
 \contentsline {section}{\numberline {2.3}Available Software}{5}{section.2.3}
-\contentsline {section}{\numberline {2.4}Example Datasets}{7}{section.2.4}
+\contentsline {section}{\numberline {2.4}Example Datasets}{8}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Soybean Genealogy}{8}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Academic Genealogy of Statisticians}{9}{subsection.2.4.2}
 \contentsline {section}{\numberline {2.5}Genealogical Input Format}{10}{section.2.5}
-\contentsline {section}{\numberline {2.6}Generating a Graphical Object}{10}{section.2.6}
+\contentsline {section}{\numberline {2.6}Generating a Graphical Object}{11}{section.2.6}
 \contentsline {section}{\numberline {2.7}Plotting a Shortest Path}{12}{section.2.7}
 \contentsline {section}{\numberline {2.8}Superimposing Shortest Path on Tree}{14}{section.2.8}
 \contentsline {section}{\numberline {2.9}Plotting Ancestors and Descendants by Generation}{17}{section.2.9}
@@ -20,6 +20,7 @@
 \contentsline {section}{\numberline {2.12}Future Avenues}{27}{section.2.12}
 \contentsline {section}{\numberline {2.13}Conclusions}{28}{section.2.13}
 \contentsline {section}{\numberline {2.14}Acknowledgments}{28}{section.2.14}
-\contentsline {chapter}{\chapternumberline {3}Stock syntax}{29}{chapter.3}
-\contentsline {section}{\numberline {3.1}Database structure}{29}{section.3.1}
-\contentsline {chapter}{Bibliography}{32}{section*.15}
+\contentsline {chapter}{\chapternumberline {3}Visualization methods for gene expression analysis}{29}{chapter.3}
+\contentsline {chapter}{\chapternumberline {4}Stock syntax}{32}{chapter.4}
+\contentsline {section}{\numberline {4.1}Database structure}{32}{section.4.1}
+\contentsline {chapter}{Bibliography}{35}{section*.14}
