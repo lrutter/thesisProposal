@@ -5,6 +5,7 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[breakable, theorems, skins]{tcolorbox}
 \usepackage[]{media9}
+\usepackage{lipsum}
 \tcbset{enhanced}
 %% maxwidth is the original width if it is less than linewidth
 %% otherwise use linewidth (to make sure the graphics do not exceed the margin)
@@ -141,11 +142,11 @@
 
 \vspace{1cm}
 
-{\LARGE Dianne Cook, Major Professor}
+{\LARGE Dianne Cook (Major Professor)}
 
 \vspace{.25cm}
 
-{\LARGE Amy Toth, Major Professor}
+{\LARGE Amy Toth (Major Professor)}
 
 \vspace{.25cm}
 
@@ -185,16 +186,16 @@
 
 \section{Background to data visualization}
 
-Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah.
+\lipsum[1]
 
 \section{Problems to be addressed}
 
-Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah.
+\lipsum[2]
 
 \section{Overview of thesis research}
 \label{sec:helpSection}
 
-Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah.
+\lipsum[3]
 
 \chapter{ggenealogy: Visualization methods for genealogical datasets}
 \label{sec:ggenealogy}
@@ -250,7 +251,7 @@ The \pkg{ggenealogy} package comes with two example datasets, one comprises a so
 
 We start with the soybean genealogy, which is available as a data frame structure with 390 rows and five columns. These data were collected from field trials, genetic studies, and United States Department of Agriculture (USDA) bulletins, and date as early as the first decade of the 1900s. They contain information on the copy number variants, single nucleotide polymorphisms, and protein content for each of the varieties, although we removed that information for a succinct example dataset. In this context, the software could ideally be used by agronomists who wish to study how soybean varieties are related. By referencing the visualization of the genealogical structure, these scientists may better understand genetic testing results - in this particular dataset, in terms of copy number variants, single nucleotide polymorphisms, protein content, and yield - and use that knowledge in future breeding decisions.
 
-Each row contains information about a particular child soybean variety, including the name of the child, its yield, the year it was released, whether or not its release year was imputed, and the name of its parent. It should be noted that it typically requires many crosses over the span of one to two decades to develop a new variety that has introduced a desired trait and/or removed an undesired trait. Hence, the release year variable in this dataset represents the year in which the variety was released to the public after its development period. While the name of the child is required, the other four columns can have missing values (which are represented in \pkg{R} with the symbol NA for ``not available"). As a result, while each row does contain information about a particular child soybean variety, whether or not a given row also contains information about a parent-child relationship between a pair of soybeans depends on whether or not the parent column has a missing value.
+Each row contains information about a particular child soybean variety, including the name of the child, its yield, the year it was released, whether or not its release year was imputed, and the name of its parent. It should be noted that it typically requires many crosses over the span of one to two decades to develop a new variety that has introduced a desired trait and/or removed an undesired trait. Hence, the release year variable in this dataset represents the year in which the variety was released to the public after its development period. While the name of the child is required, the other four columns can have missing values (which are represented in \pkg{R} with the symbol NA for "not available"). As a result, while each row does contain information about a particular child soybean variety, whether or not a given row also contains information about a parent-child relationship between a pair of soybeans depends on whether or not the parent column has a missing value.
 
 In total, there are 230 soybean varieties in the dataset, 206 of which are children and 165 of which are parents. There are soybeans that are both children and parents. Of the children, 156 have two parents, 28 have one parent, and 22 have zero parents. There are 340 parent-child relationships in the dataset.
 
@@ -276,9 +277,9 @@ We can load the example dataset of soybean genealogy (\code{sbGeneal}) and exami
 
 The \pkg{ggenealogy} package also comes with an academic genealogy of statisticians; this dataset is in the form of a data frame with 8165 rows and six columns. To develop this later dataset, we contacted the Math Genealogy Project (\citealt{mgp}), a web-based database for the genealogy of academic mathematicians. This database, which currently contains almost 200,000 entries, is a service of the North Dakota State University Department of Mathematics and the American Mathematical Society. The Mathematics Genealogy Project contact provided us a Structured Query Language (SQL) export, and we used PostgreSQL to query the database (\citealt{psql}).
 
-Each entry in the database contained 26 variables pertaining to an individual who received a graduate-level academic degree in mathematics. One of these variables was called ``msc" (Mathematics Subject Classification), and we selected only those entries that contained a value of 62 for this variable (coded as ``Statistics"). Furthermore, we only retained entries that had a parent if that parent was also in the field of ``Statistics". Hence, in our parent-child relationships, both the child and the parent received postbaccalaureate degrees in statistics, and the parent was the academic advisor to the child. This process resulted in 8995 entries, which we reduced to 8165 entries by removing duplicate entries. With the final data frame of 8165 entries, we only maintained six of the original 26 variables. 
+Each entry in the database contained 26 variables pertaining to an individual who received a graduate-level academic degree in mathematics. One of these variables was called "msc" (Mathematics Subject Classification), and we selected only those entries that contained a value of 62 for this variable (coded as "Statistics"). Furthermore, we only retained entries that had a parent if that parent was also in the field of "Statistics". Hence, in our parent-child relationships, both the child and the parent received postbaccalaureate degrees in statistics, and the parent was the academic advisor to the child. This process resulted in 8995 entries, which we reduced to 8165 entries by removing duplicate entries. With the final data frame of 8165 entries, we only maintained six of the original 26 variables. 
 
-Each row of the final data frame contains information about a particular child who received a graduate-level academic degree in statistics, including the name of the child, the year the child obtained the degree, the country and school from which the child obtained the degree, the thesis title of the degree awarded to the child, and the name of its parent. There are no missing values for the country and school from which the child received its degree or the name of the child; however, some of the years contain missing values (NA), and some of the parent and thesis names contain empty strings (``"). As a result, while each row does contain information about a particular child, whether or not a row also contains information about a parent-child relationship between a pair of academic statisticians depends on whether or not the parent column has an empty string.
+Each row of the final data frame contains information about a particular child who received a graduate-level academic degree in statistics, including the name of the child, the year the child obtained the degree, the country and school from which the child obtained the degree, the thesis title of the degree awarded to the child, and the name of its parent. There are no missing values for the country and school from which the child received its degree or the name of the child; however, some of the years contain missing values (NA), and some of the parent and thesis names contain empty strings (""). As a result, while each row does contain information about a particular child, whether or not a row also contains information about a parent-child relationship between a pair of academic statisticians depends on whether or not the parent column has an empty string.
  
 In total, there are 7122 individuals in the dataset, 7122 of which are children and 872 of which are parents. Every parent is also a child, but not every child is also a parent. Of the children, two have four parents, ten have three parents, 226 have two parents, 2801 have one parent, and 4083 have no parents. There are 3291 parent-child relationships in the dataset.
 
@@ -303,9 +304,9 @@ We can load the example dataset of academic genealogy of statisticians (\code{st
 
 \section{Genealogical Input Format}
 
-As is the case with both example data files introduced above, \pkg{ggenealogy} requires that the genealogy input file is a data frame structure with at least two columns. One column must be labeled ``child", and each case in that column must be of type character. The other column must be labeled ``parent," and each case in that column must either be of type character, type NA, or type ``". At this point, any \pkg{ggenealogy} plot that only requires information about parent-child relationships can be used.
+As is the case with both example data files introduced above, \pkg{ggenealogy} requires that the genealogy input file is a data frame structure with at least two columns. One column must be labeled "child", and each case in that column must be of type character. The other column must be labeled "parent," and each case in that column must either be of type character, type NA, or type "". At this point, any \pkg{ggenealogy} plot that only requires information about parent-child relationships can be used.
 
-However, some \pkg{ggenealogy} plots also make use of quantitative variable values associated with individuals in the genealogy. For these plots, the input data frame should also contain a third column. In both example data files, this column is labeled ``year," and each case in that column can either be of type numeric, type NA, or type ``". At this point, any \pkg{ggenealogy} plot can be used.
+However, some \pkg{ggenealogy} plots also make use of quantitative variable values associated with individuals in the genealogy. For these plots, the input data frame should also contain a third column. In both example data files, this column is labeled "year," and each case in that column can either be of type numeric, type NA, or type "". At this point, any \pkg{ggenealogy} plot can be used.
 
 \section{Generating a Graphical Object}
 
@@ -444,9 +445,9 @@ In the code above, syntax from the \pkg{ggplot2} package was appended to the \co
 
 For each variety, the x coordinate (year) and width of the x coordinate (text label width) cannot be altered, as they provide useful information. However, for each variety, the y coordinate is arbitrary. Hence, in an attempt to mitigate text overlapping, the \code{plotPathOnAll()} function does not randomly assign the y coordinate. Instead, it allows users to partially control the y coordinates with a user-determined number of bins (\code{binVector}).
 
-If the user decides to produce a plot using three bins, as in the example code above, then the varieties are all grouped into three bins based on their year values. In other words, there will be bin 1 (the ``oldest bin") which includes the one-third of varieties with the oldest years of release, bin 2 (the ``middle bin"), and bin 3 (the ``youngest bin"). Then, in order to decrease text overlap, the consecutively increasing y-axis coordinates are alternatively assigned to the three bins (For example: bin 1, bin 2, bin 3, bin 1, bin 2, bin 3, ...) repeatedly until all varieties are addressed. This algorithm means that for any pair of varieties within a given bin, there are exactly two other varieties vertically separating them.
+If the user decides to produce a plot using three bins, as in the example code above, then the varieties are all grouped into three bins based on their year values. In other words, there will be bin 1 (the "oldest bin") which includes the one-third of varieties with the oldest years of release, bin 2 (the "middle bin"), and bin 3 (the "youngest bin"). Then, in order to decrease text overlap, the consecutively increasing y-axis coordinates are alternatively assigned to the three bins (For example: bin 1, bin 2, bin 3, bin 1, bin 2, bin 3, ...) repeatedly until all varieties are addressed. This algorithm means that for any pair of varieties within a given bin, there are exactly two other varieties vertically separating them.
 
-In the code above, \code{binVector} was assigned a value of 3, and \code{pathEdgeCol} was assigned a value of ``red". Additionally, we specified a size of 2.5 for the non-path node test using the \code{nodeSize} parameter, and a size of 4 for the path node text using the \code{pathNodeSize} parameter. There are several other parameters in the \code{plotPathOnAll()} function, which can be read in more detail using the help command.
+In the code above, \code{binVector} was assigned a value of 3, and \code{pathEdgeCol} was assigned a value of "red". Additionally, we specified a size of 2.5 for the non-path node test using the \code{nodeSize} parameter, and a size of 4 for the path node text using the \code{pathNodeSize} parameter. There are several other parameters in the \code{plotPathOnAll()} function, which can be read in more detail using the help command.
 
 This code resulted in Figure \ref{fig:plotTNBin3}, where we see that edges not on the path of interest are thin and gray by default, whereas edges on the path of interest are bolded by default. We also see that variety labels in the path of interest are boldfaced by default. Figure \ref{fig:plotTNBin3} presents useful information: We immediately gather that the path of interest does span most of the years of the data structure. In fact, \code{Tokyo} appears to be the oldest variety in the dataset, and \code{Narow} appears to be one of the youngest varieties. We can also determine that the majority of varieties were released between 1950 and 1970.
 
@@ -493,7 +494,7 @@ The bottom plot of Figure \ref{fig:Lee} is not an output plot of \pkg{ggenealogy
 
 It may also be of interest to generate matrices where the colors indicates a variable between all pairwise combinations of inputted varieties. The package \pkg{ggenealogy} also provides a function \code{plotDegMatrix()} for that purpose. We can demonstrate this function with the variable being the shortest path degree between a given pair of varieties. The shortest path degree is calculated as the smallest number of parent-child edges needed to traverse between two varieties of interest. For instance, in Figure \ref{fig:pathTNZB}, the shortest path degree between \code{Tokyo} and \code{Narow} is four and the shortest path degree between \code{Bedford} and \code{Zane} is ten.
 
-Here we generate a distance matrix for a set of 10 varieties, setting the x-label and y-label as ``Variety" and the legend label as ``Degree". In this example, we add \pkg{ggplot2} functionality to specify that pairs with small degrees are white, while those with large degrees are dark green, as well as to specify the text size of the legend title and label.
+Here we generate a distance matrix for a set of 10 varieties, setting the x-label and y-label as "Variety" and the legend label as "Degree". In this example, we add \pkg{ggplot2} functionality to specify that pairs with small degrees are white, while those with large degrees are dark green, as well as to specify the text size of the legend title and label.
 
 \mybox{
 \texttt{>R varieties <- c("Brim", "Bedford", "Calland", "Dillon", "Hood", "Narow", "Pella", "Tokyo", "Young", "Zane")}\\
@@ -515,9 +516,9 @@ The \pkg{ggenealogy} package comes with two example datasets, and while we have 
 
 The ability to plot ancestors and descendants by generation was demonstrated using the plant breeding genealogy in Figure \ref{fig:Lee}. As we believe this is the most novel plotting tool in the \pkg{ggenealogy} package, we will test it again here using the academic genealogy.
 
-We need to choose a central individual of interest in order to create this plot. Perhaps we can use the academic statistician in the dataset that has the largest number of ``descendants". To determine the name of this individual, below we use the \pkg{ggenealogy} function \code{getNode()} to create a vector \code{indVec} that contains the names of all individuals in the dataset. We then use the \pkg{dplyr} package to apply the \pkg{ggenealogy} function \code{getDescendants()} on each individual in the \code{indVec} vector (\citealt{dplyr}). We set the parameter \code{gen} to a conservatively large value of 100 as this dataset is unlikely to have any individuals with more than 100 generations of ``descendants".
+We need to choose a central individual of interest in order to create this plot. Perhaps we can use the academic statistician in the dataset that has the largest number of "descendants". To determine the name of this individual, below we use the \pkg{ggenealogy} function \code{getNode()} to create a vector \code{indVec} that contains the names of all individuals in the dataset. We then use the \pkg{dplyr} package to apply the \pkg{ggenealogy} function \code{getDescendants()} on each individual in the \code{indVec} vector (\citealt{dplyr}). We set the parameter \code{gen} to a conservatively large value of 100 as this dataset is unlikely to have any individuals with more than 100 generations of "descendants".
 
-After that, we can generate a table to examine all values of ``descendant" counts in the dataset, along with the number of individuals who have each of those values of ``descendant" counts. Of the 8165 individuals in this dataset, 6252 of them have zero ``descendants", 322 of them have one ``descendant", and 145 of them have two ``descendants". There are only 17 individuals who have more than 30 ``descendants", and there is one individual who has the largest value of 159 ``descendants". We determine that this individual is the prominent British statistician Sir David Cox, who is known for the Box-Cox transformation and Cox processes, as well as for mentoring many younger researchers who later became notable statisticians themselves.
+After that, we can generate a table to examine all values of "descendant" counts in the dataset, along with the number of individuals who have each of those values of "descendant" counts. Of the 8165 individuals in this dataset, 6252 of them have zero "descendants", 322 of them have one "descendant", and 145 of them have two "descendants". There are only 17 individuals who have more than 30 "descendants", and there is one individual who has the largest value of 159 "descendants". We determine that this individual is the prominent British statistician Sir David Cox, who is known for the Box-Cox transformation and Cox processes, as well as for mentoring many younger researchers who later became notable statisticians themselves.
 
 \mybox{
 \texttt{>R library(dplyr)}\\
@@ -547,7 +548,7 @@ After that, we can generate a table to examine all values of ``descendant" count
 \texttt{     1980}
 }
 
-We can now visualize how these 159 ``descendants" are related to Sir David Cox by calling the \code{plotAncDes()} function of \pkg{ggenealogy}, similar to what we did to generate Figure \ref{fig:Lee}. As such, we create Figure \ref{fig:dCox} using the code below.
+We can now visualize how these 159 "descendants" are related to Sir David Cox by calling the \code{plotAncDes()} function of \pkg{ggenealogy}, similar to what we did to generate Figure \ref{fig:Lee}. As such, we create Figure \ref{fig:dCox} using the code below.
 
 \mybox{
 \texttt{R> plotAncDes("David Cox", statGeneal, mAnc = 6, mDes = 6, vCol = "blue")}
@@ -556,11 +557,11 @@ We can now visualize how these 159 ``descendants" are related to Sir David Cox b
 \begin{figure}%[h]
     \centering
     \includegraphics[width=\textwidth]{dCox.png}
-    \caption{The 159 academic statistician ``descendants" of Sir David Cox.}
+    \caption{The 159 academic statistician "descendants" of Sir David Cox.}
     \label{fig:dCox}
 \end{figure}
 
-We see from Figure \ref{fig:dCox} that Sir David Cox had 42 ``children", many of them becoming notable statisticians themselves, such as Basilio Pereira, Valerie Isham, Gauss Cordeiro, Peter McCullagh, and Henry Wynn. Of his ``children", the one who produced the most ``children" of their own was Peter Bloomfield, who has 26 ``children" and 49 ``descendants". In total, Sir David Cox had five generations of academic statistics mentees in this dataset.
+We see from Figure \ref{fig:dCox} that Sir David Cox had 42 "children", many of them becoming notable statisticians themselves, such as Basilio Pereira, Valerie Isham, Gauss Cordeiro, Peter McCullagh, and Henry Wynn. Of his "children", the one who produced the most "children" of their own was Peter Bloomfield, who has 26 "children" and 49 "descendants". In total, Sir David Cox had five generations of academic statistics mentees in this dataset.
 
 \mybox{
 \texttt{R> length(getChild("Peter Bloomfield", statGeneal))}
@@ -578,7 +579,7 @@ We see from Figure \ref{fig:dCox} that Sir David Cox had 42 ``children", many of
 \texttt{[1] 49}
 }
 
-At this point, it would be insightful to examine a more detailed view of one of the longest strings of ``parent-child" relationships between Sir David Cox and one of the two individuals who are his fifth generation ``descendants". We do so with the code below, choosing his fifth generation ``descendant" to be Petra Buzkova. We set the \code{fontFace} variable of the \code{plotPath()} to a value of 4, indicating we wish to boldface and italicize the two varieties of interest.
+At this point, it would be insightful to examine a more detailed view of one of the longest strings of "parent-child" relationships between Sir David Cox and one of the two individuals who are his fifth generation "descendants". We do so with the code below, choosing his fifth generation "descendant" to be Petra Buzkova. We set the \code{fontFace} variable of the \code{plotPath()} to a value of 4, indicating we wish to boldface and italicize the two varieties of interest.
 
 \mybox{
 \texttt{R> statIG <- dfToIG(statGeneal)}\\
@@ -589,11 +590,11 @@ At this point, it would be insightful to examine a more detailed view of one of 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{pathCB}
-    \caption{The shortest path between Sir David Cox and one of his fifth generation ``descendants", Petra Buzkova.}
+    \caption{The shortest path between Sir David Cox and one of his fifth generation "descendants", Petra Buzkova.}
     \label{fig:pathCB}
 \end{figure}
 
-This code results in Figure \ref{fig:pathCB}. We see that the shortest path between Sir David Cox and Petra Buzkova is strictly composed of five unidirectional ``parent-child" relationships that span about 55 years. We see that the time difference between when an advisor and student earned their degrees is not consistent across this path: The three statisticians who earned their degrees earliest in this path span more than 30 years in degree acquisition, whereas the three statisticians who earned their degrees later in this path only span less than ten years in degree acquisition.
+This code results in Figure \ref{fig:pathCB}. We see that the shortest path between Sir David Cox and Petra Buzkova is strictly composed of five unidirectional "parent-child" relationships that span about 55 years. We see that the time difference between when an advisor and student earned their degrees is not consistent across this path: The three statisticians who earned their degrees earliest in this path span more than 30 years in degree acquisition, whereas the three statisticians who earned their degrees later in this path only span less than ten years in degree acquisition.
 
 We also notice in Figure \ref{fig:pathCB} that Sir David Cox received his statistics degree in about 1950, and Petra Buzkova received her statistics degree in about 2005. This genealogy only contains historical information about obtained degrees, and does not project into the future. Hence, we can be assured that Petra Buzkova is one of the younger individuals in the dataset, at least in the sense that the youngest individual could only have received his or her degree ten years after Petra Buzkova. However, we cannot be assured that Sir David Cox is one of the oldest individuals in the dataset. As such, it would be informative to superimpose this path of interest onto the entire dataset, using the \code{plotPathOnAll()} function of the \pkg{ggenealogy} package, as we did for the soybean genealogy in Figures \ref{fig:plotTNBin3} and \ref{fig:plotTNBin6}.
 
@@ -627,6 +628,8 @@ The text labels are so numerous in Figure \ref{fig:plotCBText} that simply tryin
 
 In Figure \ref{fig:plotCBNoText}, we can now see each individual on the path of interest, and how their values for the variable year are overlaid on the entire genealogy structure. We can also more clearly see that, even though only ten years span between the youngest individual in the genealogy and Petra Buzkova, there are many individuals in that last decade. Indeed, the decade from 2005 to 2015 appears to be the densest in this dataset in terms of acquisition of statistics degrees.
 
+\subsection{Interactive visualization of genealogical structure}
+
 We could still improve upon Figure \ref{fig:plotCBNoText}. Even though we may be primarily interested in understanding how the path of interest is overlaid across the entire genealogical structure, we could, upon viewing the entire structure, also develop an interest in nodes that are not on the path of interest but are revealed to stand out among the rest of the genealogical structure. For instance, in Figure \ref{fig:plotCBNoText}, it may be of interest for us to determine the names of the few individuals who obtained their statistics degrees before 1900. Fortunately, within the \code{plotPathOnAll()} function, there is a variable \code{animate} that we can set to a value of TRUE to create an interactive version of the figure that allows us to hover over individual illegible labels and immediately receive their labels in a readable format. A short video demonstration of these interactive features can be viewed upon clicking on Figure \ref{fig:plotAnimate}.
 
 \mybox{
@@ -644,7 +647,7 @@ We could still improve upon Figure \ref{fig:plotCBNoText}. Even though we may be
 
 Incorporation of the Shiny application allows users to examine \pkg{ggenealogy} tools in a more interactive way (\citealt{shiny}). The reactive programming saves them the time of using command line for each change of input as well as the inefficiency of rerunning code. A Shiny application that uses certain \pkg{ggenealogy} functionality is available for users who wish to explore the soybean genealogy; the data can be viewed at \url{http://shiny.soybase.org/CNV/}.
 
-We also aim to incorporate plotting tools that can examine not only quantitative variables (such as our example variable of ``year"), but also categorical variables associated with individuals in datasets. Moreover, we look forward to testing the \pkg{ggenealogy} package on additional genealogical data sets. Exploring several datasets with the software will allow us to fix remaining bugs, and provide us further insight into how to make our tools available for a wide range of data input formats. 
+We also aim to incorporate plotting tools that can examine not only quantitative variables (such as our example variable of "year"), but also categorical variables associated with individuals in datasets. Moreover, we look forward to testing the \pkg{ggenealogy} package on additional genealogical data sets. Exploring several datasets with the software will allow us to fix remaining bugs, and provide us further insight into how to make our tools available for a wide range of data input formats. 
 
 The \pkg{ggenealogy} visualization tool \code{plotPathOnAll()} is suitable as a data exploration tool, but not always as a publication tool. This is because we still see textual overlap in small-enough datasets (see Figure \ref{fig:plotTNBin6}). As such, we plan to add a feature to the package that allows users to manually fine-tune automated plots. For example, after comparing several bin sizes on the soybean genealogy, we determined that the bin size of 6 produced the minimal textual overlap, as is seen in Figure \ref{fig:plotTNBin6}. If we could subsequently fine-tune the vertical positions of the small fraction of text labels that remained overlapped after the automated \pkg{ggenealogy} function, then we could potentially remove all overlaps, and the plot could be used in presentations and publications. Of course, it is impossible to eliminate textual overlap in larger datasets (see Figure \ref{fig:plotCBText}). In such cases, we can remedy this problem by representing individuals who are not on the path of interest with dots instead of text (see Figure \ref{fig:plotCBNoText}).
 
@@ -678,22 +681,103 @@ Summary overview of plot types
 
 - Heatmaps provide an overview of the data. It is diffcult to grasp the distribution of values, because of a lack of geometric interpretability, diffculty in laying it out, and the mapping of numerical value to color. However, there is an appeal to heatmaps, and their use is very wide-spread. These plots can be enhanced to make them more useful. This is our wish list:
 * Different color mappings change the perception of patterns, and in exploratory analysis we want to see many different patterns to learn about different aspects of the data. We would like to add controls to allow the analyst to rapidly change the mapping of numerical value to color, and also the color scale. It would also be useful to switch from using color to glyphs (symbols) with size of glyph representing the the numerical value.
-* Methods to re-organize the rows and columns. Cluster analysis is one approach. For small subsets of data, manual controls like a large Rubik’s cube, would be helpful. There is a package for R (Ihaka & Gentleman 1996) available on gclus, written by Catherine Hurley, which has some alternative approaches for rearranging the results of a dendrogram. Orca (Sutherland, Rossini, Lumley, Lewin-Koh, Dickerson, Cox & Cook 2000) has a few manual controls for rearranging rows and columns in a colored matrix.
+* Methods to re-organize the rows and columns. Cluster analysis is one approach. For small subsets of data, manual controls like a large Rubik's cube, would be helpful. There is a package for R (Ihaka and Gentleman 1996) available on gclus, written by Catherine Hurley, which has some alternative approaches for rearranging the results of a dendrogram. Orca (Sutherland, Rossini, Lumley, Lewin-Koh, Dickerson, Cox and Cook 2000) has a few manual controls for rearranging rows and columns in a colored matrix.
 * The plot is not scalable, because at some point one reaches the maximum available plotting space. There need to be ways to reduce the size of a plot, such as spatial smoothing, and pan and zoom and slice controls for focusing on smaller subsets.
-* The heatmap needs to be probeable, to allow queries such as, “Which gene and which chip is it that has such a high expression value?”
+* The heatmap needs to be probeable, to allow queries such as, "Which gene and which chip is it that has such a high expression value?"
 - Scatterplots are useful for pairwise comparisons, finding which genes are disproportionately expressed, and in tours they provide an overview of the multivariate distribution of expression values. Overplotting can be a problem for a large number of genes, but this can be alleviated using a density representation of the overplotted points. When there are many chips it is not possible to organize all pairs of plots into a scatterplot matrix. Linking between scatterplots is common and simple to implement.
 - Parallel coordinates can be used to overview data, but only when there are very few cases. Generally the large number of genes means that it is not possible to see the distribution of values using a parallel coordinate plot, although density plots based on alpha blending, such as those available in ExplorN 1, Mondrian and Cassatt 2, can help. In the literature, and gene expression software packages, we usually see only subsets of the data plotted using parallel coordinates.
 
-- These are a new type of plot, that we call a replicate line (RL) plot. We are now looking for genes that have a big difference between treatments (far from x = y), and that have little di↵erence in replicates, small line length.
+- These are a new type of plot, that we call a replicate line (RL) plot. We are now looking for genes that have a big difference between treatments (far from x = y), and that have little difference in replicates, small line length.
 
+\chapter{Visualization methods for RNA-sequencing}
 
-\chapter{}
+The problem with only applying traditional modeling approaches to gene expression data is that these models are replete with assumptions that they alone cannot call into question. Fortunately, visualization enables analysts to see things they may not have expected with traditional modeling. By plotting the data, analysts can determine whether or not the applied models are sensible; they can work between the visualizations and the modeling, enhancing the models based on feedback from the plots. In sum, graphics are essential for analysts to check the quality of the data, assess the model diagnostics, and compare results from different methods.
 
+Previous studies have provided sound evidence that gene expression data is most effectively explored by using graphical and numerical approaches in a complementary fashion (\citealt{jds}). The authors of this study demonstrated this finding by applying modeling and visualization tools to simulated and real microarray data. Through the use of plots, they determined that their initial model assumptions were inappropriate and needed revision, and that the data quality was questionable and needed relabeling. 
 
+We would like to expand upon this knowledge that was originally applied to microarray data. In particular, we aim to develop, test, and publish visualization tools that are imperative for the exploration of the increasingly more common form of gene expression data - RNA-sequencing data. We tentatively plan to work on five main visualization techniques that can be applied to RNA-sequencing data.
 
+- list 5 plot types here
 
+\section{Parallel coordinate plots}
 
+Side-by-side boxplots are often used to check the initial normalization process in RNA-sequencing pipelines (see Figure \ref{fig:boxplot}). When analyzing RNA-sequencing data, we only expect a handful of genes to show differential expression. As a result, when representing the read counts for each sample with a different boxplot, we expect the boxplots across the samples to look similar; that is, to have similar five number summaries and outlier distributions.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{boxplot}
+    \caption{Boxplot of the 17 samples, after using RLE scaling factor method for normalization. Since we only expect a very small fraction of genes to show differential expression, the samples should appear similar after normalization. We can confirm that here, as the median values and IQR ranges are comparable across the samples.}
+    \label{fig:boxplot}
+\end{figure}
+
+Unfortunately, side-by-side boxplots can hide potential problems that could still be lurking in the data after normalization. This is because most RNA-sequencing normalization methods are conducted at the sample-level, and side-by-side boxplots do not show connections between the samples. Consequently, boxplots may deceive analysts to believe that the normalization succeeded in cases where alternative plots (such as parallel coordinate plots) would have otherwise indicated that the normalization was in fact unsuccessful due to the presence of inconsistencies (crossings) between replicates.
+
+For this reason, parallel coordinate plots are an essential visual tool when checking the initial normalization process. If the normalization is adequate, then the connections between replications should be flat, and we should only see crossings between treatement groups. An example of a parallel coordinate plot showing successful normalization is shown in Figure \ref{fig:pcp}.
+
+\textbf{\textcolor{Red}{"The pattern is a bow tie. The twist, between chips 2 and 3, means that the values of these chips are negatively correlated. The flat profiles between chips 1 and 2, and again between chips 3 and 4, mean that the values are positively correlated. Thus we get an overall picture that there is no strong clustering in this data. Yet, it is not a very clear picture because there are a lot of lines drawn here."}}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{pcp}
+    \caption{Simulated microarray data showing two treatment groups}
+    \label{fig:pcp}
+\end{figure}
+
+The tools currently available for constructing parallel coordinate plots to assess RNA-sequencing data are severely limited: Namely, the large number of genes present can cause constraints in space and time. With one line being drawn for each gene, our resulting plots will have too many lines being drawn to even view patterns of interest in the first place. Moreover, the construction of these plots can be consuming in computation and time, often requiring analysts to wait for minutes before they can view the output.
+
+Even when popular tools to visualize parallel coordinate plots (such as the \code{ggparcoord} function in the \code{GGally} package) can be very useful for many datasets, they are not always helpful for RNA-sequencing datasets (\citealt{ggally}). As a result, our goal is to develop a new approach that both quickly and meaningfully displays the key pieces of information for RNA-sequencing data with parallel coordinate plots. 
+
+\section{Pairwise scatterplots}
+
+We aim to develop plots that can effectively plot replicates against each other. We can do this by generating pairwise scatterplots for replicates, using the \code{scatmat()} function of the \code{GGally} package (\citealt{ggally}). If the data is high quality, then we would expect negligent differences between read counts across replicates. This would result in a scatterplot where the read counts from the two replicates fall along the x=y relationship. Deviations from this expectation would indicate a quality problem with the data.
+
+With this second goal we face the same challenges that we did with the first goal: We have a plotting algorithm that is not tailored to deal with the vastly sized datasets like RNA-sequencing data. As a result, we again face space (overplotting) and time (computational speed) constraints, and our goal would be to tailor the scatterplot matrix to adapt to large amounts of data.
+
+In addition, we must now recognize that the few data points along the perimeter of the x=y relationship that we can see may be misleading. Hence, we would want to develop guidelines in terms of what denotes a high-quality dataset where read counts are similar between replicates and different between treatments. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{scatmat}
+    \caption{Simulated scatterplot matrix}
+    \label{fig:scatmat}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{scatmat2}
+    \caption{Simulated scatterplot matrix 2}
+    \label{fig:scatmat2}
+\end{figure}
+
+\section{Replicate line plots}
+
+third thing is want to be able to see replicates (scatterplot of treatment 1 versus treatment 2) and connect replicates (porcupine plots, but they only work for 2 reps) (but have that kind of display for >2 reps. what is variability in replicate versus variability across treatments)
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{porcupine}
+    \caption{Porcupine plot}
+    \label{fig:porcupine}
+\end{figure}
+
+\section{Single gene plots}
+
+\textbf{\textcolor{Red}{fourth thing is want interaction plots that allow us to easily draw single gene plots of top candidates.}}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{DESeqGene}
+    \caption{Single gene plot}
+    \label{fig:DESeqGene}
+\end{figure}
+
+\section{Permutation testing plots}
+
+fifth thing is permutation testing. that should be a part of this package. we want to see what this might look like if we permuted (get confidence bands on what we might see if it is just random noise as the difference). want to build confidence bands on the visualization based on the permutation ideas.
+
+- triplets - generate display with 3 plots (one is actual data, other two are perm1, perm2). for the most sig genes
+- do top 20 genes as triplets. randomize the location of the actual data amongst the other two. (so don’t know which one is permuted and which one is not permuted)
+- this is line-ups (triangle-test, b/c only three), and so can use the package (nullabor). have the three along a row. top gene under permuted design versus real data.
 
 
 
@@ -704,15 +788,7 @@ Summary overview of plot types
 \chapter{Stock syntax}
 \section{Database structure}
 
-Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah. As an example, the learning outcomes for \texttt{Topic 03} are provided in List \hyperref[sec:lo]{1} below.
-As seen in Figure \ref{fig:overviewFigure}.
-
-\begin{center}
-\captionsetup{width=\textwidth}
-\fbox{\includegraphics[width=\textwidth]{stock.png}}
-\captionof{figure}{Caption blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah}
-\label{fig:overviewFigure}
-\end{center}
+As an example, the learning outcomes for \texttt{Topic 03} are provided in List \hyperref[sec:lo]{1} below.
 
 Now, we will run the \hyperref[sec:helpSection]{REFER TO SECTION }.
 
@@ -808,12 +884,12 @@ The absolute pathway to the \texttt{extdata} directory on your local computer ca
 \begin{framed}
 \begin{itemize}
 \vspace{-3mm}
-\item One topic for one section - short version (``secTopicShort")
-\item One topic for one section - long version (``secTopicLong")
-\item One topic comparing multiple sections - short version (``crossSecTopicShort")
-\item One topic comparing multiple sections - long version (``crossSecTopicLong")
-\item One unit (group of topics) for one section (``secUnit")
-\item One unit (group of topics) comparing multiple sections (``crossSecUnit")
+\item One topic for one section - short version ("secTopicShort")
+\item One topic for one section - long version ("secTopicLong")
+\item One topic comparing multiple sections - short version ("crossSecTopicShort")
+\item One topic comparing multiple sections - long version ("crossSecTopicLong")
+\item One unit (group of topics) for one section ("secUnit")
+\item One unit (group of topics) comparing multiple sections ("crossSecUnit")
 \end{itemize}
 \end{framed}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
