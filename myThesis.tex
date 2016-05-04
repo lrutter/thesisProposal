@@ -636,12 +636,12 @@ We could still improve upon Figure \ref{fig:plotCBNoText}. Even though we may be
 \texttt{R> plotPathOnAll(pathCB, statGeneal, statIG, binVector = 1:200, nodeSize = .5, pathNodeSize = 2.5, nodeCol = "darkgray", edgeCol = "lightgray", animate = TRUE)}
 }
 
-%\begin{figure}[H]
-%    \centering
-%    \includemedia[width=1.0\textwidth, addresource=animateGen.mov, deactivate=onclick, flashvars={source=animateGen.mov}]{\includegraphics{./plotCBNoText.png}}{VPlayer.swf}
-%    \caption{Upon clicking on this figure twice, a short video demonstrating the animation features for this function can be viewed. Please note that to properly view this video, the PDF version of this paper must be opened in Adobe Acrobat Reader DC (Version >=9), which can be downloaded free of charge.}
-%    \label{fig:plotAnimate}
-%\end{figure}
+\begin{figure}[H]
+    \centering
+    \includemedia[width=1.0\textwidth, addresource=animateGen.mov, deactivate=onclick, flashvars={source=animateGen.mov}]{\includegraphics{./plotCBNoText.png}}{VPlayer.swf}
+    \caption{Upon clicking on this figure twice, a short video demonstrating the animation features for this function can be viewed. Please note that to properly view this video, the PDF version of this paper must be opened in Adobe Acrobat Reader DC (Version >=9), which can be downloaded free of charge.}
+    \label{fig:plotAnimate}
+\end{figure}
 
 \section{Future Avenues}
 
@@ -689,7 +689,7 @@ Summary overview of plot types
 
 - These are a new type of plot, that we call a replicate line (RL) plot. We are now looking for genes that have a big difference between treatments (far from x = y), and that have little difference in replicates, small line length.
 
-\chapter{Visualization methods for RNA-sequencing}
+\chapter{Visualization method goals for RNA-sequencing}
 
 The problem with only applying traditional modeling approaches to gene expression data is that these models are replete with assumptions that they alone cannot call into question. Fortunately, visualization enables analysts to see things they may not have expected with traditional modeling. By plotting the data, analysts can determine whether or not the applied models are sensible; they can work between the visualizations and the modeling, enhancing the models based on feedback from the plots. In sum, graphics are essential for analysts to check the quality of the data, assess the model diagnostics, and compare results from different methods.
 
@@ -779,120 +779,41 @@ fifth thing is permutation testing. that should be a part of this package. we wa
 - do top 20 genes as triplets. randomize the location of the actual data amongst the other two. (so don’t know which one is permuted and which one is not permuted)
 - this is line-ups (triangle-test, b/c only three), and so can use the package (nullabor). have the three along a row. top gene under permuted design versus real data.
 
+\chapter{Visualization method for RNA-sequencing: Soybean Data}
 
+\section{Introduction}
+\section{Dataset}
+\section{Normalization}
+showed L120 and R30 looked good
+\section{L120}
+\subsection{Parallel coordinate plots}
+\subsubsection{k-means clustering - 2 clusters}
+\subsubsection{k-means clustering - 3 clusters}
+\subsection{Scatterplot matrices}
+\subsubsection{k-means clustering superimposed - 3 clusters}
+\subsection{Single gene plots}
+did to detect poor-quality third cluster
+\section{Full dataset}
+\subsection{Parallel coordinate plots}
+\subsubsection{k-means clustering - 2 clusters}
+\subsubsection{k-means clustering - 3 clusters}
+\subsection{Scatterplot matrices}
+\subsubsection{k-means clustering superimposed - 2 clusters}
+\section{k-means clustering with large number of clusters}
 
+\chapter{Visualization method for RNA-sequencing: Paper wasp Data}
+\section{Introduction}
+\section{Dataset}
+\section{Normalization}
+showed DU and DR looked good (MDS plots)
+\subsection{Parallel coordinate plots}
+\textbf{\textcolor{Red}{parallel coordinate plots looked bad!}}
+\subsection{Scatterplot matrices}
+DU and DR promising?
+\subsection{Single gene plots}
+found differential expressed genes between DU and DR
+Show top 10 gene plots
 
-
-
-
-\chapter{Stock syntax}
-\section{Database structure}
-
-As an example, the learning outcomes for \texttt{Topic 03} are provided in List \hyperref[sec:lo]{1} below.
-
-Now, we will run the \hyperref[sec:helpSection]{REFER TO SECTION }.
-
-%%%%%%%%%%%%%%%%%%%%%% TABLE EXAMPLE %%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\captionof{table}{Topic numbers and descriptions}
-\label{tab:topics}
-\begin{tabular} { | l | l | }
-\hline \textbf{Number} & \textbf{Description} \\
-\hline
-01 & Data \\
-\hline
-02  & Descriptive Statistics for a Single Categorical Variable \\
-\hline
-03 & Descriptive Statistics for a Single Quantitative Variable \\
-\hline
-\end{tabular}
-\end{center}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%% ENUMERATION - A/B/C EXAMPLE %%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\centerline{List 1: Learning outcomes for Topic 03}
-\vspace{-2mm}
-\begin{framed}
-\begin{enumerate}[label=\Alph*.]
-\label{sec:lo}
-\item Use standardizing to determine how many standard deviations an observation is away from the mean value.
-\item Use z-scores to compare observations for different quantitative variables.
-\item Explain how standardizing affects the shape, center, and variability of the distribution of a quantitative variable.
-\end{enumerate}
-\end{framed}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%% COLOR TEXT %%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{framed}
-Example question title: \textbf{\textcolor{Red}{T16}.\textcolor{YellowOrange}{A}.\textcolor{YellowGreen}{A}.\textcolor{Green}{04-1}.\textcolor{blue}{1}.\textcolor{RedViolet}{MC}.\textcolor{VioletRed}{1}}
-\end{framed}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%% EXAMPLE CODE %%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The absolute pathway to the \texttt{extdata} directory on your local computer can be determined by typing the following command into the \textbf{\textsf{R}} console: \\
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{system.file}\hlstd{(}\hlstr{"inst/extdata/"}\hlstd{,} \hlkwc{package} \hlstd{=} \hlstr{"ePort"}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{keyHTM} \hlkwb{=} \hlkwd{system.file}\hlstd{(}\hlstr{"inst/extdata/KeyFiles/Topic06.Questions.htm"}\hlstd{,} \hlkwc{package} \hlstd{=}
-  \hlstr{"ePort"}\hlstd{)}
-
-\hlkwd{refineKey}\hlstd{(keyHTM)}
-
-\hlstd{keyPath} \hlkwb{=} \hlkwd{gsub}\hlstd{(}\hlstr{"htm$"}\hlstd{,} \hlstr{"txt"}\hlstd{, keyHTM)}
-
-\hlstd{dataPath} \hlkwb{=} \hlkwd{system.file}\hlstd{(}\hlstr{"inst/extdata/DataFiles/Topic06/Topic06.A.csv"}\hlstd{,} \hlkwc{package} \hlstd{=}
-  \hlstr{"ePort"}\hlstd{)}
-
-\hlkwd{rewriteData}\hlstd{(dataPath)}
-
-\hlstd{loPath} \hlkwb{=} \hlkwd{system.file}\hlstd{(}\hlstr{"inst/extdata/LOFiles/Topic06.Outcomes.txt"}\hlstd{,} \hlkwc{package} \hlstd{=} \hlstr{"ePort"}\hlstd{)}
-
-\hlstd{outPath} \hlkwb{=} \hlkwd{system.file}\hlstd{(}\hlstr{"inst/extdata/OutputFiles"}\hlstd{,} \hlkwc{package} \hlstd{=} \hlstr{"ePort"}\hlstd{)}
-
-\hlkwd{makeReport}\hlstd{(}\hlkwc{keyFile} \hlstd{= keyPath,} \hlkwc{dataFile} \hlstd{= dataPath,} \hlkwc{loFile} \hlstd{= loPath,} \hlkwc{outFile} \hlstd{=}
-  \hlstd{outPath)}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{merged} \hlkwb{=} \hlkwd{subsetData}\hlstd{(mergedData, dataTable)}
-\hlkwd{makeReport}\hlstd{(}\hlkwc{outFile} \hlstd{= outPath,} \hlkwc{unit} \hlstd{=} \hlnum{2}\hlstd{,} \hlkwc{reportType} \hlstd{=} \hlstr{"crossSecUnit"}\hlstd{,} \hlkwc{className} \hlstd{=}
-  \hlstr{"Eng444"}\hlstd{,} \hlkwc{repeatLowScore} \hlstd{=} \hlnum{70}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%% LIST (BULLETS) %%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{framed}
-\begin{itemize}
-\vspace{-3mm}
-\item One topic for one section - short version ("secTopicShort")
-\item One topic for one section - long version ("secTopicLong")
-\item One topic comparing multiple sections - short version ("crossSecTopicShort")
-\item One topic comparing multiple sections - long version ("crossSecTopicLong")
-\item One unit (group of topics) for one section ("secUnit")
-\item One unit (group of topics) comparing multiple sections ("crossSecUnit")
-\end{itemize}
-\end{framed}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \bibliography{myThesis}
 
