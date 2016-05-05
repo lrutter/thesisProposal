@@ -701,13 +701,13 @@ We would like to expand upon this knowledge that was originally applied to micro
 
 \section{Parallel coordinate plots}
 
-Side-by-side boxplots are often used to check the initial normalization process in RNA-sequencing pipelines (see Figure \ref{fig:boxplot}). When analyzing RNA-sequencing data, we only expect a handful of genes to show differential expression. As a result, when representing the read counts for each sample with a different boxplot, we expect the boxplots across the samples to look similar; that is, to have similar five number summaries and outlier distributions.
+Side-by-side boxplots are often used to check the initial normalization process in RNA-sequencing pipelines (see Figure \ref{fig:boxplotL120}). When analyzing RNA-sequencing data, we only expect a handful of genes to show differential expression. As a result, when representing the read counts for each sample with a different boxplot, we expect the boxplots across the samples to look similar; that is, to have similar five number summaries and outlier distributions.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{boxplot}
+    \includegraphics[width=0.7\textwidth]{boxplotL120}
     \caption{Boxplot of the 17 samples, after using RLE scaling factor method for normalization. Since we only expect a very small fraction of genes to show differential expression, the samples should appear similar after normalization. We can confirm that here, as the median values and IQR ranges are comparable across the samples.}
-    \label{fig:boxplot}
+    \label{fig:boxplotL120}
 \end{figure}
 
 Unfortunately, side-by-side boxplots can hide potential problems that could still be lurking in the data after normalization. This is because most RNA-sequencing normalization methods are conducted at the sample-level, and side-by-side boxplots do not show connections between the samples. Consequently, boxplots may deceive analysts to believe that the normalization succeeded in cases where alternative plots (such as parallel coordinate plots) would have otherwise indicated that the normalization was in fact unsuccessful due to the presence of inconsistencies (crossings) between replicates.
@@ -845,7 +845,7 @@ It would be difficult (if not impossible) to determine how consistent the sample
     \label{fig:needNorm}
 \end{figure}
 
-Next, we create an MDS plot to better understand the quality of the data (\citealt{limma}). Based on this MDS plot, we determine that the six samples of leaves from 120 minutes appear to be of the best quality from this dataset.
+Next, we created an MDS plot to better understand the quality of the data (\citealt{limma}). Based on this MDS plot, we determine that the six samples of leaves from 120 minutes appear to be of the best quality from this dataset (see Figure \ref{fig:mdsGroups}).
 
 \begin{figure}[H]
     \centering
@@ -854,58 +854,143 @@ Next, we create an MDS plot to better understand the quality of the data (\citea
     \label{fig:mdsGroups}
 \end{figure}
 
+\section{Highest quality replicates (Leaves at 120 minutes)}
+
 Because these visual tools made us believe that the leaves from 120 minutes were of the highest quality, we subsetted the data to only consider these six samples for the time being. First, we converted the read counts to counts per million (cpm), because raw counts  do not account for differences in library sizes between samples. We then placed the cpm count values on a logarithmic scale.
 
-We then prepared to examine this subset of the data by heavily filtering it. In general, genes should be discarded if they have zero probability of being expressed in all the samples for any of the treatments (\citealt{edger}). We first applied this rule of thumb, but then we continued to filter more extensively. Namely, we calculated the mean and standard deviation read count for the six samples, and removed the genes with the lowest quartile of mean read count, as well as the genes with the lowest quartile of standard deviation read count across the six samples. Finally, we removed genes that contained negative residuals from a Loess fit, as these genes were unlikely to be of interest, having low mean and standard deviation read counts.
+We then prepared to examine this subset of the data by heavily filtering it. In general, genes should be discarded if they have zero probability of being expressed in all the samples for any of the treatments (\citealt{edger}). We first applied this rule of thumb, but then we continued to filter more extensively. Namely, we calculated the mean and standard deviation read count for the six samples, and removed the genes with the lowest quartile of mean read count, as well as the genes with the lowest quartile of standard deviation read count across the six samples. Finally, we removed genes that contained negative residuals from a Loess fit, as these genes were unlikely to be of interest, having low mean and standard deviation read counts (see Figure \ref{fig:loess120}).
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{loessL120}
-    \caption{This is a plot for the standard deviation versus mean read count of the genes in the 6 leaf samples at 120 minutes. Any genes below the Loess fit (shown in blue) will be removed for having a low standard deviation and mean read count.}
-    \label{fig:loess}
+    \includegraphics[width=\textwidth]{loess120}
+    \caption{Plot of all genes with the standard deviation versus mean read count of the 6 leaf samples at 120 minutes. Any genes below the Loess fit (shown in blue) were removed for having a low standard deviation and mean read count across the samples.}
+    \label{fig:loess120}
 \end{figure}
 
+After filtering and normalizing on the six samples of interest (leaves at 120 minutes), we then checked the quality again by creating a scatterplot matrix, which confirmed that this subset of the data had potential for trustworthy analysis (see Figure \ref{fig:L120scatter}).
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{L120scatter}
+    \includegraphics[width=\textwidth]{L120scatter}
     \caption{Scatterplot matrix of the six samples of leaves from 120 minutes, where each of scatterplot matrix compares two of the three replicates. If the 120-minute leaves samples are high quality, then we would expect replicates to have read counts centered on the diagonal x=y line, and non-relicates to deviate somewhat from the diagonal x=y line. Indeed, this is what we see, as the bottom-left nine plots (non-replicates) appear much thicker around the x=y line than the other plots (replicates).}
     \label{fig:L120scatter}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{boxplotL120}
-    \caption{Boxplot of the 17 leaves samples, after using the TMM (weighted trimmed mean of M-values) normalization method. Since we only expect a handful of genes to show differential expression, we expect the samples to be mostly similar, and we do here, as the median values and IQR ranges are comparable across the samples.}
-    \label{fig:boxplotL120}
-\end{figure}
+Now that the data of the leaf samples at 120 minutes has been properly pre-processed, we began the clustering analysis by producing a dendogram. We used Euclidean distance (which is acceptable as we have standardized the data) and hiearchical clustering with Wards linkage.
+
+\textbf{\textcolor{Red}{I should mention that we did not use k-means clustering, we used hierarchical clustering. I think we used k-means earlier, and Dr. Cook suggested for me to change that.}}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{dendogramL120}
-    \caption{Porcupine plot}
-    \label{fig:dendogramL120}
+    \includegraphics[width=\textwidth]{dendL120}
+    \caption{The dendogram of the 6 leaf samples at 120 minutes. We see that there may be two main clusters (designated by the orange cut), and possibly a third smaller cluster (designated by the purple cut).}
+    \label{fig:dendL120}
+\end{figure}
+
+\subsection{Two clusters}
+
+We first examined how the data separates into the two main clusters indicated in the dendogram of Figure \ref{fig:dendL120}. To do so, we cut the hierarchical tree, and then constructed a parallel coordinate plot of the resulting two clusters, along with the previously-filtered data (see Figure \ref{fig:pcp2L120}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{pcp2L120}
+    \caption{Parallel coordinate plot of the two clusters and filtered data, where each line represents the standardized read count for a given gene across the 6 leaf samples from 120 minutes. As the dendogram in Figure \ref{fig:dendL120} suggested 2 clusters for the 6 samples, we applied a k-means clustering algorithm with a cluster size of 2, resulting in the pink cluster and green cluster above. We see that the pink cluster contains genes higher in the Fe- samples, whereas the green cluster contains genes higher in the Fe+ samples. Both clusters look relatively clean (their repetitions are horizontal). In blue, we see the genes that were filtered, in the process previously described. This is relatively flat across all six samples, as we would expect.}
+    \label{fig:pcp2L120}
+\end{figure}
+
+Additionally, we can examine what these two clusters look like in a scatterplot (shown in Figure \ref{fig:scatterL120}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{scatterL120}
+    \caption{A scatterplot, where each dot represents the raw read counts from a gene in iron-deficient (x-axis) and iron-sufficient (y-axis) conditions from the leaf samples at 120 minutes. The pink and green colors represent the two clusters created when a k-means algorithm of cluster size 2 was applied, and the blue color represents the data filtered out as described at the beginning of the paper. The image is consistent with Figure \ref{fig:pcp2L120}, and the pink cluster appears to have lower Fe+ read counts, while the green cluster appears to have lower Fe- read counts. The blue cluster is, as expected, more closely along the x-y axis.}
+    \label{fig:scatterL120}
+\end{figure}
+
+\subsection{Three clusters}
+
+We next look at how the data separates into the three main clusters indicated in the dendogram of Figure \ref{fig:dendL120}. We perform the appropriate heirarchical cut on the data, and then construct a parallel coordinate plot of the resulting three clusters, along with the previously-filtered data, see Figure \ref{fig:pcp3L120}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{pcp3L120}
+  \caption{Parallel coordinate plot of the three clusters and filtered data, where each line represents the standardized read count for a given gene across the 6 leaf samples from 120 minutes. As the dendogram in Figure \ref{fig:dendL120} suggested 3 clusters for the 6 samples, we cut the data accordingly, resulting in the pink, green, and purple clusters above. We see that the pink cluster contains genes higher in the Fe- samples, whereas the green cluster contains genes higher in the Fe+ samples. Both clusters look relatively clean (their repetitions are horizontal). In blue, we see the genes that were filtered, in the process previously described. This is relatively flat across all six samples, as we would expect. All of this is similar to what we saw in Figure \ref{fig:pcp2L120}, where we examined 2 clusters. What is new is the purple cluster, which appears similar to the pink cluster (in that it is lower in the Fe+ read counts), except for the third repetition, which seems inconsisent. This purple cluster may represent low-quality genes.}
+  \label{fig:pcp3L120}
+\end{figure}
+
+We can again view this data in a scatterplot matrix format (see Figure \ref{fig:3scatterL120}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{3scatterL120}
+  \caption{Scatterplot matrix of the three clusters from the leaves in 120 minutes, where the purple cluster that looked problematic in the parallel coordinate plot in Figure \ref{fig:pcp3L120} is also colored purple here, and all other data is colored grey. We see that our suspicions from the parallel coordinate plot that the purple cluster was poor-quality have been corroborated here; the third repetition from the Fe+ sample appears to be the cause of the streaks seen most prominently in the bottom-right scatterplot.}
+  \label{fig:3scatterL120}
+\end{figure}
+
+Based on our parallel coordinate plot in Figure \ref{fig:pcp3L120} and our scatterplot matrix in Figure \ref{fig:3scatterL120}, when this data is clustered into three groups, one of these clusters (the purple cluster) may be of poor quality (inconsistency between replicates). At this point, it may be helpful to examine some of the 1076 genes in this third cluster individually. In Figures \ref{fig:indSBGenes1} and \ref{fig:indSBGenes2}, we show a more detailed (genewise) view of a random sample of 24 genes from this third cluster.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{indSBGenes1}
+  \caption{One random sample of 12 genes from the third problematic-looking purple cluster. We see that many of these genes confirm the patterns we saw in the third cluster in Figures \ref{fig:pcp3L120} and \ref{fig:3scatterL120}. Namely, they tended to show smaller read counts in the Fe+ condition than the Fe- condition, except for a disconcerningly large read count for the third replicate of the Fe- condition.}
+  \label{fig:indSBGenes1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{indSBGenes2}
+  \caption{A second random sample of 12 genes from the third problematic-looking purple cluster. We see that many of these genes confirm the patterns we saw in the third cluster in Figures \ref{fig:pcp3L120} and \ref{fig:3scatterL120}. Namely, they tended to show smaller read counts in the Fe+ condition than the Fe- condition, except for a disconcerningly large read count for the third replicate of the Fe- condition.}
+  \label{fig:indSBGenes2}
 \end{figure}
 
 
-\section{L120}
-\subsection{Parallel coordinate plots}
-\subsubsection{k-means clustering - 2 clusters}
-\subsubsection{k-means clustering - 3 clusters}
-\subsection{Scatterplot matrices}
-\subsubsection{k-means clustering superimposed - 3 clusters}
-\subsection{Single gene plots}
-did to detect poor-quality third cluster
-\section{Full dataset}
-\subsection{Parallel coordinate plots}
-\subsubsection{k-means clustering - 2 clusters}
-\subsubsection{k-means clustering - 3 clusters}
-\subsection{Scatterplot matrices}
-\subsubsection{k-means clustering superimposed - 2 clusters}
-\section{k-means clustering with large number of clusters}
 
 \chapter{Visualization methods for significance testing of RNA-sequencing data}
 \section{Introduction}
+
+\textbf{Ali's paper on nutrition in P. metricus shows that nutrition (but no nutrition alone) can influence caste determination (\citealt{pw1}).}
+- Phenotypic plasticity provides an important adaptive mechanism by which morphology, physiology, and/or be- havior can be adjusted to biotic and abiotic environmental factors including temperature, nutrition, population dens- ity, and predator presence [1]. \\
+- One of the best-studied models of insect phenotypic plasticity is reproductive castes in social insects, especially social Hymenoptera (bees, ants, and wasps [5]) \\
+- Instead, environmental factors in- duce differences in hormone titers and gene expression (reviewed in [6]), leading to the development of queens or workers, which vary in physiology and behavior and for advanced social species, in morphology [5]. \\
+- Differential nourishment [7-10] and nutrition-related genes and pathways (e.g. storage proteins such as vitellogenin and hexamerin, insulin/insulin-like signaling (IIS) pathways) have been linked to caste differences in honey bees [11,12], paper wasps [13,14], and termites [15,16]. \\
+- First-brood offspring produced early in the colony cycle have been reared by a single nest-founding queen or few queens, which also perform all colony tasks such as nest building, foraging, egg laying, and brood rearing [30]. At this early time in the colony cycle the adult-to-larva ratio is low [30,33], which leads to low feeding rates and more limited larval nourishment compared to offspring reared by workers and produced later in the colony cycle (future queens or “gynes”). Physiological evidence of nourishment- related differences between workers and gynes collected from naturally-founded colonies in the field include greater fat body stores in gynes [34,35] \\
+- Experimental studies show that nourishment inequalities that correspond to early-season and late-season larval development contexts are associated with development of offspring having characteristics of worker and gyne phenotypes, respectively [38,39]. \\
+- By comparing expression patterns from head samples from 8 individual wasp larvae under high and low nourishment, we identified 284 P. metricus differentially expressed transcripts (DETs) that differed between low and high nourishment treatments
+- In this study, we provide the first genome-wide transcriptional profiling of nourishment response during development in the genus Polistes, a model for understanding the evolution of social castes. We identified 285 nourishment differential expression transcripts (DETs) between larvae raised experimentally on low vs. high nourishment, many of which are associated with lipid metabolism and oxidation-reduction activity.
+- Our results provide insight into the role of nourish- ment in the differential gene expression patterns that lead to different castes in Polistes. Our results also support the notion that nourishment inequalities alone cannot explain all caste variability in gene expression. Instead, caste-related gene expression bias is likely to be additionally influenced by social factors such as domin- ance behavior [29,31], vibrational communication [40-42], and/or epigenetically mediated environmental influences [56].
+
+\textbf{Suryanarayanan's paper showed that antennal drumming  (\citealt{pw2}).}
+- We conclude that subjecting larvae in gyne-producing nests to simulated AD vibrations caused adults to emerge with significantly reduced amounts of fat, a non-diapause-related trait that corresponds to a worker phenotype [7, 8, 13]
+
 \section{Dataset}
+
+- To assess differential gene expression, we mapped reads to a previously assembled de novo transcriptome for P. metricus; the transcriptome was based on both the sequence data described here in conjunction with additional samples described in a previous study [13] \\
+
+
+The dataset consists of six samples for each of five groups for a total of 30 samples. 
+
+\begin{enumerate}
+\item \textbf{Foundress-Reared (samples labeled "F") or Worker-Destined}: 
+All specimens in this treatment group were collected at the beginning of the year, when only the foundress tended the larvae. Since this group will have restricted foraging (R) and no artificial drumming (N), we expect these larvae to develop into workers.
+\item \textbf{Worker-Reared (samples labeled "DR", "DU", "NR", "NU") or Queen-Destined}:
+All specimens in this group were collected later during the summer, when larvae would typically be developing into new queens. We expect these larvae to vary in phenotype based on the four different treatments applied.
+\begin{enumerate}
+\item \textbf{"DR"}: Larvae experienced artificial drumming (D) on the nest, and the colony experienced restricted foraging (R)
+\item \textbf{"DU"}: Larvae experienced D, the colony experienced unrestricted foraging (U)
+\item \textbf{"NR"}: Larvae experienced no artificial drumming (N), the colony experienced (R)
+\item \textbf{"NU"}: Larvae experienced (N), the colony experienced (U). These specimens are unmanipulated and should develop into new queens.
+\end{enumerate}
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{table}
+    \caption{Table.}
+    \label{fig:table}
+\end{figure}
+
+
+
 \section{Normalization}
 showed DU and DR looked good (MDS plots)
 \subsection{Parallel coordinate plots}
