@@ -777,7 +777,7 @@ fifth thing is permutation testing. that should be a part of this package. we wa
 
 - triplets - generate display with 3 plots (one is actual data, other two are perm1, perm2). for the most sig genes
 - do top 20 genes as triplets. randomize the location of the actual data amongst the other two. (so don’t know which one is permuted and which one is not permuted)
-- this is line-ups (triangle-test, b/c only three), and so can use the package (nullabor). have the three along a row. top gene under permuted design versus real data.
+- this is line-ups (triangle-test, b/c only three), and so can use the package (nullabor \citealt{nullabor}). have the three along a row. top gene under permuted design versus real data.
 
 \chapter{Visualization methods for clustering analysis of RNA-sequencing data}
 
@@ -787,11 +787,106 @@ The goal of this chapter is to develop visualization tools for RNA-sequencing re
 
 \section{Dataset}
 
+- Iron is an important micronutrient for all living things. In plants, it is essential for photosynthesis, respiration and other metabolic processes. Plants adjust their iron uptake from the soil to achieve the proper cellular iron concentrations. Without enough iron, plants suffer Iron Deficiency Chlorosis (IDC), which is among the most common and potentially severe nutritional stresses in plants \citealt{soy1}.
+- Therefore, iron homeostasis is tightly controlled by regulating iron uptake, transport and storage. IDC is a global problem, but is especially problematic in the calcareous soils of the Midwestern U. S., where the majority of U.S. soybeans are grown \citealt{soy3}.
+- The recommended management for IDC is growing IDC- resistant soybean lines. However, resistant lines yield lower than susceptible lines in conditions that do not favor the development of IDC. Identifying the genetic basis of IDC resistance may aid in the development of IDC tolerant lines that perform well in multiple soil types.
+
+- Iron is an essential micronutrient for all living things, required in plants for photosynthesis, respiration and metabolism. A lack of bioavailable iron in soil leads to iron deficiency chlorosis (IDC), causing a reduction in photosynthesis and interveinal yellowing of leaves. Soybeans (Glycine max (L.) Merr.) grown in high pH soils often suffer from IDC, resulting in substantial yield losses. Iron efficient soybean cultivars maintain photosynthesis and have higher yields under IDC-promoting conditions than inefficient cultivars.
+- To capture signaling between roots and leaves and identify genes acting early in the iron efficient cultivar Clark, we conducted a RNA-Seq study at one and six hours after replacing iron sufficient hydroponic media (100 uM iron(III) nitrate nonahydrate) with iron deficient media (50 uM iron(III) nitrate nonahydrate).
+- Genes involved in hormone signaling, regulation of DNA replication and iron uptake utilization are key aspects of the early iron-efficiency response. We observed dynamic gene expression differences between roots and leaves, suggesting the involvement of many transcription factors in eliciting rapid changes in gene expression.
+- The differentially expressed genes (DEGs) and signaling components identified here represent new targets for soybean improvement.
+- In the early 1970s, near isogenic soybean lines (NILs), Clark (PI54833) and Isoclark, were developed that differ in their responses to iron stress \citealt{soy10}. The cultivar Clark (PI54833) is iron efficient and does not develop IDC symptoms in iron-limiting conditions. Isoclark is suscep- tible to iron stress and develops interveinal chlorosis in re- sponse to iron limitation. Gene expression comparisons between Clark and Isoclark, which share 98\% genetic identity, have allowed the identification of hundreds of genes involved in iron stress responses in soybean. In the last several years, microarray analyses, RNA-Seq, intro- gression and association mapping, sub-NIL development and virus-induced gene silencing (VIGS) have been used to identify and characterize soybean genes that are differentially expressed during iron stress and iron stress recovery (\citealt{soy11}, \citealt{soy12}, \citealt{soy13}, \citealt{soy14}, and \citealt{soy15}). However, the early signaling events in the iron efficiency stress response remain elusive. Therefore, the work presented here aims to capture early transcriptional responses to iron stress in the iron efficient line Clark. We have used RNA-Seq to measure transcriptional responses one and six hours after iron stress. The differentially expressed genes (DEGs) and signaling components identified here represent new targets for soybean improvement.
+- used methods seen in \citealt{adSoy}.
+- they used edgeR
+
+\begin{itemize}
+  \item Count table for 56,044 genes in 18 samples of soybean leaves
+  \begin{itemize}
+    \item 30 minutes after iron-rich soil (3 replicates)
+    \item 60 minutes after iron-rich soil (3 replicates)
+    \item 120 minutes after iron-rich soil (3 replicates)
+    \item 30 minutes after iron-deficient soil (3 replicates)
+    \item 60 minutes after iron-deficient soil (3 replicates)
+    \item 120 minutes after iron-deficient soil (3 replicates)
+  \end{itemize}
+  \item Count table for 56,044 genes in 18 samples of soybean roots
+    \begin{itemize}
+    \item 30 minutes after iron-rich soil (3 replicates)
+    \item 60 minutes after iron-rich soil (3 replicates)
+    \item 120 minutes after iron-rich soil (3 replicates)
+    \item 30 minutes after iron-deficient soil (3 replicates)
+    \item 60 minutes after iron-deficient soil (3 replicates)
+    \item 120 minutes after iron-deficient soil (3 replicates)
+  \end{itemize}
+\end{itemize}
+
 the genes that are differentially expressed based on RNA-sequencing counts in samples from the leaves and roots of soybean plants in three time-points after induction of iron-rich or iron-poor conditions. The leaves (Allleaves040615.rda) and roots (Allroots.rda) data each contain a count table for 18 samples measured across 56,044 genes. These 18 samples consist of triplet replicates measured 30, 60, and 120 minutes after the induction (or lack of induction) of soil that was deficient in bioavailable iron. Genes will be clustered into groups that showed similar changes in read counts across iron condition, time point, and/or biological derivative (roots or leaves). The resulting clusters could help us identify what genes are responsible for how, when, and where soybeans respond to iron-deficient environments
 
+\section{Pre-processing}
 
-\section{Normalization}
-showed L120 and R30 looked good
+Exploratory data analysis was performed to better understand the data, to serve as a quality check, and to prepare for pre-processing analysis. It consisted of three main approaches:
+
+\begin{itemize}
+
+\item Normalization: Only a small fraction of the 56,044 genes should demonstrate read count changes of interest. We had to first determine what type of normalization to perform in order to standardize the gene read count distribution across the samples, so that the vast majority of genes do not artificially appear important.
+
+\item Remove Genes with Low-Counts and Low-Variability: We removed the bottom quartile of genes with low mean read counts, and we also removed the bottom quartile of genes with low standard deviaton in read counts.
+
+\item Quality and Label Checking: We check the quality of our data by analyzing pairwise scatterplot matrices of intra- versus inter- replicates and MDS plots. With these visual tools, we would high-quality genes to show replicates with consistency (low variability) in counts.
+
+\end{itemize}
+
+It would be difficult (if not impossible) to determine how consistent the samples are with a parallel coordinate plot. Instead, we began by examining a side-by-side boxplot of all 36 samples. From this plot, we believe the data will require intense normalization (see Figure \ref{fig:needNorm}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{needNorm}
+    \caption{Boxplot of the all leaves and roots samples before any normalization method. Since we only expect a handful of genes to show differential expression, we expect the samples to be mostly similar. However, we see here that there is a systematic error between the leaves and roots. Namely, the roots have a larger median number of counts, and also tend to have more low-valued outliers. There is even variation within roots and leaves (although to a much less extent than between the two groups). This all means that we need to heavily normalize this data.}
+    \label{fig:needNorm}
+\end{figure}
+
+Next, we create an MDS plot to better understand the quality of the data (\citealt{limma}). Based on this MDS plot, we determine that the six samples of leaves from 120 minutes appear to be of the best quality from this dataset.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{mdsGroups}
+    \caption{MDS plot of the six samples of leaves from 120 minutes. If the data is high-quality, then each of the three replicates should be separated very only a little distance, and inter-replicates should be separated by a further distance. We see that the 120-minute leaves in iron-deficient conditions (8, 14, and 22) and iron-sufficient conditions (11, 27, and 33) are possibly high-quality data. However, most of the rest of the MDS plot is messy, indicating that the rest of the leaves data is probably of poor-quality.}
+    \label{fig:mdsGroups}
+\end{figure}
+
+Because these visual tools made us believe that the leaves from 120 minutes were of the highest quality, we subsetted the data to only consider these six samples for the time being. First, we converted the read counts to counts per million (cpm), because raw counts  do not account for differences in library sizes between samples. We then placed the cpm count values on a logarithmic scale.
+
+We then prepared to examine this subset of the data by heavily filtering it. In general, genes should be discarded if they have zero probability of being expressed in all the samples for any of the treatments (\citealt{edger}). We first applied this rule of thumb, but then we continued to filter more extensively. Namely, we calculated the mean and standard deviation read count for the six samples, and removed the genes with the lowest quartile of mean read count, as well as the genes with the lowest quartile of standard deviation read count across the six samples. Finally, we removed genes that contained negative residuals from a Loess fit, as these genes were unlikely to be of interest, having low mean and standard deviation read counts.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{loessL120}
+    \caption{This is a plot for the standard deviation versus mean read count of the genes in the 6 leaf samples at 120 minutes. Any genes below the Loess fit (shown in blue) will be removed for having a low standard deviation and mean read count.}
+    \label{fig:loess}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{L120scatter}
+    \caption{Scatterplot matrix of the six samples of leaves from 120 minutes, where each of scatterplot matrix compares two of the three replicates. If the 120-minute leaves samples are high quality, then we would expect replicates to have read counts centered on the diagonal x=y line, and non-relicates to deviate somewhat from the diagonal x=y line. Indeed, this is what we see, as the bottom-left nine plots (non-replicates) appear much thicker around the x=y line than the other plots (replicates).}
+    \label{fig:L120scatter}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{boxplotL120}
+    \caption{Boxplot of the 17 leaves samples, after using the TMM (weighted trimmed mean of M-values) normalization method. Since we only expect a handful of genes to show differential expression, we expect the samples to be mostly similar, and we do here, as the median values and IQR ranges are comparable across the samples.}
+    \label{fig:boxplotL120}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{dendogramL120}
+    \caption{Porcupine plot}
+    \label{fig:dendogramL120}
+\end{figure}
+
+
 \section{L120}
 \subsection{Parallel coordinate plots}
 \subsubsection{k-means clustering - 2 clusters}
