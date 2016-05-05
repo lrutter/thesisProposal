@@ -18,39 +18,39 @@
 \contentsline {section}{\numberline {2.10}Plotting Distance Matrix}{21}{section.2.10}
 \contentsline {section}{\numberline {2.11}Academic Genealogy of Statisticians}{22}{section.2.11}
 \contentsline {subsection}{\numberline {2.11.1}Interactive visualization of genealogical structure}{29}{subsection.2.11.1}
-\contentsline {section}{\numberline {2.12}Future Avenues}{29}{section.2.12}
+\contentsline {section}{\numberline {2.12}Future Avenues}{30}{section.2.12}
 \contentsline {section}{\numberline {2.13}Conclusions}{30}{section.2.13}
-\contentsline {section}{\numberline {2.14}Acknowledgments}{30}{section.2.14}
-\contentsline {chapter}{\chapternumberline {3}Visualization methods for gene expression analysis}{31}{chapter.3}
-\contentsline {chapter}{\chapternumberline {4}Visualization method goals for RNA-sequencing}{35}{chapter.4}
-\contentsline {section}{\numberline {4.1}Parallel coordinate plots}{36}{section.4.1}
-\contentsline {section}{\numberline {4.2}Pairwise scatterplots}{37}{section.4.2}
-\contentsline {section}{\numberline {4.3}Replicate line plots}{39}{section.4.3}
-\contentsline {section}{\numberline {4.4}Single gene plots}{40}{section.4.4}
-\contentsline {section}{\numberline {4.5}Permutation testing plots}{40}{section.4.5}
-\contentsline {chapter}{\chapternumberline {5}Visualization method for RNA-sequencing: Soybean Data}{41}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{41}{section.5.1}
-\contentsline {section}{\numberline {5.2}Dataset}{41}{section.5.2}
-\contentsline {section}{\numberline {5.3}Normalization}{41}{section.5.3}
-\contentsline {section}{\numberline {5.4}L120}{41}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Parallel coordinate plots}{41}{subsection.5.4.1}
-\contentsline {subsubsection}{\numberline {5.4.1.1}k-means clustering - 2 clusters}{41}{subsubsection.5.4.1.1}
-\contentsline {subsubsection}{\numberline {5.4.1.2}k-means clustering - 3 clusters}{41}{subsubsection.5.4.1.2}
-\contentsline {subsection}{\numberline {5.4.2}Scatterplot matrices}{41}{subsection.5.4.2}
-\contentsline {subsubsection}{\numberline {5.4.2.1}k-means clustering superimposed - 3 clusters}{41}{subsubsection.5.4.2.1}
-\contentsline {subsection}{\numberline {5.4.3}Single gene plots}{41}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}Full dataset}{42}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Parallel coordinate plots}{42}{subsection.5.5.1}
-\contentsline {subsubsection}{\numberline {5.5.1.1}k-means clustering - 2 clusters}{42}{subsubsection.5.5.1.1}
-\contentsline {subsubsection}{\numberline {5.5.1.2}k-means clustering - 3 clusters}{42}{subsubsection.5.5.1.2}
-\contentsline {subsection}{\numberline {5.5.2}Scatterplot matrices}{42}{subsection.5.5.2}
-\contentsline {subsubsection}{\numberline {5.5.2.1}k-means clustering superimposed - 2 clusters}{42}{subsubsection.5.5.2.1}
-\contentsline {section}{\numberline {5.6}k-means clustering with large number of clusters}{42}{section.5.6}
-\contentsline {chapter}{\chapternumberline {6}Visualization method for RNA-sequencing: Paper wasp Data}{43}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{43}{section.6.1}
-\contentsline {section}{\numberline {6.2}Dataset}{43}{section.6.2}
-\contentsline {section}{\numberline {6.3}Normalization}{43}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Parallel coordinate plots}{43}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Scatterplot matrices}{43}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Single gene plots}{43}{subsection.6.3.3}
-\contentsline {chapter}{Bibliography}{44}{section*.20}
+\contentsline {section}{\numberline {2.14}Acknowledgments}{31}{section.2.14}
+\contentsline {chapter}{\chapternumberline {3}Visualization methods for gene expression analysis}{32}{chapter.3}
+\contentsline {chapter}{\chapternumberline {4}Visualization method goals for RNA-sequencing}{36}{chapter.4}
+\contentsline {section}{\numberline {4.1}Parallel coordinate plots}{37}{section.4.1}
+\contentsline {section}{\numberline {4.2}Pairwise scatterplots}{38}{section.4.2}
+\contentsline {section}{\numberline {4.3}Replicate line plots}{40}{section.4.3}
+\contentsline {section}{\numberline {4.4}Single gene plots}{41}{section.4.4}
+\contentsline {section}{\numberline {4.5}Permutation testing plots}{41}{section.4.5}
+\contentsline {chapter}{\chapternumberline {5}Visualization methods for clustering analysis of RNA-sequencing data}{42}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{42}{section.5.1}
+\contentsline {section}{\numberline {5.2}Dataset}{42}{section.5.2}
+\contentsline {section}{\numberline {5.3}Normalization}{42}{section.5.3}
+\contentsline {section}{\numberline {5.4}L120}{43}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Parallel coordinate plots}{43}{subsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.1.1}k-means clustering - 2 clusters}{43}{subsubsection.5.4.1.1}
+\contentsline {subsubsection}{\numberline {5.4.1.2}k-means clustering - 3 clusters}{43}{subsubsection.5.4.1.2}
+\contentsline {subsection}{\numberline {5.4.2}Scatterplot matrices}{43}{subsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}k-means clustering superimposed - 3 clusters}{43}{subsubsection.5.4.2.1}
+\contentsline {subsection}{\numberline {5.4.3}Single gene plots}{43}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}Full dataset}{43}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Parallel coordinate plots}{43}{subsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.1.1}k-means clustering - 2 clusters}{43}{subsubsection.5.5.1.1}
+\contentsline {subsubsection}{\numberline {5.5.1.2}k-means clustering - 3 clusters}{43}{subsubsection.5.5.1.2}
+\contentsline {subsection}{\numberline {5.5.2}Scatterplot matrices}{43}{subsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.2.1}k-means clustering superimposed - 2 clusters}{43}{subsubsection.5.5.2.1}
+\contentsline {section}{\numberline {5.6}k-means clustering with large number of clusters}{43}{section.5.6}
+\contentsline {chapter}{\chapternumberline {6}Visualization methods for significance testing of RNA-sequencing data}{44}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{44}{section.6.1}
+\contentsline {section}{\numberline {6.2}Dataset}{44}{section.6.2}
+\contentsline {section}{\numberline {6.3}Normalization}{44}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Parallel coordinate plots}{44}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Scatterplot matrices}{44}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Single gene plots}{44}{subsection.6.3.3}
+\contentsline {chapter}{Bibliography}{45}{section*.21}

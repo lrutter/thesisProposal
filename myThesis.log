@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 MAY 2016 20:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 MAY 2016 17:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2239,11 +2239,6 @@ Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
 [28 <./plotCBNoText.png>]
-
-LaTeX Warning: Reference `fig:plotAnimate' on page 29 undefined on input line 6
-33.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 637--637
 []\T1/pcr/m/n/10.95 R> plotPathOnAll(pathCB, statGeneal, statIG, binVector =
  []
@@ -2254,45 +2249,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 637--637
 ",
  []
 
-[29]
+<./plotCBNoText.png, id=535, 592.2125pt x 397.485pt>
+File: ./plotCBNoText.png Graphic file (type png)
+ <use ./plotCBNoText.png>
+Package pdftex.def Info: ./plotCBNoText.png used on input line 641.
+(pdftex.def)             Requested size: 592.21104pt x 397.48402pt.
+\g__file_internal_ior=\read3
+<<VPlayer.swf>><<animateGen.mov>> [29 <./plotCBNoText.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[30]
+[30] [31]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31
+ [32
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33]
-[34]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35
+ [34]
+[35]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36
 
 ]
-<boxplot.png, id=615, 426.59375pt x 421.575pt>
+<boxplot.png, id=645, 426.59375pt x 421.575pt>
 File: boxplot.png Graphic file (type png)
  <use boxplot.png>
 Package pdftex.def Info: boxplot.png used on input line 708.
 (pdftex.def)             Requested size: 298.75264pt x 295.25487pt.
- [36 <./boxplot.png>] <pcp.png, id=622, 393.47pt x 163.61125pt>
+ [37 <./boxplot.png>] <pcp.png, id=653, 393.47pt x 163.61125pt>
 File: pcp.png Graphic file (type png)
  <use pcp.png>
 Package pdftex.def Info: pcp.png used on input line 721.
 (pdftex.def)             Requested size: 256.07741pt x 106.48085pt.
- [37 <./pcp.png>] <scatmat.png, id=634, 600.2425pt x 606.265pt>
+ [38 <./pcp.png>] <scatmat.png, id=664, 600.2425pt x 606.265pt>
 File: scatmat.png Graphic file (type png)
  <use scatmat.png>
 Package pdftex.def Info: scatmat.png used on input line 740.
 (pdftex.def)             Requested size: 256.07741pt x 258.65367pt.
 
-<scatmat2.png, id=635, 248.93pt x 251.94125pt>
+<scatmat2.png, id=665, 248.93pt x 251.94125pt>
 File: scatmat2.png Graphic file (type png)
  <use scatmat2.png>
 Package pdftex.def Info: scatmat2.png used on input line 747.
@@ -2300,13 +2304,13 @@ Package pdftex.def Info: scatmat2.png used on input line 747.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38 <./scatmat.png>] <porcupine.png, id=641, 461.725pt x 374.39874pt>
+ [39 <./scatmat.png>] <porcupine.png, id=671, 461.725pt x 374.39874pt>
 File: porcupine.png Graphic file (type png)
 
 <use porcupine.png>
 Package pdftex.def Info: porcupine.png used on input line 758.
 (pdftex.def)             Requested size: 256.07741pt x 207.64522pt.
- <DESeqGene.png, id=642, 833.1125pt x 316.18124pt>
+ <DESeqGene.png, id=672, 833.1125pt x 316.18124pt>
 File: DESeqGene.png Graphic file (type png)
 
 <use DESeqGene.png>
@@ -2315,51 +2319,41 @@ Package pdftex.def Info: DESeqGene.png used on input line 769.
 
 Underfull \vbox (badness 7047) has occurred while \output is active []
 
- [39 <./scatmat2.png> <./porcupine.png>] [40 <./DESeqGene.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [40 <./scatmat2.png> <./porcupine.png>] [41 <./DESeqGene.png>] [42
 
- [41
+] [43] (./myThesis.bbl
+[44
 
-]
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[42] (./myThesis.bbl [43
-
-] [44
+] [45
 
 ]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 101.
- [45])
+ [46])
 
 Class memoir Warning: The material used in the headers is too large
 (27.2pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 820.
+(in both cases you will find help in the memoir manual). on input line 827.
 
-Package atenddvi Info: Last page = 46.
-[46]
+Package atenddvi Info: Last page = 47.
+[47]
 \tf@toc=\write8
 \openout8 = `myThesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 820.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 820.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 827.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 827.
  (./myThesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 820.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 820.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 827.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 827.
 Package rerunfilecheck Info: File `myThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 3E0E394C9D22B3F259059B06BCEF9EF1;4136.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: EF3FE3591C20938A171EF6EE7605350A;4164.
  ) 
 Here is how much of TeX's memory you used:
- 36947 strings out of 493089
- 703504 string characters out of 6134842
- 945184 words of memory out of 5000000
- 39599 multiletter control sequences out of 15000+600000
+ 36996 strings out of 493089
+ 704680 string characters out of 6134842
+ 945810 words of memory out of 5000000
+ 39642 multiletter control sequences out of 15000+600000
  29398 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,12n,85p,10368b,795s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2380,10 +2374,10 @@ onts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2015/texmf-dist/fon
 ts/type1/public/cm-super/sfti2074.pfb></usr/local/texlive/2015/texmf-dist/fonts
 /type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
 rw/courier/ucrro8a.pfb>
-Output written on myThesis.pdf (46 pages, 1791589 bytes).
+Output written on myThesis.pdf (47 pages, 16593768 bytes).
 PDF statistics:
- 784 PDF objects out of 1000 (max. 8388607)
- 685 compressed objects within 7 object streams
- 144 named destinations out of 1000 (max. 500000)
- 21026 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 820 PDF objects out of 1000 (max. 8388607)
+ 710 compressed objects within 8 object streams
+ 146 named destinations out of 1000 (max. 500000)
+ 21115 words of extra memory for PDF output out of 24883 (max. 10000000)
 

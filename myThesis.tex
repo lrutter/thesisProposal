@@ -779,10 +779,17 @@ fifth thing is permutation testing. that should be a part of this package. we wa
 - do top 20 genes as triplets. randomize the location of the actual data amongst the other two. (so don’t know which one is permuted and which one is not permuted)
 - this is line-ups (triangle-test, b/c only three), and so can use the package (nullabor). have the three along a row. top gene under permuted design versus real data.
 
-\chapter{Visualization method for RNA-sequencing: Soybean Data}
+\chapter{Visualization methods for clustering analysis of RNA-sequencing data}
 
 \section{Introduction}
+
+The goal of this chapter is to develop visualization tools for RNA-sequencing read counts after clustering analysis has been performed on them. We should expect that clustering analysis can successfully separate the genes into distinct groups that behaved similarly across the samples. \textbf{\textcolor{Red}{literature review?}}
+
 \section{Dataset}
+
+the genes that are differentially expressed based on RNA-sequencing counts in samples from the leaves and roots of soybean plants in three time-points after induction of iron-rich or iron-poor conditions. The leaves (Allleaves040615.rda) and roots (Allroots.rda) data each contain a count table for 18 samples measured across 56,044 genes. These 18 samples consist of triplet replicates measured 30, 60, and 120 minutes after the induction (or lack of induction) of soil that was deficient in bioavailable iron. Genes will be clustered into groups that showed similar changes in read counts across iron condition, time point, and/or biological derivative (roots or leaves). The resulting clusters could help us identify what genes are responsible for how, when, and where soybeans respond to iron-deficient environments
+
+
 \section{Normalization}
 showed L120 and R30 looked good
 \section{L120}
@@ -801,7 +808,7 @@ did to detect poor-quality third cluster
 \subsubsection{k-means clustering superimposed - 2 clusters}
 \section{k-means clustering with large number of clusters}
 
-\chapter{Visualization method for RNA-sequencing: Paper wasp Data}
+\chapter{Visualization methods for significance testing of RNA-sequencing data}
 \section{Introduction}
 \section{Dataset}
 \section{Normalization}
