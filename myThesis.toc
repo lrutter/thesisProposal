@@ -2,44 +2,51 @@
 \contentsline {chapter}{\chapternumberline {1}Introduction}{4}{chapter.1}
 \contentsline {section}{\numberline {1.1}Background to data visualization}{4}{section.1.1}
 \contentsline {section}{\numberline {1.2}Problems to be addressed}{4}{section.1.2}
-\contentsline {section}{\numberline {1.3}Overview of thesis research}{4}{section.1.3}
-\contentsline {chapter}{\chapternumberline {2}ggenealogy: Visualization methods for genealogical datasets}{6}{chapter.2}
-\contentsline {section}{\numberline {2.1}Abstract}{6}{section.2.1}
-\contentsline {section}{\numberline {2.2}Introduction}{6}{section.2.2}
-\contentsline {section}{\numberline {2.3}Available Software}{7}{section.2.3}
-\contentsline {section}{\numberline {2.4}Example Datasets}{10}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Soybean Genealogy}{10}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Academic Genealogy of Statisticians}{11}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}Genealogical Input Format}{12}{section.2.5}
-\contentsline {section}{\numberline {2.6}Generating a Graphical Object}{13}{section.2.6}
-\contentsline {section}{\numberline {2.7}Plotting a Shortest Path}{14}{section.2.7}
-\contentsline {section}{\numberline {2.8}Superimposing Shortest Path on Tree}{16}{section.2.8}
-\contentsline {section}{\numberline {2.9}Plotting Ancestors and Descendants by Generation}{19}{section.2.9}
-\contentsline {section}{\numberline {2.10}Plotting Distance Matrix}{21}{section.2.10}
-\contentsline {section}{\numberline {2.11}Academic Genealogy of Statisticians}{22}{section.2.11}
-\contentsline {subsection}{\numberline {2.11.1}Interactive visualization of genealogical structure}{29}{subsection.2.11.1}
-\contentsline {section}{\numberline {2.12}Future Avenues}{30}{section.2.12}
-\contentsline {section}{\numberline {2.13}Conclusions}{30}{section.2.13}
-\contentsline {section}{\numberline {2.14}Acknowledgments}{31}{section.2.14}
-\contentsline {chapter}{\chapternumberline {3}Visualization methods for gene expression analysis}{32}{chapter.3}
-\contentsline {chapter}{\chapternumberline {4}Visualization method goals for RNA-sequencing}{36}{chapter.4}
-\contentsline {section}{\numberline {4.1}Parallel coordinate plots}{37}{section.4.1}
-\contentsline {section}{\numberline {4.2}Pairwise scatterplots}{38}{section.4.2}
-\contentsline {section}{\numberline {4.3}Replicate line plots}{40}{section.4.3}
-\contentsline {section}{\numberline {4.4}Single gene plots}{41}{section.4.4}
-\contentsline {section}{\numberline {4.5}Permutation testing plots}{41}{section.4.5}
+\contentsline {section}{\numberline {1.3}Overview of thesis research}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}Abstract}{5}{section.1.4}
+\contentsline {section}{\numberline {1.5}Available Software}{5}{section.1.5}
+\contentsline {chapter}{\chapternumberline {2}Visualization methods for genealogical datasets}{8}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{8}{section.2.1}
+\contentsline {section}{\numberline {2.2}Example Datasets}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Soybean Genealogy}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Academic Genealogy of Statisticians}{10}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Genealogical Input Format}{11}{section.2.3}
+\contentsline {section}{\numberline {2.4}Generating a Graphical Object}{12}{section.2.4}
+\contentsline {section}{\numberline {2.5}Plotting a Shortest Path}{13}{section.2.5}
+\contentsline {section}{\numberline {2.6}Superimposing Shortest Path on Tree}{15}{section.2.6}
+\contentsline {section}{\numberline {2.7}Plotting Ancestors and Descendants by Generation}{18}{section.2.7}
+\contentsline {section}{\numberline {2.8}Plotting Distance Matrix}{20}{section.2.8}
+\contentsline {section}{\numberline {2.9}Academic Genealogy of Statisticians}{21}{section.2.9}
+\contentsline {subsection}{\numberline {2.9.1}Interactive visualization of genealogical structure}{28}{subsection.2.9.1}
+\contentsline {section}{\numberline {2.10}Future Avenues}{29}{section.2.10}
+\contentsline {section}{\numberline {2.11}Conclusions}{30}{section.2.11}
+\contentsline {section}{\numberline {2.12}Acknowledgments}{30}{section.2.12}
+\contentsline {chapter}{\chapternumberline {3}Visualization methods for gene expression analysis}{31}{chapter.3}
+\contentsline {chapter}{\chapternumberline {4}Visualization method goals for RNA-sequencing}{35}{chapter.4}
+\contentsline {section}{\numberline {4.1}Parallel coordinate plots}{36}{section.4.1}
+\contentsline {section}{\numberline {4.2}Pairwise scatterplots}{37}{section.4.2}
+\contentsline {section}{\numberline {4.3}Replicate line plots}{39}{section.4.3}
+\contentsline {section}{\numberline {4.4}Single gene plots}{40}{section.4.4}
+\contentsline {section}{\numberline {4.5}Permutation testing plots}{40}{section.4.5}
 \contentsline {chapter}{\chapternumberline {5}Visualization methods for clustering analysis of RNA-sequencing data}{42}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introduction}{42}{section.5.1}
-\contentsline {section}{\numberline {5.2}Dataset}{42}{section.5.2}
+\contentsline {section}{\numberline {5.2}Example Dataset}{42}{section.5.2}
 \contentsline {section}{\numberline {5.3}Pre-processing}{44}{section.5.3}
 \contentsline {section}{\numberline {5.4}Highest quality replicates (Leaves at 120 minutes)}{46}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Two clusters}{49}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Three clusters}{51}{subsection.5.4.2}
-\contentsline {chapter}{\chapternumberline {6}Visualization methods for significance testing of RNA-sequencing data}{57}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{57}{section.6.1}
-\contentsline {section}{\numberline {6.2}Dataset}{58}{section.6.2}
-\contentsline {section}{\numberline {6.3}Normalization}{59}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Parallel coordinate plots}{59}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Scatterplot matrices}{59}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Single gene plots}{59}{subsection.6.3.3}
-\contentsline {chapter}{Bibliography}{60}{section*.33}
+\contentsline {subsection}{\numberline {5.4.1}Two clusters}{50}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Three clusters}{52}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Many clusters}{58}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}Future Avenues}{62}{section.5.5}
+\contentsline {section}{\numberline {5.6}Conclusions}{62}{section.5.6}
+\contentsline {section}{\numberline {5.7}Acknowledgments}{63}{section.5.7}
+\contentsline {chapter}{\chapternumberline {6}Visualization methods for significance testing of RNA-sequencing data}{64}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{64}{section.6.1}
+\contentsline {section}{\numberline {6.2}Example Dataset}{65}{section.6.2}
+\contentsline {section}{\numberline {6.3}Normalization}{66}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Parallel coordinate plots}{66}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Scatterplot matrices}{66}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Single gene plots}{66}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Future Avenues}{66}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}Conclusions}{66}{subsection.6.3.5}
+\contentsline {subsection}{\numberline {6.3.6}Acknowledgments}{66}{subsection.6.3.6}
+\contentsline {chapter}{Bibliography}{67}{section*.35}
