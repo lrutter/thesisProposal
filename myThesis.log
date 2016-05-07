@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 MAY 2016 22:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  6 MAY 2016 21:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2272,229 +2272,230 @@ File: DESeqGene.png Graphic file (type png)
 <use DESeqGene.png>
 Package pdftex.def Info: DESeqGene.png used on input line 808.
 (pdftex.def)             Requested size: 244.7973pt x 92.90117pt.
- [40 <./porcupine.png> <./DESeqGene.png>] [41] [42
+ [40 <./porcupine.png> <./DESeqGene.png>] [41]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [43]
+ [42
+
+]
+[43] <needNorm.png, id=705, 517.935pt x 502.9992pt>
+File: needNorm.png Graphic file (type png)
+ <use needNorm.png>
+Package pdftex.def Info: needNorm.png used on input line 882.
+(pdftex.def)             Requested size: 407.99136pt x 396.24445pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Class memoir Warning: The material used in the headers is too large
 (27.2pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 882.
+(in both cases you will find help in the memoir manual). on input line 887.
 
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[44] <needNorm.png, id=710, 517.935pt x 502.9992pt>
-File: needNorm.png Graphic file (type png)
- <use needNorm.png>
-Package pdftex.def Info: needNorm.png used on input line 886.
-(pdftex.def)             Requested size: 407.99136pt x 396.24445pt.
-
-<mdsGroups.png, id=714, 441.8106pt x 432.6564pt>
+[44] <mdsGroups.png, id=714, 441.8106pt x 432.6564pt>
 File: mdsGroups.png Graphic file (type png)
  <use mdsGroups.png>
-Package pdftex.def Info: mdsGroups.png used on input line 897.
+Package pdftex.def Info: mdsGroups.png used on input line 893.
 (pdftex.def)             Requested size: 407.99136pt x 399.56053pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [45 <./needNorm.png>]
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[46 <./mdsGroups.png>] <loessL120.png, id=732, 455.7025pt x 440.64626pt>
+[46 <./mdsGroups.png>] <loessL120.png, id=731, 455.7025pt x 440.64626pt>
 File: loessL120.png Graphic file (type png)
 
 <use loessL120.png>
-Package pdftex.def Info: loessL120.png used on input line 912.
+Package pdftex.def Info: loessL120.png used on input line 908.
 (pdftex.def)             Requested size: 407.99136pt x 394.52051pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47]
-<L120scatter.png, id=740, 431.6125pt x 431.6125pt>
+ [47 <./loessL120.png>] <L120scatter.png, id=739, 431.6125pt x 431.6125pt>
 File: L120scatter.png Graphic file (type png)
- <use L120scatter.png>
-Package pdftex.def Info: L120scatter.png used on input line 923.
+
+<use L120scatter.png>
+Package pdftex.def Info: L120scatter.png used on input line 919.
 (pdftex.def)             Requested size: 407.99136pt x 408.00768pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[48 <./loessL120.png>] <dendL120.png, id=746, 479.391pt x 374.3586pt>
+[48 <./L120scatter.png>] <dendL120.png, id=745, 479.391pt x 374.3586pt>
 File: dendL120.png Graphic file (type png)
 
 <use dendL120.png>
-Package pdftex.def Info: dendL120.png used on input line 936.
+Package pdftex.def Info: dendL120.png used on input line 932.
 (pdftex.def)             Requested size: 407.99136pt x 318.61188pt.
- [49 <./L120scatter.png>]
-<pcp2L120.png, id=754, 586.19pt x 603.25375pt>
+ <pcp2L120.png, id=748, 586.19pt x 603.25375pt>
 File: pcp2L120.png Graphic file (type png)
- <use pcp2L120.png>
-Package pdftex.def Info: pcp2L120.png used on input line 949.
+
+<use pcp2L120.png>
+Package pdftex.def Info: pcp2L120.png used on input line 945.
 (pdftex.def)             Requested size: 407.99136pt x 419.86305pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[50 <./dendL120.png>] <scatterL120.png, id=765, 602.25pt x 573.14125pt>
+ [49 <./dendL120.png>] <scatterL120.png, id=760, 602.25pt x 573.14125pt>
 File: scatterL120.png Graphic file (type png)
 
 <use scatterL120.png>
-Package pdftex.def Info: scatterL120.png used on input line 960.
+Package pdftex.def Info: scatterL120.png used on input line 956.
 (pdftex.def)             Requested size: 407.99136pt x 388.2879pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51 <./pcp2L120.png>] <pcp3L120.png, id=775, 592.2125pt x 599.23875pt>
+
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[50 <./pcp2L120.png>] <pcp3L120.png, id=770, 592.2125pt x 599.23875pt>
 File: pcp3L120.png Graphic file (type png)
 
 <use pcp3L120.png>
-Package pdftex.def Info: pcp3L120.png used on input line 973.
+Package pdftex.def Info: pcp3L120.png used on input line 969.
 (pdftex.def)             Requested size: 407.99136pt x 412.84427pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[52 <./scatterL120.png>] <3scatterL120.png, id=786, 502.87875pt x 562.1pt>
+ [51 <./scatterL120.png>] <3scatterL120.png, id=781, 502.87875pt x 562.1pt>
 File: 3scatterL120.png Graphic file (type png)
 
 <use 3scatterL120.png>
-Package pdftex.def Info: 3scatterL120.png used on input line 984.
+Package pdftex.def Info: 3scatterL120.png used on input line 980.
 (pdftex.def)             Requested size: 407.99136pt x 456.03613pt.
 
 Underfull \vbox (badness 5681) has occurred while \output is active []
 
- [53 <./pcp3L120.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[54 <./3scatterL120.png>] <indSBGenes1.png, id=802, 467.8278pt x 640.794pt>
+[52 <./pcp3L120.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53 <./3scatterL120.png>] <indSBGenes1.png, id=797, 467.8278pt x 640.794pt>
 File: indSBGenes1.png Graphic file (type png)
 
 <use indSBGenes1.png>
-Package pdftex.def Info: indSBGenes1.png used on input line 994.
+Package pdftex.def Info: indSBGenes1.png used on input line 990.
 (pdftex.def)             Requested size: 426.79135pt x 584.59988pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55]
-Overfull \vbox (2.49596pt too high) has occurred while \output is active []
-
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[56 <./indSBGenes1.png>] <indSBGenes2.png, id=819, 467.346pt x 641.7576pt>
+[54]
+Overfull \vbox (2.49596pt too high) has occurred while \output is active []
+
+
+[55 <./indSBGenes1.png>] <indSBGenes2.png, id=814, 467.346pt x 641.7576pt>
 File: indSBGenes2.png Graphic file (type png)
 
 <use indSBGenes2.png>
-Package pdftex.def Info: indSBGenes2.png used on input line 1001.
+Package pdftex.def Info: indSBGenes2.png used on input line 997.
 (pdftex.def)             Requested size: 426.79135pt x 586.06653pt.
 
 Overfull \vbox (3.9626pt too high) has occurred while \output is active []
 
 
-[57 <./indSBGenes2.png>] <L120_15.jpg, id=831, 481.8pt x 481.8pt>
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[56 <./indSBGenes2.png>] <L120_15.jpg, id=826, 481.8pt x 481.8pt>
 File: L120_15.jpg Graphic file (type jpg)
 
 <use L120_15.jpg>
-Package pdftex.def Info: L120_15.jpg used on input line 1032.
+Package pdftex.def Info: L120_15.jpg used on input line 1028.
 (pdftex.def)             Requested size: 407.99136pt x 408.00278pt.
+ [57]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[58]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [59 <./L120_15.jpg>] <L120_15_5.jpg, id=843, 481.8pt x 481.8pt>
+[58 <./L120_15.jpg>] <L120_15_5.jpg, id=838, 481.8pt x 481.8pt>
 File: L120_15_5.jpg Graphic file (type jpg)
- <use L120_15_5.jpg>
-Package pdftex.def Info: L120_15_5.jpg used on input line 1045.
-(pdftex.def)             Requested size: 407.99136pt x 408.00278pt.
 
-<L120_15_6.jpg, id=844, 481.8pt x 481.8pt>
+<use L120_15_5.jpg>
+Package pdftex.def Info: L120_15_5.jpg used on input line 1041.
+(pdftex.def)             Requested size: 407.99136pt x 408.00278pt.
+ <L120_15_6.jpg, id=839, 481.8pt x 481.8pt>
 File: L120_15_6.jpg Graphic file (type jpg)
- <use L120_15_6.jpg>
-Package pdftex.def Info: L120_15_6.jpg used on input line 1054.
+
+<use L120_15_6.jpg>
+Package pdftex.def Info: L120_15_6.jpg used on input line 1050.
 (pdftex.def)             Requested size: 407.99136pt x 408.00278pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [59 <./L120_15_5.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[60 <./L120_15_5.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [61 <./L120_15_6.jpg>]
+[60 <./L120_15_6.jpg>] [61]
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[62] [63]
+[62]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64
+ [63
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1108--1109
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
- []
 
-[65]
-Overfull \hbox (16.92966pt too wide) in paragraph at lines 1127--1140
+[64]
+Overfull \hbox (16.92966pt too wide) in paragraph at lines 1113--1126
  [] 
  []
 
-(./myThesis.bbl
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+(./myThesis.bbl [65] [66
 
-
-[66] [67
-
-] [68]
+] [67] [68] [69]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 225.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 326.
 )
 
 Class memoir Warning: The material used in the headers is too large
 (27.2pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 1160.
+(in both cases you will find help in the memoir manual). on input line 1146.
 
-[69]
 Package atenddvi Info: Last page = 70.
- [70]
+[70]
 \tf@toc=\write8
 \openout8 = `myThesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1160.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 1160.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1146.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 1146.
  (./myThesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1160.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1160.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1146.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1146.
 
 Package rerunfilecheck Info: File `myThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 8A74A8DB7A8EE1E3C8EAF7C04C168549;3670.
+(rerunfilecheck)             Checksum: 56F0665D0D25A59019D7246550E74889;3649.
  ) 
 Here is how much of TeX's memory you used:
- 37203 strings out of 493089
- 707376 string characters out of 6134842
- 971984 words of memory out of 5000000
- 39763 multiletter control sequences out of 15000+600000
- 30191 words of font info for 119 fonts, out of 8000000 for 9000
+ 37277 strings out of 493089
+ 708147 string characters out of 6134842
+ 972821 words of memory out of 5000000
+ 39814 multiletter control sequences out of 15000+600000
+ 30554 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,12n,85p,10368b,884s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
@@ -2516,10 +2517,10 @@ s/type1/public/cm-super/sfti2074.pfb></usr/local/texlive/2015/texmf-dist/fonts/
 type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
 w/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courie
 r/ucrro8a.pfb>
-Output written on myThesis.pdf (70 pages, 18158198 bytes).
+Output written on myThesis.pdf (70 pages, 18159752 bytes).
 PDF statistics:
- 1037 PDF objects out of 1200 (max. 8388607)
- 873 compressed objects within 9 object streams
- 205 named destinations out of 1000 (max. 500000)
+ 1093 PDF objects out of 1200 (max. 8388607)
+ 928 compressed objects within 10 object streams
+ 222 named destinations out of 1000 (max. 500000)
  21665 words of extra memory for PDF output out of 24883 (max. 10000000)
 

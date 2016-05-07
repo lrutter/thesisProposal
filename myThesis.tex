@@ -827,19 +827,17 @@ fifth thing is permutation testing. that should be a part of this package. we wa
 
 The goal of this chapter is to develop visualization tools for RNA-sequencing read counts after clustering analysis has been performed on them. We should expect that clustering analysis can successfully separate the genes into distinct groups that behaved similarly across the samples. \textbf{\textcolor{Red}{literature review?}}
 
+In plants, iron is a necessary micronutrient for photosynthesis, respiration, and other metabolic processes. Iron uptake from the soil, iron transportation, and iron storage are all tightly regulated in plants to maintain homeostatic balance. A surplus of iron can cause cellular damage, but a deficiency in iron can cause Iron Deficiency Chlorosis (IDC), which causes yellowing of leaves and eventually total yield loss (\citealt{soy1}). While it is a global problem, IDC is particularly problematic where the majority of soybeans in the United States are grown in the calcareous soils of the Midwesten United States (\citealt{soy3}). One recommended strategy for controlling IDC is to develop IDC-resistant soybean lines. However, IDC-resistant soybean lines do not have as high of a yield as IDC-susceptible lines in iron-sufficent conditions. As a result, developing IDC-resistant soybean lines with high yield in multiple soil types is ideal.
+
+\textbf{\textcolor{Red}{mention clark?}}
+
+In recent years, identification of soybean genes that are differentially expressed during iron stress and recovery have been determined with the use of microarray analyses, RNA-sequencing, and virus-induced gene silencing (VIGS) (\citealt{soy11}, \citealt{soy12}, \citealt{soy13}, \citealt{soy14}, and \citealt{soy15}). However, much remains elusive about early signaling processes in iron-efficient stress responses. In the early 1970s, two soybean cultivars (Clark and Isoclark) with similar genotypes but different responses to iron stress were developed (\citealt{soy10}). Clark is an iron-efficient line that is resistant to IDC development in iron-poor conditions. In contrast, Isoclark is not an iron-efficient line and is susceptible to IDC development in iron-poor conditions.
+
 \section{Example Dataset}
 
-- Iron is an important micronutrient for all living things. In plants, it is essential for photosynthesis, respiration and other metabolic processes. Plants adjust their iron uptake from the soil to achieve the proper cellular iron concentrations. Without enough iron, plants suffer Iron Deficiency Chlorosis (IDC), which is among the most common and potentially severe nutritional stresses in plants \citealt{soy1}.
-- Therefore, iron homeostasis is tightly controlled by regulating iron uptake, transport and storage. IDC is a global problem, but is especially problematic in the calcareous soils of the Midwestern U. S., where the majority of U.S. soybeans are grown \citealt{soy3}.
-- The recommended management for IDC is growing IDC- resistant soybean lines. However, resistant lines yield lower than susceptible lines in conditions that do not favor the development of IDC. Identifying the genetic basis of IDC resistance may aid in the development of IDC tolerant lines that perform well in multiple soil types.
+The dataset comes from an RNA-sequencing study conducted to identify early signaling responses between roots and leaves in iron stress conditions in the iron-efficient soybean line Clark. To this end, a total of 36 samples of the cultivar Clark were exposed to iron-deficient and iron-sufficent soil conditions for 30 minutes, 60 minutes, and 120 minutes. \textbf{\textcolor{Red}{A more detailed and similar methodology can be found in (\citealt{adSoy}).}}
 
-- Iron is an essential micronutrient for all living things, required in plants for photosynthesis, respiration and metabolism. A lack of bioavailable iron in soil leads to iron deficiency chlorosis (IDC), causing a reduction in photosynthesis and interveinal yellowing of leaves. Soybeans (Glycine max (L.) Merr.) grown in high pH soils often suffer from IDC, resulting in substantial yield losses. Iron efficient soybean cultivars maintain photosynthesis and have higher yields under IDC-promoting conditions than inefficient cultivars.
-- To capture signaling between roots and leaves and identify genes acting early in the iron efficient cultivar Clark, we conducted a RNA-Seq study at one and six hours after replacing iron sufficient hydroponic media (100 uM iron(III) nitrate nonahydrate) with iron deficient media (50 uM iron(III) nitrate nonahydrate).
-- Genes involved in hormone signaling, regulation of DNA replication and iron uptake utilization are key aspects of the early iron-efficiency response. We observed dynamic gene expression differences between roots and leaves, suggesting the involvement of many transcription factors in eliciting rapid changes in gene expression.
-- The differentially expressed genes (DEGs) and signaling components identified here represent new targets for soybean improvement.
-- In the early 1970s, near isogenic soybean lines (NILs), Clark (PI54833) and Isoclark, were developed that differ in their responses to iron stress \citealt{soy10}. The cultivar Clark (PI54833) is iron efficient and does not develop IDC symptoms in iron-limiting conditions. Isoclark is suscep- tible to iron stress and develops interveinal chlorosis in re- sponse to iron limitation. Gene expression comparisons between Clark and Isoclark, which share 98\% genetic identity, have allowed the identification of hundreds of genes involved in iron stress responses in soybean. In the last several years, microarray analyses, RNA-Seq, intro- gression and association mapping, sub-NIL development and virus-induced gene silencing (VIGS) have been used to identify and characterize soybean genes that are differentially expressed during iron stress and iron stress recovery (\citealt{soy11}, \citealt{soy12}, \citealt{soy13}, \citealt{soy14}, and \citealt{soy15}). However, the early signaling events in the iron efficiency stress response remain elusive. Therefore, the work presented here aims to capture early transcriptional responses to iron stress in the iron efficient line Clark. We have used RNA-Seq to measure transcriptional responses one and six hours after iron stress. The differentially expressed genes (DEGs) and signaling components identified here represent new targets for soybean improvement.
-- used methods seen in \citealt{adSoy}.
-- they used edgeR
+Genes will be clustered into groups that showed similar changes in read counts across iron condition, time point, and/or biological derivative (roots or leaves). The resulting clusters could help us identify what genes are responsible for how, when, and where soybeans respond to iron-deficient environments. Our dataset of interest has a structure as follows:
 
 \begin{itemize}
   \item Count table for 56,044 genes in 18 samples of soybean leaves
@@ -862,19 +860,17 @@ The goal of this chapter is to develop visualization tools for RNA-sequencing re
   \end{itemize}
 \end{itemize}
 
-the genes that are differentially expressed based on RNA-sequencing counts in samples from the leaves and roots of soybean plants in three time-points after induction of iron-rich or iron-poor conditions. The leaves (Allleaves040615.rda) and roots (Allroots.rda) data each contain a count table for 18 samples measured across 56,044 genes. These 18 samples consist of triplet replicates measured 30, 60, and 120 minutes after the induction (or lack of induction) of soil that was deficient in bioavailable iron. Genes will be clustered into groups that showed similar changes in read counts across iron condition, time point, and/or biological derivative (roots or leaves). The resulting clusters could help us identify what genes are responsible for how, when, and where soybeans respond to iron-deficient environments
-
 \section{Pre-processing}
 
 Exploratory data analysis was performed to better understand the data, to serve as a quality check, and to prepare for pre-processing analysis. It consisted of three main approaches:
 
 \begin{itemize}
 
-\item Normalization: Only a small fraction of the 56,044 genes should demonstrate read count changes of interest. We had to first determine what type of normalization to perform in order to standardize the gene read count distribution across the samples, so that the vast majority of genes do not artificially appear important.
+\item \textbf{Normalization}: Only a small fraction of the 56,044 genes should demonstrate read count changes of interest. We had to first determine what type of normalization to perform in order to standardize the gene read count distribution across the samples, so that the vast majority of genes do not artificially appear important.
 
-\item Remove Genes with Low-Counts and Low-Variability: We removed the bottom quartile of genes with low mean read counts, and we also removed the bottom quartile of genes with low standard deviaton in read counts.
+\item \textbf{Remove Genes with Low-Counts and Low-Variability}: We removed the bottom quartile of genes with low mean read counts, and we also removed the bottom quartile of genes with low standard deviaton in read counts.
 
-\item Quality and Label Checking: We check the quality of our data by analyzing pairwise scatterplot matrices of intra- versus inter- replicates and MDS plots. With these visual tools, we would high-quality genes to show replicates with consistency (low variability) in counts.
+\item \textbf{Quality and Label Checking}: We check the quality of our data by analyzing pairwise scatterplot matrices of intra- versus inter- replicates and MDS plots. With these visual tools, we would high-quality genes to show replicates with consistency (low variability) in counts.
 
 \end{itemize}
 
@@ -1090,37 +1086,15 @@ The preliminary results from our visualization methods of clustering analysis of
 
 \section{Introduction}
 
-\textbf{Jandt's paper on this study} \citealt{pw3}
-- Early season, queen-reared larvae develop into lean, short-lived workers. After workers emerge and begin caring for the queen's offspring, larvae develop into fatty, long-lived new queens. By manipulating larval experience and quantifying gene expression, we explored the degree to which different environmental factors (nutrition and maternal antennal drumming) interact and influence molecular pathways, physiology, and behavior related to reproductive caste among developing Polistes wasp larvae.  
-- Nonetheless, larvae produced early in the colony cycle (raised by mothers) are  ‘biased’ towards worker caste, whereas larvae produced later in the colony cycle (raised by workers) are ‘biased’ towards queen caste (Figure 1a). 
-- the queen produces some form of vibratory behavior while feeding the larvae (reviewed in Jeanne 2009). In most species of Polistes it takes the form of antennal drumming (AD), in which the wasp strikes her antennae synchronously against the rim of a brood cell during feeding periods (Pratte and Jeanne 1984). The drumming has a frequency of 15-30 Hz, lasts about a second, produces an audible rattle or buzz, and causes the nest to vibrate.
-- Jeanne (2009) suggested that AD is a signal that causes the recipient larvae to develop into worker-like adults. This is supported by several observations
-- First, the foundress begins performing AD only when the oldest larvae in the young nest reach the third (of five) larval instars (Suryanarayanan and Jeanne 2008). In other eusocial Hymenoptera (Vespa, Vespula, Apis) the third larval instar is the stage at which developmental pathways of gyne- and worker-destined larvae begin to diverge (Ishay 1975; Evans and Wheeler 1999). Second, rates of vibrational signaling are high early in the colony cycle, when worker-destined larvae are being reared, and low late in the cycle, when males and gynes are being reared (Brillet et al. 1999; Suryanarayanan et al. 2011a). Finally, experimental simulation of vibrations on Polistes fuscatus nests led larvae to develop with lower (more worker-like) fat stores.  The emerging picture of caste determination in Polistes is a dual-input model, in which both nutritional and maternal-social factors interact to affect the developmental fate and caste-related physiological and behavioral characteristics of offspring.
-- Here, we examine caste-related gene expression in field-reared wasps under conditions of nutritional restriction and simulated drumming. We hypothesize that the combined effects of low nourishment and antennal drumming lead to worker-like phenotype: physiology (low lipid), brain-gene expression (lower expression of select caste-related biomarker genes), and behavior (engaged in colony tasks). Moreover, by quantifying gene expression, we can dissect whether environmental factors (nutrition and drumming) that influence developmental pathways act via the same or different molecular pathways. We predict that some caste-related genes are nutrition-responsive, some are responsive to maternal vibrational signals, and some are only responsive when both stimuli are present. 
-- In our study, we dissected the environmental (nutrition) and maternal (drumming) factors and show that some caste-related genes are nutrition-responsive, some are responsive to maternal vibrational signals, and some are only responsive when both stimuli are present. We hypothesized that the combined effects of low nourishment and antennal drumming would lead to worker-like phenotype: physiology (low lipid), brain-gene expression (lower expression of caste-related genes), and behavior (engaged in colony tasks). Our results support two of three of these predictions. Individuals reared in an environment with restricted foraging and simulated drumming, late in the season when neither of these factors would normally occur, developed with significantly lower lipid stores and decreased expression in all four caste-related genes (Figure 3), to levels at or below those measured in foundress-reared, worker-destined larvae.
-- How these two factors interact to influence expression across the transcriptome will be the next step in identifying and dissecting the relative role each of these social and environmental factors has on offspring development.
+Phenotypic plasticity is an adaptive tool in which a given genotype has the ability to produce more than one phenotype when exposed to different biotic and abiotic environmental factors (\citealt{pw4}). Reproductive castes in social Hymenoptera (wasps, ants, and bees) provide one of the most-researched models of insect phenotypic plasticity (\citealt{pw5}). In the wasp Genus \textit{Polistes}, larvae produced early in the colony season (reared by queens) tend to be caste as workers, whereas larvae produced later in the colony season (reared by workers) tend to be caste as queens (\citealt{pw3}). Two factors (nutritional and maternal-social) have emerged as the most likely expanatory variables for the casting fate of \textit{Polistes} offpsring (\citealt{pw3}).
 
+Early-season offspring are typically raised in a low adult-to-larvae ratio enviornment by one or a few nest-founding queens. This results in low feeding rates and limited body fat stores in the developing larvae (\citealt{pw6}, \citealt{pw7}, \citealt{pw8}, \citealt{pw9}). Experimental studies show that this low nourishment is associated with \textit{Polistes} offspring showing worker phenotypic characteristics (\citealt{pw10}, \citealt{pw11}). Moreover, a genome-wide study identified differentially expressed transcripts (DETs) between low and high nourishment treatment groups in \textit{P. metricus}, many of which were associated with lipid metabolism and oxidation-reduction activity (\citealt{pw1}). Moreover, in most species of \textit{Polistes}, the queen produces vibratory behavior in the form of antennal drumming (AD) when feeding the larvae (\citealt{pw12}, \citealt{pw13}), which has also been suggested to cause the larvae to develop worker phenotypic characteristics (\citealt{pw12}, \citealt{pw14}). For example, experimental simulation of vibrations on \textit{Polistes fuscatus} nests caused larvae to develop lower fat scores, which corresponds to a worker phenotype (\citealt{pw2}). The rates of antennal drumming are higher in the early-season, when worker-destined larvae are being reared by queens (\citealt{pw15}, \citealt{pw16}).
 
-\textbf{Ali's paper on nutrition in P. metricus shows that nutrition (but no nutrition alone) can influence caste determination (\citealt{pw1}).}
-- Phenotypic plasticity provides an important adaptive mechanism by which morphology, physiology, and/or be- havior can be adjusted to biotic and abiotic environmental factors including temperature, nutrition, population dens- ity, and predator presence [1]. \\
-- One of the best-studied models of insect phenotypic plasticity is reproductive castes in social insects, especially social Hymenoptera (bees, ants, and wasps [5]) \\
-- Instead, environmental factors in- duce differences in hormone titers and gene expression (reviewed in [6]), leading to the development of queens or workers, which vary in physiology and behavior and for advanced social species, in morphology [5]. \\
-- Differential nourishment [7-10] and nutrition-related genes and pathways (e.g. storage proteins such as vitellogenin and hexamerin, insulin/insulin-like signaling (IIS) pathways) have been linked to caste differences in honey bees [11,12], paper wasps [13,14], and termites [15,16]. \\
-- First-brood offspring produced early in the colony cycle have been reared by a single nest-founding queen or few queens, which also perform all colony tasks such as nest building, foraging, egg laying, and brood rearing [30]. At this early time in the colony cycle the adult-to-larva ratio is low [30,33], which leads to low feeding rates and more limited larval nourishment compared to offspring reared by workers and produced later in the colony cycle (future queens or “gynes”). Physiological evidence of nourishment- related differences between workers and gynes collected from naturally-founded colonies in the field include greater fat body stores in gynes [34,35] \\
-- Experimental studies show that nourishment inequalities that correspond to early-season and late-season larval development contexts are associated with development of offspring having characteristics of worker and gyne phenotypes, respectively [38,39]. \\
-- By comparing expression patterns from head samples from 8 individual wasp larvae under high and low nourishment, we identified 284 P. metricus differentially expressed transcripts (DETs) that differed between low and high nourishment treatments
-- In this study, we provide the first genome-wide transcriptional profiling of nourishment response during development in the genus Polistes, a model for understanding the evolution of social castes. We identified 285 nourishment differential expression transcripts (DETs) between larvae raised experimentally on low vs. high nourishment, many of which are associated with lipid metabolism and oxidation-reduction activity.
-- Our results provide insight into the role of nourish- ment in the differential gene expression patterns that lead to different castes in Polistes. Our results also support the notion that nourishment inequalities alone cannot explain all caste variability in gene expression. Instead, caste-related gene expression bias is likely to be additionally influenced by social factors such as domin- ance behavior [29,31], vibrational communication [40-42], and/or epigenetically mediated environmental influences [56].
-
-\textbf{Suryanarayanan's paper showed that antennal drumming  (\citealt{pw2}).}
-- We conclude that subjecting larvae in gyne-producing nests to simulated AD vibrations caused adults to emerge with significantly reduced amounts of fat, a non-diapause-related trait that corresponds to a worker phenotype [7, 8, 13]
+Taken together, conditions of antennal drumming and nutritional resriction may cause worker-like phenotypes in the early-season larvae that are raised by queens. One recent study manipulated larval environmental (nutrition) and maternal-social (AD) experience in \textit{Polistes fuscatus}, and quantified gene expression using real-time quantitative reverse-transcriptase polymerase chain reaction (qRT-PCR). Using caste-related candidate genes from other studies (\citealt{pw17}, \citealt{pw18}), this study provided evidence that some caste-related genes are nutrition-responsive, some are AD-responsive, and some are responsive only when both factors are present. A next step would be to conduct a similar study to determine how these two factors influence transcriptome expression related to caste determination.
 
 \section{Example Dataset}
 
-- To assess differential gene expression, we mapped reads to a previously assembled de novo transcriptome for P. metricus; the transcriptome was based on both the sequence data described here in conjunction with additional samples described in a previous study [13] \\
-
-
-The dataset consists of six samples for each of five groups for a total of 30 samples. 
+The dataset consists of RNA-sequencing count tables for 30 samples of \textit{P. fuscatus} larvae, where the reads were mapped to a previously assembled de novo transcriptmoe for \textit{P. metricus} (\citealt{pw19}). Two factors (nutrition and AD) were manipulated (or not manipulated) to create five treatment groups, each with six samples as follows:
 
 \begin{itemize}
 \item \textbf{Foundress-Reared (samples labeled "F") or Worker-Destined}: 
@@ -1151,10 +1125,40 @@ All specimens in this group were collected later during the summer, when larvae 
 \end{tabular}
 \end{center}
 
+\section{Pre-processing}
 
+- MDS plot is a rough overview. But, still, MDS shows that nutrition might be of better quality (or more biologically important) than drumming.
 
-\section{Normalization}
+- Why does the kmeans clustering work so much better on soybean than wasp?
+	- Plants are clones, but wasps are not clones. So, they have more variability.
+	- Plants are more controlled, especially over genotypes.
+
+- For now, just work with the 12 samples of DR and DU. Do the filtering and normalization on DR and DU, and keep the top 100 pairwise genes from edgeR.
 showed DU and DR looked good (MDS plots)
+- We can try RUVseq normalization method (R package). Ask Dr. Toth for ~20 genes with known quantities (not change much from one treatment to another, not care if workers, queens, drumming, nutrition). These genes are robust. This is the best normalization method.
+- We can use DR and DU to understand the signal:noise in the data
+
+- We have not looked into this with transcriptome data. However, there are a few genes we use as controls for PCR experiments that are "supposed" to be housekeeping genes that should not change much in their expression. We don't have 20 of them, but a handful. These include actin, rp49, S8, and a few others. You can find reference to these "control genes" and hopefully their primer sequences in some of the attached papers from other Polistes species, which could be blasted against the Pfus dataset to find homologs. Let me know if you would like to talk this over more.
+
+- 1) pre-existing knowledge of house-keeping genes (Dr. Toth doesn’t believe in housekeeping genes) (more useful if don’t have transcriptome)
+2) stdev within group, overall stdev, mean difference. internal control genes.
+3) could have spike-in
+
+
+
+- transcripts should not overlap (assembly could erroneously overlap them)
+- could be microoverlap 
+
+- (for the most part, they represent diff part of the genome. they are unique transcripts. They may correspond to the same gene, but they should not have any meaningful overlap in them) (some correspond to the same genes, so that type of independence is not there. some transcripts may map to same gene)
+
+- rerun analysis with DU and DR labels permuted (check permutation) (or make a couple up myself)
+
+
+- triplets - generate display with 3 plots (one is actual data, other two are perm1, perm2). for the most sig genes
+- do top 20 genes as triplets. randomize the location of the actual data amongst the other two. (so don’t know which one is permuted and which one is not permuted)
+- this is line-ups (triangle-test, b/c only three), and so can use the package (nullabor). have the three along a row. top gene under permuted design versus real data.
+
+
 \subsection{Parallel coordinate plots}
 \textbf{\textcolor{Red}{parallel coordinate plots looked bad!}}
 \subsection{Scatterplot matrices}
@@ -1163,9 +1167,9 @@ DU and DR promising?
 found differential expressed genes between DU and DR
 Show top 10 gene plots
 
-\subsection{Future Avenues}
-\subsection{Conclusions}
-\subsection{Acknowledgments}
+\section{Future Avenues}
+\section{Conclusions}
+\section{Acknowledgments}
 
 \bibliography{myThesis}
 
