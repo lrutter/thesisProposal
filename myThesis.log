@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  7 MAY 2016 19:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 MAY 2016 02:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1910,665 +1910,604 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-Underfull \vbox (badness 1354) has occurred while \output is active []
-
- [2
+) [2
 
 ])
-[3]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 200.
+[3] [4
+
+]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 205.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 200.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4
-
-]
-[5] <kinshipFig.png, id=342, 452.892pt x 360.3864pt>
-File: kinshipFig.png Graphic file (type png)
- <use kinshipFig.png>
-Package pdftex.def Info: kinshipFig.png used on input line 217.
-(pdftex.def)             Requested size: 265.1919pt x 211.0314pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./kinshipFig.png>] <Graph.png, id=356, 520.8258pt x 337.26pt>
-File: Graph.png Graphic file (type png)
- <use Graph.png>
-Package pdftex.def Info: Graph.png used on input line 230.
-(pdftex.def)             Requested size: 244.7973pt x 158.51736pt.
-
-[7 <./Graph.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [5]
+<porcupine.png, id=307, 602.25pt x 196.735pt>
+File: porcupine.png Graphic file (type png)
+ <use porcupine.png>
+Package pdftex.def Info: porcupine.png used on input line 220.
+(pdftex.def)             Requested size: 326.39433pt x 106.62555pt.
+ [6 <./porcupine.png>]
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 244.
+ [7]
+Underfull \vbox (badness 7981) has occurred while \output is active []
 
  [8
 
 ]
+<kinshipFig.png, id=355, 452.892pt x 360.3864pt>
+File: kinshipFig.png Graphic file (type png)
+ <use kinshipFig.png>
+Package pdftex.def Info: kinshipFig.png used on input line 271.
+(pdftex.def)             Requested size: 265.1919pt x 211.0314pt.
+ [9 <./kinshipFig.png>] <Graph.png, id=370, 520.8258pt x 337.26pt>
+File: Graph.png Graphic file (type png)
+ <use Graph.png>
+Package pdftex.def Info: Graph.png used on input line 284.
+(pdftex.def)             Requested size: 244.7973pt x 158.51736pt.
+
+[10 <./Graph.png>] [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12
+
+]
 Underfull \vbox (badness 1603) has occurred while \output is active []
 
- [9]
-[10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 366--366
+ [13]
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--366
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--366
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--366
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--366
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--366
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 448--448
 
  []
 
-[13] <pathTNZB.png, id=405, 636.9396pt x 398.9304pt>
+[17] <pathTNZB.png, id=434, 636.9396pt x 398.9304pt>
 File: pathTNZB.png Graphic file (type png)
  <use pathTNZB.png>
-Package pdftex.def Info: pathTNZB.png used on input line 394.
+Package pdftex.def Info: pathTNZB.png used on input line 459.
 (pdftex.def)             Requested size: 407.99136pt x 255.53372pt.
 
-[14 <./pathTNZB.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 439--439
+[18 <./pathTNZB.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 504--504
 []\T1/pcr/m/n/10.95 R> plotPathOnAll(pathTN, sbGeneal, sbIG, binVector = 1:3,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--439
+Underfull \hbox (badness 10000) in paragraph at lines 504--504
 \T1/pcr/m/n/10.95 pathEdgeCol = "red", nodeSize = 2.5, pathNodeSize = 4) +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--439
+Underfull \hbox (badness 10000) in paragraph at lines 504--504
 \T1/pcr/m/n/10.95 ggplot2::theme(axis.text = ggplot2::element_text(size = 12),
  []
 
-[15] <plotTNBin3.png, id=420, 693.59125pt x 405.515pt>
+[19] <plotTNBin3.png, id=450, 693.59125pt x 405.515pt>
 File: plotTNBin3.png Graphic file (type png)
  <use plotTNBin3.png>
-Package pdftex.def Info: plotTNBin3.png used on input line 444.
+Package pdftex.def Info: plotTNBin3.png used on input line 509.
 (pdftex.def)             Requested size: 407.99136pt x 238.54018pt.
 
-Underfull \hbox (badness 2158) in paragraph at lines 450--451
+Underfull \hbox (badness 2158) in paragraph at lines 515--516
 []\T1/cmr/m/n/10.95 (+20) In the code above, syn-tax from the \T1/pcr/m/n/10.95
  ggplot2 \T1/cmr/m/n/10.95 (+20) pack-age was ap-pended to the
  []
 
-[16 <./plotTNBin3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 464--464
+[20 <./plotTNBin3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 529--529
 []\T1/pcr/m/n/10.95 R> plotPathOnAll(pathTN, sbGeneal, sbIG, binVector = 1:6,
  []
 
-<plotTNBin6.png, id=433, 693.59125pt x 405.515pt>
+<plotTNBin6.png, id=464, 693.59125pt x 405.515pt>
 File: plotTNBin6.png Graphic file (type png)
  <use plotTNBin6.png>
-Package pdftex.def Info: plotTNBin6.png used on input line 469.
+Package pdftex.def Info: plotTNBin6.png used on input line 534.
 (pdftex.def)             Requested size: 407.99136pt x 238.54018pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
-Underfull \hbox (badness 10000) in paragraph at lines 488--488
+ [21]
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
 []\T1/pcr/m/n/10.95 R> plotAncDes("Lee", sbGeneal, mAnc = 6, mDes = 6, vCol =
  []
 
-[18 <./plotTNBin6.png>] <LeeAD3.png, id=449, 536.2434pt x 381.1038pt>
+[22 <./plotTNBin6.png>] <LeeAD3.png, id=480, 536.2434pt x 381.1038pt>
 File: LeeAD3.png Graphic file (type png)
 
 <use LeeAD3.png>
-Package pdftex.def Info: LeeAD3.png used on input line 495.
+Package pdftex.def Info: LeeAD3.png used on input line 560.
 (pdftex.def)             Requested size: 407.99136pt x 289.96753pt.
 
 Underfull \vbox (badness 2894) has occurred while \output is active []
 
- [19 <./LeeAD3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+ [23 <./LeeAD3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 577--577
 []\T1/pcr/m/n/10.95 >R varieties <- c("Brim", "Bedford", "Calland", "Dillon",
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+Underfull \hbox (badness 10000) in paragraph at lines 577--577
 \T1/pcr/m/n/10.95 >R plotDegMatrix(varieties, sbIG, sbGeneal, "Variety",
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+Underfull \hbox (badness 10000) in paragraph at lines 577--577
 \T1/pcr/m/n/10.95 "Variety", "Degree") + ggplot2::scale_fill_continuous(low =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+Underfull \hbox (badness 10000) in paragraph at lines 577--577
 \T1/pcr/m/n/10.95 "white", high = "darkgreen") + ggplot2::theme(legend.title
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+Underfull \hbox (badness 10000) in paragraph at lines 577--577
 \T1/pcr/m/n/10.95 = ggplot2::element_text(size = 15), legend.text =
  []
 
-[20] <degMatrix.png, id=467, 349.305pt x 289.08pt>
+[24] <degMatrix.png, id=496, 349.305pt x 289.08pt>
 File: degMatrix.png Graphic file (type png)
  <use degMatrix.png>
-Package pdftex.def Info: degMatrix.png used on input line 519.
+Package pdftex.def Info: degMatrix.png used on input line 584.
 (pdftex.def)             Requested size: 203.99568pt x 168.8266pt.
- [21 <./degMatrix.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 542--542
+ [25 <./degMatrix.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 607--607
 \T1/pcr/m/n/10.95 >R dFunc <- function(var) nrow(getDescendants(var, statGeneal
 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 567--567
+Underfull \hbox (badness 10000) in paragraph at lines 632--632
 []\T1/pcr/m/n/10.95 R> plotAncDes("David Cox", statGeneal, mAnc = 6, mDes = 6, 
 vCol
  []
 
-<dCox.png, id=480, 779.91376pt x 1187.43625pt>
+<dCox.png, id=510, 779.91376pt x 1187.43625pt>
 File: dCox.png Graphic file (type png)
  <use dCox.png>
-Package pdftex.def Info: dCox.png used on input line 572.
+Package pdftex.def Info: dCox.png used on input line 637.
 (pdftex.def)             Requested size: 407.99136pt x 621.16666pt.
 
 
-LaTeX Warning: Float too large for page by 12.52985pt on input line 576.
+LaTeX Warning: Float too large for page by 12.52985pt on input line 641.
 
-[22] [23 <./dCox.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 590--590
+[26] [27 <./dCox.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 655--655
 []\T1/pcr/m/n/10.95 R> nrow(getDescendants("Peter Bloomfield", statGeneal, gen 
 =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--602
+Underfull \hbox (badness 10000) in paragraph at lines 667--667
 \T1/pcr/m/n/10.95 R> pathCB <- getPath("David Cox", "Petra Buzkova", statIG,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--602
+Underfull \hbox (badness 10000) in paragraph at lines 667--667
 \T1/pcr/m/n/10.95 R> plotPath(pathCB, fontFace = 4) + ggplot2::theme(axis.text
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--602
+Underfull \hbox (badness 10000) in paragraph at lines 667--667
 \T1/pcr/m/n/10.95 = ggplot2::element_text(size = 10), axis.title =
  []
 
-<pathCB.png, id=492, 454.69875pt x 397.485pt>
+<pathCB.png, id=522, 454.69875pt x 397.485pt>
 File: pathCB.png Graphic file (type png)
  <use pathCB.png>
-Package pdftex.def Info: pathCB.png used on input line 607.
+Package pdftex.def Info: pathCB.png used on input line 672.
 (pdftex.def)             Requested size: 285.5927pt x 249.65872pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
+ [28]
 Underfull \vbox (badness 3323) has occurred while \output is active []
 
- [25 <./pathCB.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 621--621
+ [29 <./pathCB.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 686--686
 []\T1/pcr/m/n/10.95 R> plotPathOnAll(pathCB, statGeneal, statIG, binVector =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 621--621
+Underfull \hbox (badness 10000) in paragraph at lines 686--686
 \T1/pcr/m/n/10.95 1:200) + ggplot2::theme(axis.text = ggplot2::element_text(siz
 e
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 621--621
+Underfull \hbox (badness 10000) in paragraph at lines 686--686
 \T1/pcr/m/n/10.95 = 8), axis.title = ggplot2::element_text(size = 8)) +
  []
 
-<plotCBText.png, id=509, 691.58376pt x 405.515pt>
+<plotCBText.png, id=538, 691.58376pt x 405.515pt>
 File: plotCBText.png Graphic file (type png)
  <use plotCBText.png>
-Package pdftex.def Info: plotCBText.png used on input line 626.
+Package pdftex.def Info: plotCBText.png used on input line 691.
 (pdftex.def)             Requested size: 407.99136pt x 239.2332pt.
- [26 <./plotCBText.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 638--638
+ [30 <./plotCBText.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 []\T1/pcr/m/n/10.95 R> plotPathOnAll(pathCB, statGeneal, statIG,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 638--638
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/pcr/m/n/10.95 binVector = 1:200, nodeSize = .5, pathNodeSize =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 638--638
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/pcr/m/n/10.95 2.5, nodeCol = "darkgray", edgeCol = "lightgray") +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 638--638
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/pcr/m/n/10.95 ggplot2::theme(axis.text = ggplot2::element_text(size
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 638--638
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/pcr/m/n/10.95 = 8), axis.title = ggplot2::element_text(size = 8)) +
  []
 
-<plotCBNoText.png, id=519, 592.2125pt x 397.485pt>
+<plotCBNoText.png, id=548, 592.2125pt x 397.485pt>
 File: plotCBNoText.png Graphic file (type png)
  <use plotCBNoText.png>
-Package pdftex.def Info: plotCBNoText.png used on input line 643.
+Package pdftex.def Info: plotCBNoText.png used on input line 708.
 (pdftex.def)             Requested size: 407.99136pt x 273.84645pt.
 
-[27 <./plotCBNoText.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 657--657
+[31 <./plotCBNoText.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 722--722
 []\T1/pcr/m/n/10.95 R> plotPathOnAll(pathCB, statGeneal, statIG, binVector =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 657--657
+Underfull \hbox (badness 10000) in paragraph at lines 722--722
 \T1/pcr/m/n/10.95 1:200, nodeSize = .5, pathNodeSize = 2.5, nodeCol = "darkgray
 ",
  []
 
-<./plotCBNoText.png, id=532, 592.2125pt x 397.485pt>
+<./plotCBNoText.png, id=562, 592.2125pt x 397.485pt>
 File: ./plotCBNoText.png Graphic file (type png)
  <use ./plotCBNoText.png>
-Package pdftex.def Info: ./plotCBNoText.png used on input line 662.
+Package pdftex.def Info: ./plotCBNoText.png used on input line 727.
 (pdftex.def)             Requested size: 592.21104pt x 397.48402pt.
 \g__file_internal_ior=\read3
 <<VPlayer.swf>><<animateGen.mov>>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28]
-Underfull \hbox (badness 3536) in paragraph at lines 677--678
+ [32]
+Underfull \hbox (badness 3536) in paragraph at lines 742--743
 []\T1/cmr/bx/n/10.95 Further elim-i-nate text over-lap\T1/cmr/m/n/10.95 (+20) :
  The \T1/pcr/m/n/10.95 ggenealogy \T1/cmr/m/n/10.95 (+20) vi-su-al-iza-tion too
 l
  []
 
-[29 <./plotCBNoText.png>] [30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33]
-[34]
+[33 <./plotCBNoText.png>] [34]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [35
 
 ]
-<boxplotL120.png, id=641, 449.68pt x 441.65pt>
-File: boxplotL120.png Graphic file (type png)
- <use boxplotL120.png>
-Package pdftex.def Info: boxplotL120.png used on input line 737.
-(pdftex.def)             Requested size: 285.5927pt x 280.50528pt.
-
-Underfull \vbox (badness 3407) has occurred while \output is active []
-
- [36 <./boxplotL120.png>] <pcp.png, id=648, 393.47pt x 163.61125pt>
-File: pcp.png Graphic file (type png)
- <use pcp.png>
-Package pdftex.def Info: pcp.png used on input line 752.
-(pdftex.def)             Requested size: 244.7973pt x 101.78992pt.
- [37 <./pcp.png>] <scatmat.png, id=660, 600.2425pt x 606.265pt>
-File: scatmat.png Graphic file (type png)
- <use scatmat.png>
-Package pdftex.def Info: scatmat.png used on input line 773.
-(pdftex.def)             Requested size: 244.7973pt x 247.24739pt.
-
-<scatmat2.png, id=661, 248.93pt x 251.94125pt>
-File: scatmat2.png Graphic file (type png)
- <use scatmat2.png>
-Package pdftex.def Info: scatmat2.png used on input line 782.
-(pdftex.def)             Requested size: 244.7973pt x 247.7657pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [38 <./scatmat.png>] <porcupine.png, id=667, 461.725pt x 374.39874pt>
-File: porcupine.png Graphic file (type png)
-
-<use porcupine.png>
-Package pdftex.def Info: porcupine.png used on input line 795.
-(pdftex.def)             Requested size: 244.7973pt x 198.49893pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39 <./scatmat2.png>] <DESeqGene.png, id=673, 833.1125pt x 316.18124pt>
-File: DESeqGene.png Graphic file (type png)
-
-<use DESeqGene.png>
-Package pdftex.def Info: DESeqGene.png used on input line 808.
-(pdftex.def)             Requested size: 244.7973pt x 92.90117pt.
- [40 <./porcupine.png> <./DESeqGene.png>] [41]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42
-
-]
-[43] <needNorm.png, id=726, 517.935pt x 502.9992pt>
-File: needNorm.png Graphic file (type png)
- <use needNorm.png>
-Package pdftex.def Info: needNorm.png used on input line 882.
-(pdftex.def)             Requested size: 407.99136pt x 396.24445pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Class memoir Warning: The material used in the headers is too large
 (27.2pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 887.
+(in both cases you will find help in the memoir manual). on input line 812.
 
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[44] <mdsGroups.png, id=735, 441.8106pt x 432.6564pt>
+[36] <needNorm.png, id=642, 517.935pt x 502.9992pt>
+File: needNorm.png Graphic file (type png)
+ <use needNorm.png>
+Package pdftex.def Info: needNorm.png used on input line 822.
+(pdftex.def)             Requested size: 407.99136pt x 396.24445pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+<mdsGroups.png, id=652, 441.8106pt x 432.6564pt>
 File: mdsGroups.png Graphic file (type png)
  <use mdsGroups.png>
-Package pdftex.def Info: mdsGroups.png used on input line 893.
+Package pdftex.def Info: mdsGroups.png used on input line 833.
 (pdftex.def)             Requested size: 407.99136pt x 399.56053pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45 <./needNorm.png>]
+
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[46 <./mdsGroups.png>] <loessL120.png, id=751, 455.7025pt x 440.64626pt>
+[38 <./needNorm.png>] [39 <./mdsGroups.png>]
+<loessL120.png, id=668, 455.7025pt x 440.64626pt>
 File: loessL120.png Graphic file (type png)
-
-<use loessL120.png>
-Package pdftex.def Info: loessL120.png used on input line 908.
+ <use loessL120.png>
+Package pdftex.def Info: loessL120.png used on input line 848.
 (pdftex.def)             Requested size: 407.99136pt x 394.52051pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47 <./loessL120.png>] <L120scatter.png, id=759, 431.6125pt x 431.6125pt>
-File: L120scatter.png Graphic file (type png)
-
-<use L120scatter.png>
-Package pdftex.def Info: L120scatter.png used on input line 919.
-(pdftex.def)             Requested size: 407.99136pt x 408.00768pt.
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[48 <./L120scatter.png>] <dendL120.png, id=765, 479.391pt x 374.3586pt>
+[40 <./loessL120.png>] <L120scatter.png, id=676, 431.6125pt x 431.6125pt>
+File: L120scatter.png Graphic file (type png)
+
+<use L120scatter.png>
+Package pdftex.def Info: L120scatter.png used on input line 859.
+(pdftex.def)             Requested size: 407.99136pt x 408.00768pt.
+ <dendL120.png, id=677, 479.391pt x 374.3586pt>
 File: dendL120.png Graphic file (type png)
 
 <use dendL120.png>
-Package pdftex.def Info: dendL120.png used on input line 932.
+Package pdftex.def Info: dendL120.png used on input line 870.
 (pdftex.def)             Requested size: 407.99136pt x 318.61188pt.
- <pcp2L120.png, id=768, 586.19pt x 603.25375pt>
+ [41 <./L120scatter.png>]
+<pcp2L120.png, id=685, 586.19pt x 603.25375pt>
 File: pcp2L120.png Graphic file (type png)
-
-<use pcp2L120.png>
-Package pdftex.def Info: pcp2L120.png used on input line 945.
+ <use pcp2L120.png>
+Package pdftex.def Info: pcp2L120.png used on input line 883.
 (pdftex.def)             Requested size: 407.99136pt x 419.86305pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49 <./dendL120.png>] <scatterL120.png, id=780, 602.25pt x 573.14125pt>
+
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[42 <./dendL120.png>] <scatterL120.png, id=696, 602.25pt x 573.14125pt>
 File: scatterL120.png Graphic file (type png)
 
 <use scatterL120.png>
-Package pdftex.def Info: scatterL120.png used on input line 956.
+Package pdftex.def Info: scatterL120.png used on input line 894.
 (pdftex.def)             Requested size: 407.99136pt x 388.2879pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[50 <./pcp2L120.png>] <pcp3L120.png, id=790, 592.2125pt x 599.23875pt>
+ [43 <./pcp2L120.png>] <pcp3L120.png, id=707, 592.2125pt x 599.23875pt>
 File: pcp3L120.png Graphic file (type png)
 
 <use pcp3L120.png>
-Package pdftex.def Info: pcp3L120.png used on input line 969.
+Package pdftex.def Info: pcp3L120.png used on input line 907.
 (pdftex.def)             Requested size: 407.99136pt x 412.84427pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51 <./scatterL120.png>] <3scatterL120.png, id=801, 502.87875pt x 562.1pt>
+
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[44 <./scatterL120.png>] <3scatterL120.png, id=718, 502.87875pt x 562.1pt>
 File: 3scatterL120.png Graphic file (type png)
 
 <use 3scatterL120.png>
-Package pdftex.def Info: 3scatterL120.png used on input line 980.
+Package pdftex.def Info: 3scatterL120.png used on input line 918.
 (pdftex.def)             Requested size: 407.99136pt x 456.03613pt.
 
 Underfull \vbox (badness 5681) has occurred while \output is active []
 
+ [45 <./pcp3L120.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[52 <./pcp3L120.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [53 <./3scatterL120.png>] <indSBGenes1.png, id=817, 467.8278pt x 640.794pt>
+[46 <./3scatterL120.png>] <indSBGenes1.png, id=735, 467.8278pt x 640.794pt>
 File: indSBGenes1.png Graphic file (type png)
 
 <use indSBGenes1.png>
-Package pdftex.def Info: indSBGenes1.png used on input line 990.
+Package pdftex.def Info: indSBGenes1.png used on input line 928.
 (pdftex.def)             Requested size: 426.79135pt x 584.59988pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [47]
+Overfull \vbox (2.49596pt too high) has occurred while \output is active []
+
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[54]
-Overfull \vbox (2.49596pt too high) has occurred while \output is active []
-
-
-[55 <./indSBGenes1.png>] <indSBGenes2.png, id=834, 467.346pt x 641.7576pt>
+[48 <./indSBGenes1.png>] <indSBGenes2.png, id=751, 467.346pt x 641.7576pt>
 File: indSBGenes2.png Graphic file (type png)
 
 <use indSBGenes2.png>
-Package pdftex.def Info: indSBGenes2.png used on input line 997.
+Package pdftex.def Info: indSBGenes2.png used on input line 935.
 (pdftex.def)             Requested size: 426.79135pt x 586.06653pt.
 
 Overfull \vbox (3.9626pt too high) has occurred while \output is active []
 
 
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[56 <./indSBGenes2.png>] <L120_15.jpg, id=846, 481.8pt x 481.8pt>
+[49 <./indSBGenes2.png>] <L120_15.jpg, id=764, 481.8pt x 481.8pt>
 File: L120_15.jpg Graphic file (type jpg)
 
 <use L120_15.jpg>
-Package pdftex.def Info: L120_15.jpg used on input line 1028.
+Package pdftex.def Info: L120_15.jpg used on input line 966.
 (pdftex.def)             Requested size: 407.99136pt x 408.00278pt.
- [57]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[58 <./L120_15.jpg>] <L120_15_5.jpg, id=858, 481.8pt x 481.8pt>
+[50]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51 <./L120_15.jpg>] <L120_15_5.jpg, id=776, 481.8pt x 481.8pt>
 File: L120_15_5.jpg Graphic file (type jpg)
-
-<use L120_15_5.jpg>
-Package pdftex.def Info: L120_15_5.jpg used on input line 1041.
+ <use L120_15_5.jpg>
+Package pdftex.def Info: L120_15_5.jpg used on input line 979.
 (pdftex.def)             Requested size: 407.99136pt x 408.00278pt.
- <L120_15_6.jpg, id=859, 481.8pt x 481.8pt>
+
+<L120_15_6.jpg, id=777, 481.8pt x 481.8pt>
 File: L120_15_6.jpg Graphic file (type jpg)
-
-<use L120_15_6.jpg>
-Package pdftex.def Info: L120_15_6.jpg used on input line 1050.
+ <use L120_15_6.jpg>
+Package pdftex.def Info: L120_15_6.jpg used on input line 988.
 (pdftex.def)             Requested size: 407.99136pt x 408.00278pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59 <./L120_15_5.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[60 <./L120_15_6.jpg>] [61]
+[52 <./L120_15_5.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53 <./L120_15_6.jpg>]
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[62]
+[54] [55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63
+ [56
 
 ]
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[64]
-Overfull \hbox (6.30173pt too wide) in paragraph at lines 1112--1125
+[57]
+Overfull \hbox (6.30173pt too wide) in paragraph at lines 1057--1070
 [][] 
  []
 
-<boxplotPW.png, id=963, 606.265pt x 605.26125pt>
+<boxplotPW.png, id=881, 606.265pt x 605.26125pt>
 File: boxplotPW.png Graphic file (type png)
  <use boxplotPW.png>
-Package pdftex.def Info: boxplotPW.png used on input line 1145.
+Package pdftex.def Info: boxplotPW.png used on input line 1090.
 (pdftex.def)             Requested size: 407.99136pt x 407.32385pt.
 
 Underfull \vbox (badness 2343) has occurred while \output is active []
 
- [65]
-<mdsPW.png, id=974, 592.2125pt x 525.965pt>
+
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[58] <mdsPW.png, id=892, 592.2125pt x 525.965pt>
 File: mdsPW.png Graphic file (type png)
  <use mdsPW.png>
-Package pdftex.def Info: mdsPW.png used on input line 1156.
+Package pdftex.def Info: mdsPW.png used on input line 1101.
 (pdftex.def)             Requested size: 407.99136pt x 362.36246pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [59 <./boxplotPW.png>]
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[66 <./boxplotPW.png>] [67 <./mdsPW.png>]
-<scatMatPW.png, id=989, 702.625pt x 702.625pt>
+[60 <./mdsPW.png>] <scatMatPW.png, id=906, 702.625pt x 702.625pt>
 File: scatMatPW.png Graphic file (type png)
- <use scatMatPW.png>
-Package pdftex.def Info: scatMatPW.png used on input line 1173.
+
+<use scatMatPW.png>
+Package pdftex.def Info: scatMatPW.png used on input line 1118.
 (pdftex.def)             Requested size: 407.99136pt x 408.00523pt.
-
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[68 <./scatMatPW.png>] <degPW.png, id=1000, 512.6352pt x 869.1672pt>
+ [61 <./scatMatPW.png>]
+<degPW.png, id=918, 512.6352pt x 869.1672pt>
 File: degPW.png Graphic file (type png)
-
-<use degPW.png>
-Package pdftex.def Info: degPW.png used on input line 1190.
-(pdftex.def)             Requested size: 407.99136pt x 691.75386pt.
+ <use degPW.png>
+Package pdftex.def Info: degPW.png used on input line 1130.
+(pdftex.def)             Requested size: 384.1096pt x 651.26373pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [69]
-Overfull \vbox (137.51707pt too high) has occurred while \output is active []
-
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[70 <./degPW.png>] [71]
+[62]
+Overfull \vbox (69.1598pt too high) has occurred while \output is active []
+
+
+[63 <./degPW.png>]
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[72]
-Overfull \hbox (9.14719pt too wide) in paragraph at lines 1231--1242
+[64] [65]
+Overfull \hbox (9.14719pt too wide) in paragraph at lines 1171--1182
 [] 
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 1249--1249
+Underfull \hbox (badness 1430) in paragraph at lines 1189--1189
 \T1/cmr/m/n/10.95 (+20) pro-vides vi-su-al-iza-tion tools for ge-nealog-i-cal
  []
 
 
-Overfull \hbox (9.14719pt too wide) in paragraph at lines 1245--1258
+Overfull \hbox (9.14719pt too wide) in paragraph at lines 1185--1198
 [] 
  []
 
 
-Overfull \hbox (9.14719pt too wide) in paragraph at lines 1261--1268
+Overfull \hbox (9.14719pt too wide) in paragraph at lines 1201--1208
 [] 
  []
 
-(./myThesis.bbl [73
+(./myThesis.bbl [66
 
-] [74
+] [67
 
-] [75] [76] [77]
+] [68] [69]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 340.
-)
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 311.
+ [70])
 
 Class memoir Warning: The material used in the headers is too large
 (27.2pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 1271.
+(in both cases you will find help in the memoir manual). on input line 1211.
 
-Package atenddvi Info: Last page = 78.
-[78]
+Package atenddvi Info: Last page = 71.
+[71]
 \tf@toc=\write8
 \openout8 = `myThesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1271.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 1271.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1211.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 1211.
  (./myThesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1271.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1271.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1211.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1211.
 
 Package rerunfilecheck Info: File `myThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 4BB3EA5DA513E5D77F09158F0A60B4A0;3915.
+(rerunfilecheck)             Checksum: F8CC5079CAE7948814C51BA738B3F31B;3447.
  ) 
 Here is how much of TeX's memory you used:
- 37342 strings out of 493089
- 708940 string characters out of 6134842
- 976029 words of memory out of 5000000
- 39847 multiletter control sequences out of 15000+600000
- 31376 words of font info for 124 fonts, out of 8000000 for 9000
+ 37276 strings out of 493089
+ 707965 string characters out of 6134842
+ 975860 words of memory out of 5000000
+ 39806 multiletter control sequences out of 15000+600000
+ 31255 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,12n,85p,10368b,884s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
@@ -2591,10 +2530,10 @@ type1/public/cm-super/sfti2074.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/urw/courier/ucrb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/
 courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/
 ucrro8a.pfb>
-Output written on myThesis.pdf (78 pages, 19188832 bytes).
+Output written on myThesis.pdf (71 pages, 18948183 bytes).
 PDF statistics:
- 1199 PDF objects out of 1200 (max. 8388607)
- 1019 compressed objects within 11 object streams
- 247 named destinations out of 1000 (max. 500000)
- 22229 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 1113 PDF objects out of 1200 (max. 8388607)
+ 945 compressed objects within 10 object streams
+ 229 named destinations out of 1000 (max. 500000)
+ 22148 words of extra memory for PDF output out of 24883 (max. 10000000)
 
