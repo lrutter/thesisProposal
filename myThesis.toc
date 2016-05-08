@@ -42,11 +42,15 @@
 \contentsline {chapter}{\chapternumberline {6}Visualization methods for significance testing of RNA-sequencing data}{63}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction}{63}{section.6.1}
 \contentsline {section}{\numberline {6.2}Example Dataset}{64}{section.6.2}
-\contentsline {section}{\numberline {6.3}Normalization}{65}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Parallel coordinate plots}{65}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Scatterplot matrices}{65}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Single gene plots}{65}{subsection.6.3.3}
-\contentsline {section}{\numberline {6.4}Future Avenues}{65}{section.6.4}
-\contentsline {section}{\numberline {6.5}Conclusions}{65}{section.6.5}
-\contentsline {section}{\numberline {6.6}Acknowledgments}{65}{section.6.6}
-\contentsline {chapter}{Bibliography}{66}{section*.35}
+\contentsline {section}{\numberline {6.3}Pre-processing}{65}{section.6.3}
+\contentsline {section}{\numberline {6.4}Highest quality replicates (Artificial Drumming groups)}{67}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Clustering analysis}{69}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Differential expression analysis}{69}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}Future Avenues}{71}{section.6.5}
+\contentsline {section}{\numberline {6.6}Conclusions}{72}{section.6.6}
+\contentsline {section}{\numberline {6.7}Acknowledgments}{72}{section.6.7}
+\contentsline {chapter}{\chapternumberline {7}Timeline}{73}{chapter.7}
+\contentsline {section}{\numberline {7.1}Completed}{73}{section.7.1}
+\contentsline {section}{\numberline {7.2}Scheduled deliverables}{73}{section.7.2}
+\contentsline {section}{\numberline {7.3}Other work}{73}{section.7.3}
+\contentsline {chapter}{Bibliography}{74}{section*.39}
