@@ -2,48 +2,44 @@
 \contentsline {chapter}{\chapternumberline {1}Introduction}{4}{chapter.1}
 \contentsline {section}{\numberline {1.1}Background to data visualization}{4}{section.1.1}
 \contentsline {section}{\numberline {1.2}Problems to be addressed}{4}{section.1.2}
-\contentsline {section}{\numberline {1.3}Overview of thesis research}{7}{section.1.3}
-\contentsline {chapter}{\chapternumberline {2}Literature Review}{8}{chapter.2}
-\contentsline {section}{\numberline {2.1}Visualization methods for genealogical data}{8}{section.2.1}
-\contentsline {section}{\numberline {2.2}Visualization methods for RNA-sequencing data}{10}{section.2.2}
-\contentsline {chapter}{\chapternumberline {3}Visualization methods for genealogical datasets}{12}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction}{12}{section.3.1}
-\contentsline {section}{\numberline {3.2}Example Datasets}{13}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Soybean Genealogy}{13}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Academic Genealogy of Statisticians}{14}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Genealogical Input Format}{15}{section.3.3}
-\contentsline {section}{\numberline {3.4}Generating a Graphical Object}{16}{section.3.4}
-\contentsline {section}{\numberline {3.5}Plotting a Shortest Path}{17}{section.3.5}
-\contentsline {section}{\numberline {3.6}Superimposing Shortest Path on Tree}{19}{section.3.6}
-\contentsline {section}{\numberline {3.7}Plotting Ancestors and Descendants by Generation}{22}{section.3.7}
-\contentsline {section}{\numberline {3.8}Plotting Distance Matrix}{24}{section.3.8}
-\contentsline {section}{\numberline {3.9}Academic Genealogy of Statisticians}{25}{section.3.9}
-\contentsline {subsection}{\numberline {3.9.1}Interactive visualization of genealogical structure}{32}{subsection.3.9.1}
-\contentsline {section}{\numberline {3.10}Future Avenues}{33}{section.3.10}
-\contentsline {section}{\numberline {3.11}Conclusions}{34}{section.3.11}
-\contentsline {section}{\numberline {3.12}Acknowledgments}{34}{section.3.12}
-\contentsline {chapter}{\chapternumberline {4}Visualization methods for clustering analysis of RNA-sequencing data}{35}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{35}{section.4.1}
-\contentsline {section}{\numberline {4.2}Example Dataset}{36}{section.4.2}
-\contentsline {section}{\numberline {4.3}Pre-processing}{36}{section.4.3}
-\contentsline {section}{\numberline {4.4}Highest quality replicates (Leaves at 120 minutes)}{39}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Two clusters}{42}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Three clusters}{44}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Many clusters}{50}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}Future Avenues}{54}{section.4.5}
-\contentsline {section}{\numberline {4.6}Conclusions}{54}{section.4.6}
-\contentsline {section}{\numberline {4.7}Acknowledgments}{55}{section.4.7}
-\contentsline {chapter}{\chapternumberline {5}Visualization methods for significance testing of RNA-sequencing data}{56}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{56}{section.5.1}
-\contentsline {section}{\numberline {5.2}Example Dataset}{57}{section.5.2}
-\contentsline {section}{\numberline {5.3}Pre-processing}{58}{section.5.3}
-\contentsline {section}{\numberline {5.4}Highest quality replicates (Artificial Drumming groups)}{60}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Differential expression analysis}{62}{subsection.5.4.1}
-\contentsline {section}{\numberline {5.5}Future Avenues}{64}{section.5.5}
-\contentsline {section}{\numberline {5.6}Conclusions}{65}{section.5.6}
-\contentsline {section}{\numberline {5.7}Acknowledgments}{65}{section.5.7}
-\contentsline {chapter}{\chapternumberline {6}Timeline}{66}{chapter.6}
-\contentsline {section}{\numberline {6.1}Completed}{66}{section.6.1}
-\contentsline {section}{\numberline {6.2}Scheduled deliverables}{66}{section.6.2}
-\contentsline {section}{\numberline {6.3}Other work}{66}{section.6.3}
-\contentsline {chapter}{Bibliography}{67}{section*.34}
+\contentsline {section}{\numberline {1.3}Literature review}{7}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Visualization methods for genealogical data}{7}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Visualization methods for RNA-sequencing data}{9}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.4}Overview of thesis research}{10}{section.1.4}
+\contentsline {chapter}{\chapternumberline {2}Visualization methods for genealogical datasets}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Example datasets}{12}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Soybean genealogy}{12}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Academic genealogy of statisticians}{13}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Genealogical input format}{14}{section.2.3}
+\contentsline {section}{\numberline {2.4}Generating a graphical object}{15}{section.2.4}
+\contentsline {section}{\numberline {2.5}Plotting a shortest path}{16}{section.2.5}
+\contentsline {section}{\numberline {2.6}Superimposing shortest path on tree}{18}{section.2.6}
+\contentsline {section}{\numberline {2.7}Plotting ancestors and descendants by generation}{21}{section.2.7}
+\contentsline {section}{\numberline {2.8}Plotting distance matrix}{23}{section.2.8}
+\contentsline {section}{\numberline {2.9}Academic genealogy of statisticians}{24}{section.2.9}
+\contentsline {subsection}{\numberline {2.9.1}Interactive visualization of genealogical structure}{31}{subsection.2.9.1}
+\contentsline {section}{\numberline {2.10}Future avenues}{32}{section.2.10}
+\contentsline {section}{\numberline {2.11}Conclusions}{33}{section.2.11}
+\contentsline {section}{\numberline {2.12}Acknowledgments}{33}{section.2.12}
+\contentsline {chapter}{\chapternumberline {3}Visualization methods for clustering analysis of RNA-sequencing data}{34}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{34}{section.3.1}
+\contentsline {section}{\numberline {3.2}Example dataset}{35}{section.3.2}
+\contentsline {section}{\numberline {3.3}Pre-processing}{36}{section.3.3}
+\contentsline {section}{\numberline {3.4}Highest quality replicates (Leaves at 120 minutes)}{38}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Two clusters}{41}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Three clusters}{43}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Many clusters}{48}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}Future avenues}{52}{section.3.5}
+\contentsline {chapter}{\chapternumberline {4}Visualization methods for significance testing of RNA-sequencing data}{53}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{53}{section.4.1}
+\contentsline {section}{\numberline {4.2}Example dataset}{54}{section.4.2}
+\contentsline {section}{\numberline {4.3}Pre-processing}{55}{section.4.3}
+\contentsline {section}{\numberline {4.4}Highest quality replicates (Artificial drumming groups)}{57}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Differential expression analysis}{59}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.5}Future avenues}{61}{section.4.5}
+\contentsline {chapter}{\chapternumberline {5}Timeline}{63}{chapter.5}
+\contentsline {section}{\numberline {5.1}Completed}{63}{section.5.1}
+\contentsline {section}{\numberline {5.2}Scheduled deliverables}{63}{section.5.2}
+\contentsline {section}{\numberline {5.3}Other work}{63}{section.5.3}
+\contentsline {chapter}{Bibliography}{64}{section*.34}

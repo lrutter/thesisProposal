@@ -193,14 +193,16 @@ The problem with only applying traditional modeling approaches to data is that t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Problems to be addressed}
 
-Genealogical data has a standardized type of display known as a pedigree chart, which we introduce in Chapter \ref{sec:litReview}. While this visual plot is useful for certain genealogical datasets, it is not useful for many genealogical datasets, particularly agricultural ones that are used for breeding purposes. We address this problem by introducing a new type of plot to display the paths between the ancestors and descendants constrained by generation for an individual of interest, which could otherwise not be accomplished with a pedigree chart. This new plot (and other plots) are introduced in Chapter \ref{sec:ggenealogy}.
+Genealogical data has a standardized type of display known as a pedigree chart, which we introduce in Section \ref{sec:litReview} (\citealt{extra7}). While this visual plot is useful for certain genealogical datasets, it is not useful for many genealogical datasets, particularly agricultural ones that are used for breeding purposes. We address this problem by introducing a new type of plot to display the paths between the ancestors and descendants constrained by generation for an individual of interest, which could otherwise not be accomplished with a pedigree chart. This new plot (and other plots) are introduced in Chapter \ref{sec:ggenealogy}.
 
-There are popular plotting tools for analyzing RNA-sequencing data, but there are less popular tools that could be more helfpul for RNA-sequencing analysis. We strive to work on the following five uncommon plotting types that could be useful for better understanding RNA-sequencing data, and we show our work-in-progress toward these goals in Chapters \ref{sec:clustering} and \ref{sec:sigtest}:
+There are popular plotting tools for analyzing RNA-sequencing data, but there are less popular tools that could be more helpful for RNA-sequencing analysis. We strive to work on the following five uncommon plotting types that could be useful for better understanding RNA-sequencing data, and we show our work-in-progress toward these goals in Chapters \ref{sec:clustering} and \ref{sec:sigtest}:
+
+\clearpage
 
 \begin{enumerate}
 \item \textbf{Parallel coordinate plots}:
 
-In gene expression data analysis, we are striving to find relative patterns. Side-by-side boxplots are often used for this purpose, but they can hide potential problems that could still be lurking in the data after normalization. This is because most RNA-sequencing normalization methods are conducted at the sample-level, and side-by-side boxplots do not show connections between the samples. Consequently, boxplots may deceive analysts to believe that the normalization succeeded in cases where alternative plots (such as parallel coordinate plots) would have otherwise indicated that the normalization was in fact unsuccessful due to the presence of inconsistencies (crossings) between replicates. For this reason, parallel coordinate plots (\citealt{origPCP}, \citealt{origPCP2}) are an essential visual tool when checking the initial normalization process of RNA-sequencing analysis. If the normalization is adequate, then the connections between replications should be flat, and we should only see crossings between treatement groups.
+In gene expression data analysis, we are striving to find relative patterns. Side-by-side boxplots are often used for this purpose, but they can hide potential problems that could still be lurking in the data after normalization. This is because most RNA-sequencing normalization methods are conducted at the sample-level, and side-by-side boxplots do not show connections between the samples. Consequently, boxplots may deceive analysts to believe that the normalization succeeded in cases where alternative plots (such as parallel coordinate plots) would have otherwise indicated that the normalization was in fact unsuccessful due to the presence of inconsistencies (crossings) between replicates. For this reason, parallel coordinate plots (\citealt{origPCP}, \citealt{origPCP2}) are an essential visual tool when checking the initial normalization process of RNA-sequencing analysis. If the normalization is adequate, then the connections between replications should be flat, and we should only see crossings between treatment groups.
 
 The tools currently available for constructing parallel coordinate plots to assess RNA-sequencing data are severely limited: Namely, the large number of genes present can cause constraints in space and time. With one line being drawn for each gene, our resulting plots will have too many lines being drawn to even view patterns of interest in the first place. Moreover, the construction of these plots can be consuming in computation and time, often requiring analysts to wait for minutes before they can view the output. Even though popular tools to visualize parallel coordinate plots (such as the \code{ggparcoord} function in the \code{GGally} package) can be very useful for many datasets, they are not always helpful for large RNA-sequencing datasets (\citealt{ggally}). As a result, our goal is to develop a new approach that both quickly and meaningfully displays the key pieces of information for RNA-sequencing data with parallel coordinate plots. 
 
@@ -235,27 +237,11 @@ We aim to develop permutation testing plots for differentially expressed genes. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Overview of thesis research}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-In Chapter \ref{sec:litReview}, we provide a brief review of the literature behind visualization tools for genealogical data and RNA-sequencing data.
-
-In Chapter \ref{sec:ggenealogy}, we introduce \textbf{\pkg{ggenealogy}} (\citealt{ggen}), a developing \pkg{R} software package that provides tools for searching through genealogical data, generating basic statistics on their graphical structures using parent and child connections, and displaying the results. The package allows users to draw the genealogy in relation to variables related to the nodes, and to determine and display the shortest path distances between the nodes. Production of pairwise distance matrices and genealogical diagrams constrained on generation are also available in the visualization toolkit. We have tested the tools on a dataset with milestone cultivars of soybean varieties (\citealt{soybean}) as well as on a web-based database of the academic genealogy of mathematicians (\citealt{mgp}).
-
-Susan VanderPlas began the original work for this package and developed most features in the \code{plotAncDes()} function. The software package has been available on the Comprehensive \pkg{R} Archive Network since March 2015 (\citealt{ggen}). In August 2015, a paper introducing the \pkg{ggenealogy} software package received a student paper competition award from the Statistical Computing and Graphics Section of the American Statistical Association. Currently, we are preparing to submit another paper describing the software package to the Journal of Statistical Software. We also aim to release a second version of the package as we have added interactive plotting tools that were not available in the first version.
-
-In Chapter \ref{sec:clustering}, we show what we have accomplished toward developing visualization methods for clustering analysis of RNA-sequencing data. We use a soybean example dataset with treatments of iron-poor and iron-rich conditions. On the clustered data, we use both scatterplot matrices and parallel coordinate plots to determine which clusters are of interest. We also use individual gene plots to determine if there subsets of genes within clusters of interest that should be reconsidered.
-
-In Chapter \ref{sec:sigtest}, we demonstrate some of our work-in-progress toward developing visualization methods for significance testing of RNA-sequencing data. We use a paper wasp example dataset with treatments of antennal drumming and nutrition. We use individual transcript plots to determine if the top statistically-significantly differentially expressed transcripts appear to show differences in read counts across the treatments.
-
-In Chapter \ref{sec:timeline}, we tabulate the completed work, the scheduled deliverables for thesis completion, and other work performed outside of thesis work.
-
-\chapter{Literature Review}
+\section{Literature review}
 \label{sec:litReview}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Visualization methods for genealogical data}
+\subsection{Visualization methods for genealogical data}
 
 Publishing in the open source \pkg{R} statistical programming language allows for tools to be distributed and modified at ease, encourages cross-platform collaboration, and provides a foundation for effective and aesthetic data visualization from the grammar of graphics. There are several useful \pkg{R} packages that offer tools for analyzing and visualizing genealogical datasets. Here, we introduce these packages, and emphasize the shortcomings for which our package \pkg{ggenealogy} brings to this collection of work.
 
@@ -288,12 +274,29 @@ We again illustrate this problem in Figure \ref{fig:Graph} with an example genea
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Visualization methods for RNA-sequencing data}
+
+Previous studies have provided sound evidence that gene expression data is most effectively explored by using graphical and numerical approaches in a complementary fashion (\citealt{extra2}, \citealt{extra1}, \citealt{extra4}). The authors of one study demonstrated this finding by applying modeling and visualization tools to simulated and real microarray data (\citealt{jds}). Through the use of plots, they determined that their initial models were inappropriate and needed improvement, and that the data quality was questionable and needed relabeling.
+
+Moreover, they demonstrated that some of the most common plots for gene expression data are rife with problems, while some of the less popular plots are useful. In one example, they showed that heat maps are commonly-used, but they do not allow users to detect outlying genes. In contrast, scatterplots can allow for outlier detection. Furthermore, they introduced a new type of plot called the replicate line plot, which can be used to visually mine for genes that show low variability in read counts between replicates but high variability in read counts between treatments. The authors also showed the importance of interaction on plots for gene expression analysis; they used GGobi (\citealt{ggobi}, \citealt{ggobi2}, \citealt{ggobi3}) to generate direct manipulation and linking between various multivariate plots to display the data. Interactive plots for multivariate data could also be accomplished with the use of projections (\citealt{extra3}).
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Visualization methods for RNA-sequencing data}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Overview of thesis research}
 
-Previous studies have provided sound evidence that gene expression data is most effectively explored by using graphical and numerical approaches in a complementary fashion (\citealt{jds}). The authors of this study demonstrated this finding by applying modeling and visualization tools to simulated and real microarray data. Through the use of plots, they determined that their initial models were inappropriate and needed improvement, and that the data quality was questionable and needed relabeling.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Moreover, they demonstrated that some of the most common plots for gene expression data are rife with problems, while some of the less popular plots are useful. In one example, they showed that heatmaps are commonly-used, but they do not allow users to detect outlying genes. In contrast, scatterplots can allow for outlier detection. The authors also showed the importance of interaction on plots for gene expression analysis; they used GGobi (\citealt{ggobi}, \citealt{ggobi2}, \citealt{ggobi3}) to generate direct manipulation and linking between various multivariate plots to display the data. Furthermore, they introduced a new type of plot called the replicate line plot, which can be used to visually mine for genes that show low variability in read counts between replicates but high variablity in read counts between treatments.
+In Chapter \ref{sec:ggenealogy}, we introduce \textbf{\pkg{ggenealogy}} (\citealt{ggen}), a developing \pkg{R} software package that provides tools for searching through genealogical data, generating basic statistics on their graphical structures using parent and child connections, and displaying the results. The package allows users to draw the genealogy in relation to variables related to the nodes, and to determine and display the shortest path distances between the nodes. Production of pairwise distance matrices and genealogical diagrams constrained on generation are also available in the visualization toolkit. We have tested the tools on a dataset with milestone cultivars of soybean varieties (\citealt{soybean}) as well as on a web-based database of the academic genealogy of mathematicians (\citealt{mgp}).
+
+Susan VanderPlas began the original work for this package and developed most features in the \code{plotAncDes()} function. The software package has been available on the Comprehensive \pkg{R} Archive Network since March 2015 (\citealt{ggen}). In August 2015, a paper introducing the \pkg{ggenealogy} software package received a student paper competition award from the Statistical Computing and Graphics Section of the American Statistical Association. Currently, we are preparing to submit another paper describing the software package to the Journal of Statistical Software. We also aim to release a second version of the package as we have added interactive plotting tools that were not available in the first version.
+
+In Chapter \ref{sec:clustering}, we show what we have accomplished toward developing visualization methods for clustering analysis of RNA-sequencing data. We use a soybean example dataset with treatments of iron-poor and iron-rich conditions. On the clustered data, we use both scatterplot matrices and parallel coordinate plots to determine which clusters are of interest. We also use individual gene plots to determine if there subsets of genes within clusters of interest that should be reconsidered.
+
+In Chapter \ref{sec:sigtest}, we demonstrate some of our work-in-progress toward developing visualization methods for significance testing of RNA-sequencing data. We use a paper wasp example dataset with treatments of antennal drumming and nutrition. We use individual transcript plots to determine if the top statistically-significantly differentially expressed transcripts appear to show differences in read counts across the treatments.
+
+In Chapter \ref{sec:timeline}, we tabulate the completed work, the scheduled deliverables for thesis completion, and other work performed outside of thesis work.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
@@ -309,12 +312,12 @@ Genealogical structures can also serve as informative tools outside of a strict 
 
 In all these examples, the genealogical relationships can be represented visually. Access to various types of plotting tools can allow scientists and others to more efficiently and accurately explore features of interest across the genealogy. We introduce here a developing visualization toolkit that is intended to assist users in their exploration and analysis of genealogical structures. In this paper, we demonstrate the main tools of the software package \pkg{ggenealogy} using two example genealogical datasets, one of soybean cultivars (\citealt{soybean}) and the other of academic mathematicians (\citealt{mgp}).
 
-\section{Example Datasets}
+\section{Example datasets}
 \label{exData}
 
 The \pkg{ggenealogy} package comes with two example datasets, one comprises a soybean genealogy and the other comprises an academic statistician genealogy. We will introduce both example datasets to demonstrate some of the tools available in the software.
 
-\subsection{Soybean Genealogy}
+\subsection{Soybean genealogy}
 
 We start with the soybean genealogy, which is available as a data frame structure with 390 rows and five columns. These data were collected from field trials, genetic studies, and United States Department of Agriculture (USDA) bulletins, and date as early as the first decade of the 1900s. They contain information on the copy number variants, single nucleotide polymorphisms, and protein content for each of the varieties, although we removed that information for a succinct example dataset. In this context, the software could ideally be used by agronomists who wish to study how soybean varieties are related. By referencing the visualization of the genealogical structure, these scientists may better understand genetic testing results - in this particular dataset, in terms of copy number variants, single nucleotide polymorphisms, protein content, and yield - and use that knowledge in future breeding decisions.
 
@@ -340,7 +343,7 @@ We can load the example dataset of soybean genealogy (\code{sbGeneal}) and exami
 \texttt{\$ parent      : chr  "Hutcheson" "Dunfield" NA "A.K." ...}
 }
 
-\subsection{Academic Genealogy of Statisticians}
+\subsection{Academic genealogy of statisticians}
 
 The \pkg{ggenealogy} package also comes with an academic genealogy of statisticians; this dataset is in the form of a data frame with 8165 rows and six columns. To develop this later dataset, we contacted the Math Genealogy Project (\citealt{mgp}), a web-based database for the genealogy of academic mathematicians. This database, which currently contains almost 200,000 entries, is a service of the North Dakota State University Department of Mathematics and the American Mathematical Society. The Mathematics Genealogy Project contact provided us a Structured Query Language (SQL) export, and we used PostgreSQL to query the database (\citealt{psql}).
 
@@ -369,13 +372,13 @@ We can load the example dataset of academic genealogy of statisticians (\code{st
 \texttt{[1] "child"   "parent"  "year"    "country" "school"  "thesis"}
 }
 
-\section{Genealogical Input Format}
+\section{Genealogical input format}
 
 As is the case with both example data files introduced above, \pkg{ggenealogy} requires that the genealogy input file is a data frame structure with at least two columns. One column must be labeled "child", and each case in that column must be of type character. The other column must be labeled "parent," and each case in that column must either be of type character, type NA, or type "". At this point, any \pkg{ggenealogy} plot that only requires information about parent-child relationships can be used.
 
 However, some \pkg{ggenealogy} plots also make use of quantitative variable values associated with individuals in the genealogy. For these plots, the input data frame should also contain a third column. In both example data files, this column is labeled "year," and each case in that column can either be of type numeric, type NA, or type "". At this point, any \pkg{ggenealogy} plot can be used.
 
-\section{Generating a Graphical Object}
+\section{Generating a graphical object}
 
 Most functions in the \pkg{ggenealogy} software package require an input parameter of a graph structure. Therefore, as a preprocessing step, we must first convert our original data frame structure into a graph structure. Below, we read in the \pkg{R} data file \code{sbGeneal} that is included in the package as a sample data set of soybean genealogy.
 
@@ -430,7 +433,7 @@ There are many statistics about the \code{sbGeneal} dataset that we may wish to 
 \texttt{[1] 5.438079}
 }
 
-\section{Plotting a Shortest Path}
+\section{Plotting a shortest path}
 
 With soybean lineages, it may be useful for soybean breeders to track how two varieties are related to each other via parent-child relationships. Then, any dramatic changes in yield and other measures of interest between the two varieties can be traced across their genetic timeline. The \pkg{ggenealogy} package allows users to select two varieties of interest, and determine the shortest pathway of parent-child relationships between them, using the \code{getPath()} function. This will return a list that contains the variety names and their years in the path.
 
@@ -493,7 +496,7 @@ The resulting plot (right half of Figure \ref{fig:pathTNZB}) allows us to quickl
 
 Furthermore, as determined by the figure, for both \code{Zane} and \code{Bedford}, there are four varieties of unidirectional parent-child relationships between each of them and their common ancestor \code{D55-4090}. Hence, any feature of interest that differentiates \code{Zane} and \code{Bedford} (protein content, yield, disease resistance, etc.) can also be examined across these two separate lineage histories.
 
-\section{Superimposing Shortest Path on Tree}
+\section{Superimposing shortest path on tree}
 
 Now that we can create path objects, we may wish to know how those paths are positioned compared to the entire genealogical lineage. For instance, of the documented soybean cultivar lineage varieties, where does the shortest path between two varieties of interest exist? Are these two varieties older compared to the overall data structure? Are they newer? Or, do they span the entire structure, and represent two extreme ends of documented time points?
 
@@ -528,6 +531,8 @@ However, Figure \ref{fig:plotTNBin3} has significant empty spaces between the no
 \texttt{R> plotPathOnAll(pathTN, sbGeneal, sbIG, binVector = 1:6, pathEdgeCol = "seagreen2", nodeSize = 1, pathNodeSize = 3)}
 }
 
+\clearpage
+
 \begin{figure}[H]
     \begin{framed}
     \centering
@@ -539,7 +544,7 @@ However, Figure \ref{fig:plotTNBin3} has significant empty spaces between the no
 
 We can immediately see that Figure \ref{fig:plotTNBin6} more successfully mitigates text overlap compared to Figure \ref{fig:plotTNBin3}. We can also confirm what we saw in the previous plot that indeed most varieties were released between 1950 and 1970, and any textual overlap is confined to this range of years.
 
-\section{Plotting Ancestors and Descendants by Generation}
+\section{Plotting ancestors and descendants by generation}
 \label{remedy}
 
 The most novel visual function in \pkg{ggenealogy}, \code{plotAncDes()} allows users to view the ancestors and descendants of a given variety. The inputted variety is highlighted in the center of the plot, ancestors are displayed to the left of the center, and descendants are displayed to the right of the center. The further from the center that a variety is located, the more generations that variety is distanced from the centered variety of interest.
@@ -565,7 +570,7 @@ This generates the top plot of Figure \ref{fig:Lee}. We notice that \code{Lee} h
 
 The bottom plot of Figure \ref{fig:Lee} is not an output plot of \pkg{ggenealogy}. Instead, it was simply created for didactic purposes. Here, the paths that were manually highlighted in blue in the top plot produced by \pkg{ggenealogy} are shown again, only now nodes cannot be repeated. The parenthetical number above each node represents the set of generation counts distancing that node from the center node \code{Lee}; green parentheses indicate that the node could be successfully placed in one horizontal position, but red parentheses indicate that the node could not be successfully placed in one horizontal position. We see that node \code{TN89-39} cannot simultaneously be represented as both a third and fourth descendent of node \code{Lee}, and node \code{5601T} cannot simultaneously be represented as a third, fourth, and fifth descendent of node \code{Lee}. Hence, without allowing nodes to repeat, this dataset cannot be presented in the graph on the bottom as it can be in the \pkg{ggenealogy} graph on the top. This is a current limitation in other genealogy and graphical software that \pkg{ggenealogy} can now provide.
 
-\section{Plotting Distance Matrix}
+\section{Plotting distance matrix}
 
 It may also be of interest to generate matrices where the colors indicates a variable between all pairwise combinations of inputted varieties. The package \pkg{ggenealogy} also provides a function \code{plotDegMatrix()} for that purpose. We can demonstrate this function with the variable being the shortest path degree between a given pair of varieties. The shortest path degree is calculated as the smallest number of parent-child edges needed to traverse between two varieties of interest. For instance, in Figure \ref{fig:pathTNZB}, the shortest path degree between \code{Tokyo} and \code{Narow} is four and the shortest path degree between \code{Bedford} and \code{Zane} is ten.
 
@@ -587,7 +592,7 @@ This creates the plot in Figure \ref{fig:degMatrix}. We see that the degree of t
     \label{fig:degMatrix}
 \end{figure}
 
-\section{Academic Genealogy of Statisticians}
+\section{Academic genealogy of statisticians}
 
 The \pkg{ggenealogy} package comes with two example datasets, and while we have introduced the plant breeding genealogy, we have yet to introduce the academic genealogy. As was demonstrated in Section \ref{exData}, every parent in the academic genealogy is also a child, and some children in the academic genealogy have more than two parents. Neither of these features was the case in the plant breeding genealogy. Additionally, the academic genealogy is much larger than the plant breeding genealogy. Some of these differences may affect how one would approach \pkg{ggenealogy} plotting tools. For this reason, we will now demonstrate some of the \pkg{ggenealogy} plotting tools we already introduced, only now applied to the academic genealogy. 
 
@@ -666,6 +671,8 @@ At this point, it would be insightful to examine a more detailed view of one of 
 \texttt{R> plotPath(pathCB, fontFace = 4) + ggplot2::theme(axis.text = ggplot2::element\_text(size = 10), axis.title = ggplot2::element\_text(size = 10))}
 }
 
+\clearpage
+
 \begin{figure}[H]
     \begin{framed}
     \centering
@@ -696,7 +703,7 @@ We can achieve this using the below code. After trial and error, we use a \code{
 
 We see from the resulting Figure \ref{fig:plotCBText} that almost all text labels for individuals who received their graduate-level statistics degrees between 1950 and 2015 are undecipherable. We also see that the year Sir David Cox acquired his statistics degree is somewhere in the later half of the variable year for this dataset, as the oldest dates for acquisition of statistics degrees in this dataset occur around 1860. However, the number of individuals who are documented as receiving their statistics degrees between 1860 and 1950 are few enough so that their text labels are somewhat readable.
 
-The text labels are so numerous in Figure \ref{fig:plotCBText} that simply trying different values for the input parameter \code{binVector} will not solve the text overlapping problem. Instead, one approach we can try is to reconstruct the plot using the same \pkg{ggenealogy} function \code{plotPathOnAll()}, only now specifying variables to render the size (2.5) and color (default of black) of the text for nodes that are on the path of interest to be more noticeable than the size (0.5) and color (dark gray) of the text for nodes thare not on the path of interest. Moreover, we can make the edges that are not on the path of interest to be represented in a less noticeable color (light gray) than the edges that are on the path of interest (default of dark green). The variable names and options for these aesthetics is further detailed in the help manual of the function. We provide one example code that alters the defaults of the text color and sizes of nodes and edges below, which results in Figure \ref{fig:plotCBNoText}.
+The text labels are so numerous in Figure \ref{fig:plotCBText} that simply trying different values for the input parameter \code{binVector} will not solve the text overlapping problem. Instead, one approach we can try is to reconstruct the plot using the same \pkg{ggenealogy} function \code{plotPathOnAll()}, only now specifying variables to render the size (2.5) and color (default of black) of the text for nodes that are on the path of interest to be more noticeable than the size (0.5) and color (dark gray) of the text for nodes that are not on the path of interest. Moreover, we can make the edges that are not on the path of interest to be represented in a less noticeable color (light gray) than the edges that are on the path of interest (default of dark green). The variable names and options for these aesthetics is further detailed in the help manual of the function. We provide one example code that alters the defaults of the text color and sizes of nodes and edges below, which results in Figure \ref{fig:plotCBNoText}.
 
 \mybox{
 \texttt{R> plotPathOnAll(pathCB, statGeneal, statIG, binVector = 1:200, nodeSize = .5, pathNodeSize = 2.5, nodeCol = "darkgray", edgeCol = "lightgray") + ggplot2::theme(axis.text = ggplot2::element\_text(size = 8), axis.title = ggplot2::element\_text(size = 8)) + ggplot2::scale\_x\_continuous(expand = c(.1, .2))}
@@ -721,6 +728,8 @@ We could still improve upon Figure \ref{fig:plotCBNoText}. Even though we may be
 \texttt{R> plotPathOnAll(pathCB, statGeneal, statIG, binVector = 1:200, nodeSize = .5, pathNodeSize = 2.5, nodeCol = "darkgray", edgeCol = "lightgray", animate = TRUE)}
 }
 
+\clearpage
+
 \begin{figure}[H]
     \begin{framed}
     \centering
@@ -730,7 +739,7 @@ We could still improve upon Figure \ref{fig:plotCBNoText}. Even though we may be
     \label{fig:plotAnimate}
 \end{figure}
 
-\section{Future Avenues}
+\section{Future avenues}
 
 We have several avenues we could pursue to expand upon this work:
 
@@ -769,13 +778,15 @@ This project was an effort between Susan VanderPlas, Dianne Cook, Michelle A. Gr
 
 \section{Introduction}
 
-In plants, iron is a necessary micronutrient for photosynthesis, respiration, and other metabolic processes. Iron uptake from the soil, iron transportation, and iron storage are all tightly regulated in plants to maintain homeostatic balance. A surplus of iron can cause cellular damage, but a deficiency in iron can cause Iron Deficiency Chlorosis (IDC), which causes yellowing of leaves and eventually total yield loss (\citealt{soy1}). While it is a global problem, IDC is particularly problematic where the majority of soybeans in the United States are grown in the calcareous soils of the Midwesten United States (\citealt{soy3}). One recommended strategy for controlling IDC is to develop IDC-resistant soybean lines. However, IDC-resistant soybean lines do not have as high of a yield as IDC-susceptible lines in iron-sufficent conditions. As a result, developing IDC-resistant soybean lines with high yield in multiple soil types is ideal.
+In plants, iron is a necessary micronutrient for photosynthesis, respiration, and other metabolic processes. Iron uptake from the soil, iron transportation, and iron storage are all tightly regulated in plants to maintain homeostatic balance. A surplus of iron can cause cellular damage, but a deficiency in iron can cause Iron Deficiency Chlorosis (IDC), which causes yellowing of leaves and eventually total yield loss (\citealt{soy1}). While it is a global problem, IDC is particularly problematic where the majority of soybeans in the United States are grown in the calcareous soils of the Midwestern United States (\citealt{soy3}). One recommended strategy for controlling IDC is to develop IDC-resistant soybean lines. However, IDC-resistant soybean lines do not have as high of a yield as IDC-susceptible lines in iron-sufficient conditions. As a result, developing IDC-resistant soybean lines with high yield in multiple soil types is ideal.
 
-In recent years, identification of soybean genes that are differentially expressed during iron stress and recovery have been determined with the use of microarray analyses, RNA-sequencing, and virus-induced gene silencing (VIGS) (\citealt{soy11}, \citealt{soy12}, \citealt{soy13}, \citealt{soy14}, and \citealt{soy15}). However, much remains elusive about early signaling processes in iron-efficient stress responses. In the early 1970s, two soybean cultivars (Clark and Isoclark) with similar genotypes but different responses to iron stress were developed (\citealt{soy10}). Clark is an iron-efficient line that is resistant to IDC development in iron-poor conditions. In contrast, Isoclark is not an iron-efficient line and is susceptible to IDC development in iron-poor conditions.
+In recent years, identification of soybean genes that are differentially expressed during iron stress and recovery have been determined with the use of microarray analyses, RNA-sequencing, and virus-induced gene silencing (VIGS) (\citealt{soy11}, \citealt{soy12}, \citealt{soy13}, \citealt{soy14}, and \citealt{soy15}). However, much remains elusive about early signaling processes in iron-efficient stress responses. In the early 1970s, two soybean cultivars (\code{Clark} and \code{Isoclark}) with similar genotypes but different responses to iron stress were developed (\citealt{soy10}). \code{Clark} is an iron-efficient line that is resistant to IDC development in iron-poor conditions. In contrast, \code{Isoclark} is not an iron-efficient line and is susceptible to IDC development in iron-poor conditions. Previous studies that compared these two soybean lines have found that energy controlling pathways could promote effective stress response in iron deficient environments (\citealt{soy11}).
 
-\section{Example Dataset}
+Clustering analysis has been applied to plant breeding purposes in previous studies (\citealt{extra5}), although not on RNA-sequencing data. It could be of use to explore the approach of visualizing the application of clustering analysis to RNA-sequencing data using the iron-efficient variety \code{Clark}.
 
-The dataset comes from an RNA-sequencing study conducted to identify early signaling responses between roots and leaves in iron stress conditions in the iron-efficient soybean line Clark. To this end, a total of 36 samples of the cultivar Clark were exposed to iron-deficient and iron-sufficent soil conditions for 30 minutes, 60 minutes, and 120 minutes. A more detailed and similar methodology can be found in (\citealt{adSoy}).
+\section{Example dataset}
+
+The dataset comes from an RNA-sequencing study conducted to identify early signaling responses between roots and leaves in iron stress conditions in the iron-efficient soybean line \code{Clark}. To this end, a total of 36 samples of the cultivar \code{Clark} were exposed to iron-deficient and iron-sufficient soil conditions for 30 minutes, 60 minutes, and 120 minutes. A more detailed and similar methodology can be found in (\citealt{adSoy}).
 
 Genes will be clustered into groups that showed similar changes in read counts across iron condition, time point, and/or biological derivative (roots or leaves). The resulting clusters could help us identify what genes are responsible for how, when, and where soybeans respond to iron-deficient environments. Our dataset of interest has a structure as follows:
 
@@ -808,13 +819,15 @@ Exploratory data analysis was performed to better understand the data, to serve 
 
 \item \textbf{Normalization}: Only a small fraction of the 56,044 genes should demonstrate read count changes of interest. We had to first determine what type of normalization to perform in order to standardize the gene read count distribution across the samples, so that the vast majority of genes do not artificially appear important.
 
-\item \textbf{Remove Genes with Low-Counts and Low-Variability}: We removed the bottom quartile of genes with low mean read counts, and we also removed the bottom quartile of genes with low standard deviaton in read counts.
+\item \textbf{Remove Genes with Low-Counts and Low-Variability}: We removed the bottom quartile of genes with low mean read counts, and we also removed the bottom quartile of genes with low standard deviation in read counts.
 
 \item \textbf{Quality and Label Checking}: We check the quality of our data by analyzing pairwise scatterplot matrices of intra- versus inter- replicates and MDS plots. With these visual tools, we would expect high-quality genes to show replicates with consistency (low variability) in counts.
 
 \end{itemize}
 
 It would be difficult (if not impossible) to determine how consistent the samples are with a parallel coordinate plot. Instead, we began by examining a side-by-side boxplot of all 36 samples. From this plot, we believe the data will require intense normalization (see Figure \ref{fig:needNorm}).
+
+\clearpage
 
 \begin{figure}[H]
     \begin{framed}
@@ -826,6 +839,8 @@ It would be difficult (if not impossible) to determine how consistent the sample
 \end{figure}
 
 Next, we created an MDS plot to better understand the quality of the data (\citealt{limma}). Based on this MDS plot, we determine that the six samples of leaves from 120 minutes appear to be of the best quality from this dataset (see Figure \ref{fig:mdsGroups}).
+
+\clearpage
 
 \begin{figure}[H]
     \begin{framed}
@@ -858,11 +873,11 @@ After filtering and normalizing on the six samples of interest (leaves at 120 mi
     \centering
     \includegraphics[width=\textwidth]{L120scatter}
     \end{framed}
-    \caption{Scatterplot matrix of the six samples of leaves from 120 minutes, where each individual scatterplot matrix compares two of the six samples. If the 120-minute leaves samples are high quality, then we would expect replicates to have read counts centered on the diagonal x=y line, and non-relicates to deviate somewhat from the diagonal x=y line. Indeed, this is what we see, as the bottom-left nine plots (non-replicates) appear much thicker around the x=y line than the other plots (replicates).}
+    \caption{Scatterplot matrix of the six samples of leaves from 120 minutes, where each individual scatterplot matrix compares two of the six samples. If the 120-minute leaves samples are high quality, then we would expect replicates to have read counts centered on the diagonal x=y line, and non-replicates to deviate somewhat from the diagonal x=y line. Indeed, this is what we see, as the bottom-left nine plots (non-replicates) appear much thicker around the x=y line than the other plots (replicates).}
     \label{fig:L120scatter}
 \end{figure}
 
-Now that the data of the leaf samples at 120 minutes has been properly pre-processed, we began the clustering analysis by producing a dendogram. We used Euclidean distance (which is acceptable as we have standardized the data) and hiearchical clustering with Wards linkage.
+Now that the data of the leaf samples at 120 minutes has been properly pre-processed, we began the clustering analysis by producing a dendogram. We used Euclidean distance (which is acceptable as we have standardized the data) and hierarchical clustering with Wards linkage.
 
 \begin{figure}[H]
     \begin{framed}
@@ -877,12 +892,14 @@ Now that the data of the leaf samples at 120 minutes has been properly pre-proce
 
 We first examined how the data separates into the two main clusters indicated in the dendogram of Figure \ref{fig:dendL120}. To do so, we cut the hierarchical tree, and then constructed a parallel coordinate plot of the resulting two clusters, along with the previously-filtered data (see Figure \ref{fig:pcp2L120}).
 
+\clearpage
+
 \begin{figure}[H]
     \begin{framed}
     \centering
     \includegraphics[width=\textwidth]{pcp2L120}
     \end{framed}
-    \caption{Parallel coordinate plot of the two clusters and filtered data, where each line represents the standardized read count for a given gene across the 6 leaf samples from 120 minutes. As the dendogram in Figure \ref{fig:dendL120} suggested 2 clusters for the 6 samples, we applied a k-means clustering algorithm with a cluster size of 2, resulting in the pink cluster and green cluster above. We see that the pink cluster contains genes higher in the Fe- samples, whereas the green cluster contains genes higher in the Fe+ samples. Both clusters look relatively clean (their repetitions are horizontal). In blue, we see the genes that were filtered, in the process previously described. This is relatively flat across all six samples, as we would expect.}
+    \caption{Parallel coordinate plot of the two clusters and filtered data, where each line represents the standardized read count for a given gene across the 6 leaf samples from 120 minutes. As the dendogram in Figure \ref{fig:dendL120} suggested 2 clusters for the 6 samples, we applied a hierarchical clustering algorithm with a cluster size of 2, resulting in the pink cluster and green cluster above. We see that the pink cluster contains genes higher in the Fe- samples, whereas the green cluster contains genes higher in the Fe+ samples. Both clusters look relatively clean (their repetitions are horizontal). In blue, we see the genes that were filtered, in the process previously described. This is relatively flat across all six samples, as we would expect.}
     \label{fig:pcp2L120}
 \end{figure}
 
@@ -893,20 +910,20 @@ Additionally, we can examine what these two clusters look like in a scatterplot 
     \centering
     \includegraphics[width=\textwidth]{scatterL120}
     \end{framed}
-    \caption{A scatterplot, where each dot represents the raw read counts from a gene in iron-deficient (x-axis) and iron-sufficient (y-axis) conditions from the leaf samples at 120 minutes. The pink and green colors represent the two clusters created when a k-means algorithm of cluster size 2 was applied, and the blue color represents the data filtered out as described at the beginning of the paper. The image is consistent with Figure \ref{fig:pcp2L120}, and the pink cluster appears to have lower Fe+ read counts, while the green cluster appears to have lower Fe- read counts. The blue cluster is, as expected, more closely along the x-y axis.}
+    \caption{A scatterplot, where each dot represents the raw read counts from a gene in iron-deficient (x-axis) and iron-sufficient (y-axis) conditions from the leaf samples at 120 minutes. The pink and green colors represent the two clusters created when a hierarchical algorithm of cluster size 2 was applied, and the blue color represents the data filtered out as described at the beginning of the paper. The image is consistent with Figure \ref{fig:pcp2L120}, and the pink cluster appears to have lower Fe+ read counts, while the green cluster appears to have lower Fe- read counts. The blue cluster is, as expected, more closely along the x-y axis.}
     \label{fig:scatterL120}
 \end{figure}
 
 \subsection{Three clusters}
 
-We next look at how the data separates into the three main clusters indicated in the dendogram of Figure \ref{fig:dendL120}. We perform the appropriate heirarchical cut on the data, and then construct a parallel coordinate plot of the resulting three clusters, along with the previously-filtered data, see Figure \ref{fig:pcp3L120}.
+We next look at how the data separates into the three main clusters indicated in the dendogram of Figure \ref{fig:dendL120}. We perform the appropriate hierarchical cut on the data, and then construct a parallel coordinate plot of the resulting three clusters, along with the previously-filtered data, see Figure \ref{fig:pcp3L120}.
 
 \begin{figure}[H]
   \begin{framed}
   \centering
   \includegraphics[width=\textwidth]{pcp3L120}
   \end{framed}
-  \caption{Parallel coordinate plot of the three clusters and filtered data, where each line represents the standardized read count for a given gene across the 6 leaf samples from 120 minutes. As the dendogram in Figure \ref{fig:dendL120} suggested 3 clusters for the 6 samples, we cut the data accordingly, resulting in the pink, green, and purple clusters above. We see that the pink cluster contains genes higher in the Fe- samples, whereas the green cluster contains genes higher in the Fe+ samples. Both clusters look relatively clean (their repetitions are horizontal). In blue, we see the genes that were filtered, in the process previously described. This is relatively flat across all six samples, as we would expect. All of this is similar to what we saw in Figure \ref{fig:pcp2L120}, where we examined 2 clusters. What is new is the purple cluster, which appears similar to the pink cluster (in that it is lower in the Fe+ read counts), except for the third repetition, which seems inconsisent. This purple cluster may represent low-quality genes.}
+  \caption{Parallel coordinate plot of the three clusters and filtered data, where each line represents the standardized read count for a given gene across the 6 leaf samples from 120 minutes. As the dendogram in Figure \ref{fig:dendL120} suggested 3 clusters for the 6 samples, we cut the data accordingly, resulting in the pink, green, and purple clusters above. We see that the pink cluster contains genes higher in the Fe- samples, whereas the green cluster contains genes higher in the Fe+ samples. Both clusters look relatively clean (their repetitions are horizontal). In blue, we see the genes that were filtered, in the process previously described. This is relatively flat across all six samples, as we would expect. All of this is similar to what we saw in Figure \ref{fig:pcp2L120}, where we examined 2 clusters. What is new is the purple cluster, which appears similar to the pink cluster (in that it is lower in the Fe+ read counts), except for the third repetition, which seems inconsistent. This purple cluster may represent low-quality genes.}
   \label{fig:pcp3L120}
 \end{figure}
 
@@ -917,23 +934,25 @@ We can again view this data in a scatterplot matrix format (see Figure \ref{fig:
   \centering
   \includegraphics[width=\textwidth]{3scatterL120}
   \end{framed}
-  \caption{Scatterplot matrix of the three clusters from the leaves in 120 minutes, where the purple cluster that looked problematic in the parallel coordinate plot in Figure \ref{fig:pcp3L120} is also colored purple here, and all other data is colored grey. We see that our suspicions from the parallel coordinate plot that the purple cluster was poor-quality have been corroborated here; the third repetition from the Fe+ sample appears to be the cause of the streaks seen most prominently in the bottom-right scatterplot.}
+  \caption{Scatterplot matrix of the three clusters from the leaves in 120 minutes, where the purple cluster that looked problematic in the parallel coordinate plot in Figure \ref{fig:pcp3L120} is also colored purple here, and all other data is colored grey. Our suspicions that the purple cluster was poor-quality have been corroborated; the third repetition from the Fe+ sample appears to be the cause of the streaks seen most prominently in the bottom-right scatterplot.}
   \label{fig:3scatterL120}
 \end{figure}
 
-Based on our parallel coordinate plot in Figure \ref{fig:pcp3L120} and our scatterplot matrix in Figure \ref{fig:3scatterL120}, when this data is clustered into three groups, one of these clusters (the purple cluster) may be of poor quality (inconsistency between replicates). At this point, it may be helpful to examine some of the 1076 genes in this third cluster individually. In Figures \ref{fig:indSBGenes1} and \ref{fig:indSBGenes2}, we show a more detailed (genewise) view of a random sample of 24 genes from this third cluster.
+\vspace{-1cm}
+
+Based on our parallel coordinate plot in Figure \ref{fig:pcp3L120} and our scatterplot matrix in Figure \ref{fig:3scatterL120}, when this data is clustered into three groups, one of these clusters (the purple cluster) may be of poor quality (inconsistency between replicates). At this point, it may be helpful to examine some of the 1076 genes in this third cluster individually (see Figures \ref{fig:indSBGenes1} and \ref{fig:indSBGenes2}).
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{indSBGenes1}
-  \caption{One random sample of 12 genes from the third problematic-looking purple cluster. We see that many of these genes confirm the patterns we saw in the third cluster in Figures \ref{fig:pcp3L120} and \ref{fig:3scatterL120}. Namely, they tended to show smaller read counts in the Fe+ condition than the Fe- condition, except for a disconcerningly large read count for the third replicate of the Fe- condition.}
+  \caption{One random sample of 12 genes from the third problematic-looking purple cluster. We see that many of these genes confirm the patterns we saw in the third cluster in Figures \ref{fig:pcp3L120} and \ref{fig:3scatterL120}. Namely, they tended to show smaller read counts in the Fe+ condition than the Fe- condition, except for a disconcertingly large read count for the third replicate of the Fe- condition.}
   \label{fig:indSBGenes1}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{indSBGenes2}
-  \caption{A second random sample of 12 genes from the third problematic-looking purple cluster. We see that many of these genes confirm the patterns we saw in the third cluster in Figures \ref{fig:pcp3L120} and \ref{fig:3scatterL120}. Namely, they tended to show smaller read counts in the Fe+ condition than the Fe- condition, except for a disconcerningly large read counts for the third replicates of the Fe- condition.}
+  \caption{A second random sample of 12 genes from the third problematic-looking purple cluster. We see that many of these genes confirm the patterns we saw in the third cluster in Figures \ref{fig:pcp3L120} and \ref{fig:3scatterL120}. Namely, they tended to show smaller read counts in the Fe+ condition than the Fe- condition, except for a disconcertingly large read counts for the third replicates of the Fe- condition.}
   \label{fig:indSBGenes2}
 \end{figure}
 
@@ -942,13 +961,13 @@ Based on our parallel coordinate plot in Figure \ref{fig:pcp3L120} and our scatt
 
 By going from two clusters to three clusters, it seems that we were able to discard 1076 genes, many of which would not be of interest to us as they demonstrate poor consistency in the third replication of the Fe- condition. However, not all (or even a majority) of the genes from this cluster follow this pattern of poor consistency in the third replication of the Fe-condition. Moreover, we are still left with 8733 unfiltered genes (4133 genes from the first cluster and 4600 genes from the second cluster), which would be too many genes to make any coherent biological implications.  
 
-For these reasons, we may now wish to apply increasingly larger cluster cuts so that we can continue to discard genes by grouping them into clusters that indicate poor quality (inconsistent replications) or indifference to the treatment of interest (consistent values between treatment groups). At the same time, this process will refine our set of genes that remain undiscarded, by sifting through the clusters that indicate high quality (consistent replications) and response to treatments (inconsistent values between treatment groups) to remove the genes that should not be present in those groups in the first place.
+For these reasons, we may now wish to apply increasingly larger cluster cuts so that we can continue to discard genes by grouping them into clusters that indicate poor quality (inconsistent replications) or indifference to the treatment of interest (consistent values between treatment groups). At the same time, this process will refine our set of genes that remain, by sifting through the clusters that indicate high quality (consistent replications) and response to treatments (inconsistent values between treatment groups) to remove the genes that should not be present in those groups in the first place.
 
 We have created a script for users that allows them to designate the maximum cluster size they wish to cut. It then outputs into a folder for them the following items:
 
 \begin{itemize}
 
-\item One PDF file that contains the parallel coordinate plot for each cluster cut size between two (just like Figure \ref{fig:pcp3L120}) and the maxmimum cluster size of their choice.
+\item One PDF file that contains the parallel coordinate plot for each cluster cut size between two (just like Figure \ref{fig:pcp3L120}) and the maximum cluster size of their choice.
 
 \item A JPG file of the parallel coordinate plot for each cluster in each cluster cut size (between two and the maximum cluster size of their choice). This would result in $2+3+4+5+6+7+8+9+10+11+12+13+14+15=199$ JPG files.
 
@@ -965,7 +984,7 @@ For example, we conducted an analysis using a maximum cluster size of 15. In the
   \centering
   \includegraphics[width=\textwidth]{L120_15}
   \end{framed}
-  \caption{Parallel coordinate plots for the resulting 15 clusters (and the filtered cluster) when the user defines a maximum cluster size of 15. Just like we created the purple cluster with the suspiciously poor-quality third replication of the Fe+ treatment, we have now created many additional clusters that may not be of interest to us due to poor quality: For instance, Cluster 11 contains a group of 250 genes that may have suspiciously low read counts in the second replication of the Fe+ group, and Cluster 2 contains a group of 497 genes that may have suspiciously high read counts in the first replication of the Fe+ group. We have also created clusers that may not be of interest to us due to lack of response to treatements: For instance, Clusters 3, 7, 10, and 14 all show a relatively flat line across the six samples, and the 2190 genes contained between these four clusters may be considered for removal.}
+  \caption{Parallel coordinate plots for the resulting 15 clusters (and the filtered cluster) when the user defines a maximum cluster size of 15. Just like we created the purple cluster with the suspiciously poor-quality third replication of the Fe+ treatment, we have now created many additional clusters that may not be of interest to us due to poor quality: For instance, Cluster 11 contains a group of 250 genes that may have suspiciously low read counts in the second replication of the Fe+ group, and Cluster 2 contains a group of 497 genes that may have suspiciously high read counts in the first replication of the Fe+ group. We have also created clusters that may not be of interest to us due to lack of response to treatments: For instance, Clusters 3, 7, 10, and 14 all show a relatively flat line across the six samples, and the 2190 genes contained between these four clusters may be considered for removal.}
   \label{fig:L120_15}
 \end{figure}
 
@@ -993,7 +1012,9 @@ In the output directory, we would have the TXT files that list the 1223 genes th
 
 Overall, increasing the cluster cut size from 2 to 15 reduced the total number of genes in our two clusters of interest from 9809 to 2667 genes. This may still be too large of a number of genes to work with and the quality of the two clusters - even at a cluster cut size of 15 - could still be improved with an even larger cut size.
 
-\section{Future Avenues}
+\clearpage
+
+\section{Future avenues}
 
 We have several avenues we could pursue to expand upon this work:
 
@@ -1010,18 +1031,7 @@ We have several avenues we could pursue to expand upon this work:
 
 \end{enumerate}
 
-\section{Conclusions}
-
-The preliminary results from our visualization methods of clustering analysis of RNA-sequencing data are promising: We conclude that cluster analysis provided us with clusters of genes that may have marked different expression across time, iron environment, and biological derivative (leaf versus root), and that we could use visual tools to better understand the results. Our approach could still be greatly improved; we have obtained a better specified and more complete list of future avenue directions with our preliminary results. 
-
-\section{Acknowledgments}
-
-\textbf{\textcolor{Red}{What should I put here?}}
-
-
-
-
-
+The preliminary results from our visualization methods of clustering analysis of RNA-sequencing data are promising: We have evidence that cluster analysis provided us with clusters of genes that may have marked different expression across time, iron environment, and biological derivative (leaf versus root), and that we could use visual tools to better understand the results. Our approach could still be greatly improved: We have obtained a more specified list of future avenue directions from our preliminary results. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1031,15 +1041,15 @@ The preliminary results from our visualization methods of clustering analysis of
 
 \section{Introduction}
 
-Phenotypic plasticity is an adaptive tool in which a given genotype has the ability to produce more than one phenotype when exposed to different biotic and abiotic environmental factors (\citealt{pw4}). Reproductive castes in social Hymenoptera (wasps, ants, and bees) provide one of the most-researched models of insect phenotypic plasticity (\citealt{pw5}). In the wasp Genus \textit{Polistes}, larvae produced early in the colony season (reared by queens) tend to be caste as workers, whereas larvae produced later in the colony season (reared by workers) tend to be caste as queens (\citealt{pw3}). Two factors (nutritional and maternal-social) have emerged as the most likely expanatory variables for the casting fate of \textit{Polistes} offpsring (\citealt{pw3}).
+Phenotypic plasticity is an adaptive tool in which a given genotype has the ability to produce more than one phenotype when exposed to different biotic and abiotic environmental factors (\citealt{pw4}). Reproductive castes in social Hymenoptera (wasps, ants, and bees) provide one of the most-researched models of insect phenotypic plasticity (\citealt{pw5}). In the wasp Genus \textit{Polistes}, larvae produced early in the colony season (reared by queens) tend to be caste as workers, whereas larvae produced later in the colony season (reared by workers) tend to be caste as queens (\citealt{pw3}). Two factors (nutritional and maternal-social) have emerged as the most likely explanatory variables for the casting fate of \textit{Polistes} offspring (\citealt{pw3}).
 
-Early-season offspring are typically raised in a low adult-to-larvae ratio enviornment by one or a few nest-founding queens. This results in low feeding rates and limited body fat stores in the developing larvae (\citealt{pw6}, \citealt{pw7}, \citealt{pw8}, \citealt{pw9}). Experimental studies show that this low nourishment is associated with \textit{Polistes} offspring showing worker phenotypic characteristics (\citealt{pw10}, \citealt{pw11}). Moreover, a genome-wide study identified differentially expressed transcripts (DETs) between low and high nourishment treatment groups in \textit{P. metricus}, many of which were associated with lipid metabolism and oxidation-reduction activity (\citealt{pw1}). Moreover, in most species of \textit{Polistes}, the queen produces vibratory behavior in the form of antennal drumming (AD) when feeding the larvae (\citealt{pw12}, \citealt{pw13}), which has also been suggested to cause the larvae to develop worker phenotypic characteristics (\citealt{pw12}, \citealt{pw14}). For example, experimental simulation of vibrations on \textit{Polistes fuscatus} nests caused larvae to develop lower fat scores, which corresponds to a worker phenotype (\citealt{pw2}). The rates of antennal drumming are higher in the early-season, when worker-destined larvae are being reared by queens (\citealt{pw15}, \citealt{pw16}).
+Early-season offspring are typically raised in a low adult-to-larvae ratio environment by one or a few nest-founding queens. This results in low feeding rates and limited body fat stores in the developing larvae (\citealt{pw6}, \citealt{pw7}, \citealt{pw8}, \citealt{pw9}). Experimental studies show that this low nourishment is associated with \textit{Polistes} offspring showing worker phenotypic characteristics (\citealt{pw10}, \citealt{pw11}). Moreover, a genome-wide study identified differentially expressed transcripts (DETs) between low and high nourishment treatment groups in \textit{P. metricus}, many of which were associated with lipid metabolism and oxidation-reduction activity (\citealt{pw1}). Moreover, in most species of \textit{Polistes}, the queen produces vibratory behavior in the form of antennal drumming (AD) when feeding the larvae (\citealt{pw12}, \citealt{pw13}), which has also been suggested to cause the larvae to develop worker phenotypic characteristics (\citealt{pw12}, \citealt{pw14}). For example, experimental simulation of vibrations on \textit{Polistes fuscatus} nests caused larvae to develop lower fat scores, which corresponds to a worker phenotype (\citealt{pw2}). The rates of antennal drumming are higher in the early-season, when worker-destined larvae are being reared by queens (\citealt{pw15}, \citealt{pw16}).
 
-Taken together, conditions of antennal drumming and nutritional resriction may cause worker-like phenotypes in the early-season larvae that are raised by queens. One recent study manipulated larval environmental (nutrition) and maternal-social (AD) experience in \textit{Polistes fuscatus}, and quantified gene expression using real-time quantitative reverse-transcriptase polymerase chain reaction (qRT-PCR). Using caste-related candidate genes from other studies (\citealt{pw17}, \citealt{pw18}), this study provided evidence that some caste-related genes are nutrition-responsive, some are AD-responsive, and some are responsive only when both factors are present. A next step would be to conduct a similar study to determine how these two factors influence transcriptome expression related to caste determination.
+Taken together, conditions of antennal drumming and nutritional restriction may cause worker-like phenotypes in the early-season larvae that are raised by queens. One recent study manipulated larval environmental (nutrition) and maternal-social (AD) experience in \textit{Polistes fuscatus}, and quantified gene expression using real-time quantitative reverse-transcriptase polymerase chain reaction (qRT-PCR). Using caste-related candidate genes from other studies (\citealt{pw17}, \citealt{pw18}), this study provided evidence that some caste-related genes are nutrition-responsive, some are AD-responsive, and some are responsive only when both factors are present. A next step would be to conduct a similar study to determine how these two factors influence transcriptome expression related to caste determination.
 
-\section{Example Dataset}
+\section{Example dataset}
 
-The dataset consists of RNA-sequencing count tables for 30 samples of \textit{P. fuscatus} larvae, where the reads were mapped to a previously assembled de novo transcriptmoe for \textit{P. metricus} (\citealt{pw19}). Two factors (nutrition and AD) were manipulated (or not manipulated) to create five treatment groups, each with six samples as follows:
+The dataset consists of RNA-sequencing count tables for 30 samples of \textit{P. fuscatus} larvae, where the reads were mapped to a previously assembled de novo transcriptome for \textit{P. metricus} (\citealt{pw19}). Two factors (nutrition and AD) were manipulated (or not manipulated) to create five treatment groups, each with six samples as follows:
 
 \begin{itemize}
 \item \textbf{Foundress-Reared (samples labeled "F") or Worker-Destined}: 
@@ -1082,7 +1092,7 @@ Exploratory data analysis was performed to better understand the data, to serve 
 
 \end{itemize}
 
-It would be difficult (if not impossible) to determine how consistent the samples are with a parallel coordinate plot. Instead, we began by examining a side-by-side boxplot of all 30 samples. We applied betweenLaneNormalization from the EDASeq package (\citealt{edaseq}). Since this normalization method takes into account all samples at once, we believe it may be a better option than normalization methods from the edgeR package, which typically work on a sample-by-sample basis (see Figure \ref{fig:boxplotPW}).
+It would be difficult (if not impossible) to determine how consistent the samples are with a parallel coordinate plot. Instead, we began by examining a side-by-side boxplot of all 30 samples. We applied betweenLaneNormalization from the \code{EDASeq} package (\citealt{edaseq}). Since this normalization method takes into account all samples at once, we believe it may be a better option than normalization methods from the edgeR package, which typically work on a sample-by-sample basis (see Figure \ref{fig:boxplotPW}).
 
 \begin{figure}[H]
     \begin{framed}
@@ -1095,6 +1105,8 @@ It would be difficult (if not impossible) to determine how consistent the sample
 
 After removing the third replicate of NU, we created an MDS plot to better understand the quality of the data (\citealt{limma}) (see Figure \ref{fig:mdsPW}).
 
+\clearpage
+
 \begin{figure}[H]
     \begin{framed}
     \centering
@@ -1106,9 +1118,9 @@ After removing the third replicate of NU, we created an MDS plot to better under
 
 We also examined scatterplot matrices of all pairwise combinations of the five treatment groups. These plots did not appear to show much of a difference in read counts in inter-replicates and as much of a similarity in read counts in intra-replicates as we saw previously with the soybean data back in Figure \ref{fig:L120scatter}.
 
-\section{Highest quality replicates (Artificial Drumming groups)}
+\section{Highest quality replicates (Artificial drumming groups)}
 
-The visual tools of the boxplot, MDS, and scatterplot matrices made us believe that the two artificial drumming treament groups (DU and DR) were of the highest quality. As such, we subsetted the data to only consider these twelve samples for the time being. First, we converted the read counts to counts per million (cpm), because raw counts  do not account for differences in library sizes between samples. We then placed the cpm count values on a logarithmic scale. We also filtered the data: In general, genes should be discarded if they have zero probability of being expressed in all the samples for any of the treatments, and so we applied this rule of thumb (\citealt{edger}).
+The visual tools of the boxplot, MDS, and scatterplot matrices made us believe that the two artificial drumming treatment groups (DU and DR) were of the highest quality. As such, we subsetted the data to only consider these twelve samples for the time being. First, we converted the read counts to counts per million (cpm), because raw counts  do not account for differences in library sizes between samples. We then placed the cpm count values on a logarithmic scale. We also filtered the data: In general, genes should be discarded if they have zero probability of being expressed in all the samples for any of the treatments, and so we applied this rule of thumb (\citealt{edger}).
 
 After filtering and normalizing on the twelve samples of interest (DU and DR), we then checked the quality again by creating a scatterplot matrix. As we stated earlier, the scatterplot matrices did not look too clean, and we see this even in the case of DU and DR (see Figure \ref{fig:scatMatPW}).
 
@@ -1117,7 +1129,7 @@ After filtering and normalizing on the twelve samples of interest (DU and DR), w
     \centering
     \includegraphics[width=\textwidth]{scatMatPW}
     \end{framed}
-    \caption{Scatterplot matrix of the twelve samples of artificial drumming groups (DU and DR), where each individual scatterplot matrix compares two of the twelve samples. If the DU and DR treatment group samples are high quality, then we would expect replicates to have read counts centered on the diagonal x=y line, and non-relicates to deviate somewhat from the diagonal x=y line. We do not see this so clearly: The bottom-left 36 plots (non-replicates) do not appear much (if any) thicker around the x=y line than the other plots (replicates).}
+    \caption{Scatterplot matrix of the twelve samples of artificial drumming groups (DU and DR), where each individual scatterplot matrix compares two of the twelve samples. If the DU and DR treatment group samples are high quality, then we would expect replicates to have read counts centered on the diagonal x=y line, and non-replicates to deviate somewhat from the diagonal x=y line. We do not see this so clearly: The bottom-left 36 plots (non-replicates) do not appear much (if any) thicker around the x=y line than the other plots (replicates).}
     \label{fig:scatMatPW}
 \end{figure}
 
@@ -1125,19 +1137,21 @@ After filtering and normalizing on the twelve samples of interest (DU and DR), w
 
 We performed significance testing on just the 12 samples of the treatment groups DU and DR, mostly following the recommended pre-processing protocol recommended in edgeR (\citealt{edger}). We then created single transcript plots (similar to what we did in Figures \ref{fig:indSBGenes1} and \ref{fig:indSBGenes2}) for the transcripts that were the most differentially expressed. The results of the top ten differentially expressed transcripts are shown below in Figure \ref{fig:degPW}.
 
+\clearpage
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{degPW}
+    \includegraphics[width=0.8\textwidth]{degPW}
     \caption{The ten transcripts with the lowest FDR values after performing differential expression analysis using edgeR comparing the DU and DR groups. Each sample read count is represented as a dot and a black line connects the mean read counts from the two treatment groups. The differential expression can be visually verified; it appears that these transcripts did have significant differences in read counts between treatment groups.}
     \label{fig:degPW}
 \end{figure}
 
-\section{Future Avenues}
+\section{Future avenues}
 
 We have several avenues we could pursue to expand upon this work:
 
 \begin{enumerate}
-\item \textbf{Strengthen normalization}: The MDS plot, scatterplot matrices, and parallel coordinate plots from clustering analysis did not appear as clean in the paper wasp data as they did for soybean data. One method we can approach is a more robest normalization process as outline in the RUVseq package (\citealt{ruvseq}). Within this approach, there are three possible directions in which a handful of "negative control transcripts" must be used.
+\item \textbf{Strengthen normalization}: The MDS plot, scatterplot matrices, and parallel coordinate plots from clustering analysis did not appear as clean in the paper wasp data as they did for soybean data. One method we can approach is a more robust normalization process as outline in the RUVseq package (\citealt{ruvseq}). Within this approach, there are three possible directions in which a handful of "negative control transcripts" must be used.
 
 \begin{enumerate}
 \item \textbf{Housekeeping transcripts}: In this approach, we would use a small number of robust transcripts with known quantities that do not change much from one treatment to another. For the \textit{Polistes fuscatus} transcriptome, there are a small number of known transcripts for this purpose (such as actin, rp49, and S8), although their usefulness is dubious as their quantity can vary considerably across different experimental conditions.
@@ -1145,23 +1159,17 @@ We have several avenues we could pursue to expand upon this work:
 \item \textbf{Spike-in controls}: In this approach, a known concentration of RNA transcripts are applied. As such, they can be advantageous to endogenous controls. However, we have yet to determine if the RNA-sequencing for this data had employed spike-in controls. 
 \end{enumerate}
 
-\item \textbf{Map to genome}: We have thusfar examined the transcript read counts after the reads were mapped to the transcriptome from the same species (\citealt{pw19}). We could also consider examining the genome read counts by mapping the reads to the genome of a similar species.
+\item \textbf{Map to genome}: We have so far examined the transcript read counts after the reads were mapped to the transcriptome from the same species (\citealt{pw19}). We could also consider examining the genome read counts by mapping the reads to the genome of a similar species.
 
-\item \textbf{Permutation testing}: Although the top differentially expressed transcripts between DU and DR looked promising (in Figure \ref{fig:degPW}), will also develop permutation testing for this type of visual analysis of differentially expressed transcripts. Namely, we can create permutations where the sample names (DU.1, DU.2, ..., DR.6) are randomly assigned to columns in the data. After that, we can rerun the edgeR process on this falsely-named data, determine the new set of differentially expressed transcripts, and examine this new set visually with the same plots as in Figure \ref{fig:degPW}. At this point, we can create a lineup of the most statistically-significantly differentially expressed transcripts from the real dataset and from two permuted datasets. This would create a "triplet plot", where the location of the actual data plot is randomized amongst the two permuted data plots. If the actual data plot can be distinguished from the permuted data plots, then we have evidence that the differential expression we found was more due to treatment differences than other differences. To accomplish this, we plan on using the \pkg{nullabor} package (\citealt{nullabor}).
+\item \textbf{Permutation testing}: Although the top differentially expressed transcripts between DU and DR looked promising (in Figure \ref{fig:degPW}), will also develop permutation testing for this type of visual analysis of differentially expressed transcripts. Namely, we can create permutations where the sample names (DU.1, DU.2, ..., DR.6) are randomly assigned to columns in the data. After that, we can rerun the edgeR process on this falsely-named data, determine the new set of differentially expressed transcripts, and examine this new set visually with the same plots as in Figure \ref{fig:degPW}. At this point, we can create a lineup of the most statistically-significantly differentially expressed transcripts from the real dataset and from two permuted datasets. This would create a "triplet plot", where the location of the actual data plot is randomized amongst the two permuted data plots. If the actual data plot can be distinguished from the permuted data plots, then we have evidence that the differential expression we found was more due to treatment differences than other differences. This type of visualization inference has been successfully explored in previous work (\citealt{6}). To accomplish this, we plan on using the \pkg{nullabor} package (\citealt{nullabor}), which has been successfully used for RNA-sequencing visualization inference (\citealt{extra1}).
 
-\item \textbf{Render plotting interactive}: It would be useful to allow for the permutation testing visualization tools to have an interactive element. For example, users could quickly glance through the triplet plots of the top differentially expressed transcripts to discover if there are any transcripts that appear suspcious. Or, they could quickly rerun the permutation testing on a different set of treatment groups of interest.
+\item \textbf{Render plotting interactive}: It would be useful to allow for the permutation testing visualization tools to have an interactive element. For example, users could quickly glance through the triplet plots of the top differentially expressed transcripts to discover if there are any transcripts that appear suspicious. Or, they could quickly rerun the permutation testing on a different set of treatment groups of interest.
 
 \end{enumerate}
 
-\section{Conclusions}
+The paper wasp data did not respond as well as the soybean data did to the visual tools for RNA-sequencing clustering analysis (which we did not explicitly show in this thesis proposal). This may be due to the fact that the soybean replicates were clones, whereas the wasp replicates were not clones. Moreover, the soybean data is more controlled than the wild paper wasps. It could also be due to us using transcript read counts for the paper wasp data, while we used gene read counts for the soybean data. While there is only negligible overlap between transcripts, there is no longer independence as multiple transcripts can map to the same gene.
 
-The paper wasp data did not respond as well as the soybean data did to the visual tools for RNA-sequencing clustering analysis (which we did not explicitly show in this thesis proposal). This may be due to the fact that the soybean replicates were clones, whereas the wasp replicates were not clones. Moreover, the soybean data is more controlled than the wild paper wasps. It could also be due to us using transcript read counts for the paper wasp data, while we used gene read counts for the soybean data. While there is only neglible overlap between transcripts, there is no longer independence as multiple transcripts can map to the same gene.
-
-We have preliminary plotting tools for RNA-sequencing signficance testing analysis. We could see that the top differentially expressed transcripts did appear as we would expect in Figure \ref{fig:degPW}. We can now expand upon this by creating interactive permutation testing visualizations of these differentially expressed transcripts.
-
-\section{Acknowledgments}
-
-\textbf{\textcolor{Red}{What should I Put here? We would like to thank Dr. Jennifer M. Jandt for sharing the \textit{Polistes fuscatus} RNA-sequencing data.}}
+However, we have preliminary plotting tools for RNA-sequencing significance testing analysis. We could see that the top differentially expressed transcripts did appear as we would expect in Figure \ref{fig:degPW}. We can now expand upon this by creating interactive permutation testing visualizations of these differentially expressed transcripts.
 
 \chapter{Timeline}
 \label{sec:timeline}
@@ -1192,7 +1200,9 @@ We have preliminary plotting tools for RNA-sequencing signficance testing analys
  \hline
  R package & First release of package that provides visualization tools for RNA-sequencing datasets & TBD \\
  \hline
- Paper & Submit paper about package that provides visualization tools for RNA-sequencing & TBD \\
+ Paper & Submit paper about visualization tools for clustering analysis of RNA-sequencing & TBD \\
+ \hline
+ Paper & Submit paper about visualization tools for significance testing of RNA-sequencing & TBD \\
  \hline
 \end{tabular}
 
@@ -1202,7 +1212,7 @@ We have preliminary plotting tools for RNA-sequencing signficance testing analys
  \hline
  \textbf{Product} & \textbf{Description} & \textbf{Date} \\ 
  \hline
- R package & First release of ePort & July 2016 \\
+ R package & First release of ePort package that generates electronic reports for instructors to evaluate student performance & July 2016 \\
  \hline
 \end{tabular}
 
